@@ -2,6 +2,8 @@ import { Meta } from '../layout/Meta';
 import { AppConfig } from '../utils/AppConfig';
 import { Footer } from './Footer';
 import { Hero } from './Hero';
+// eslint-disable-next-line import/extensions
+import { MailChimp } from './MailChimp';
 import { VerticalFeatures } from './VerticalFeatures';
 
 const Base = () => (
@@ -11,6 +13,7 @@ const Base = () => (
     {/* <Sponsors /> */}
     <VerticalFeatures />
     {/* <Banner /> */}
+    <MailChimp />
     <Footer />
   </div>
 );
