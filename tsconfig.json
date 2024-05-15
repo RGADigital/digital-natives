@@ -38,6 +38,12 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
+      "@/atoms/*": ["src/components/atoms/*"],
+      "@/molecules/*": ["src/components/molecules/*"],
+      "@/globals/*": ["src/components/globals/*"],
+      "@/organisms/*": ["src/components/organisms/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/templates/*": ["src/components/templates/*"],
       "@/public/*": ["./public/*"],
     },
   },
