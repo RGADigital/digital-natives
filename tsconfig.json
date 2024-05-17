@@ -42,8 +42,10 @@
       "@/molecules/*": ["src/components/molecules/*"],
       "@/globals/*": ["src/components/globals/*"],
       "@/organisms/*": ["src/components/organisms/*"],
-      "@/utils/*": ["src/utils/*"],
       "@/templates/*": ["src/components/templates/*"],
+
+      "@/helpers/*": ["src/helpers/*"],
+      "@/utils/*": ["src/utils/*"],
       "@/public/*": ["./public/*"],
     },
   },

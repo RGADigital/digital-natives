@@ -1,7 +1,7 @@
 import Link from 'next/link'
 
 import { Background, Section } from '@/globals/index'
-import { HeroOneButton, NavbarTwoColumns } from '@/organisms/index'
+import { NavbarTwoColumns } from '@/organisms/index'
 
 import { Logo } from './Logo'
 
@@ -15,7 +15,7 @@ const Hero = () => (
       </NavbarTwoColumns>
     </Section>
 
-    <Section yPadding="pt-20 pb-32">
+    {/* <Section yPadding="pt-20 pb-32">
       <HeroOneButton
         title={
           <>
@@ -26,7 +26,7 @@ const Hero = () => (
         description=""
         button={''}
       />
-    </Section>
+    </Section> */}
   </Background>
 )
 
