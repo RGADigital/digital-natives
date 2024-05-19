@@ -1,11 +1,10 @@
 import type { AppProps } from 'next/app'
+import { MantineProvider } from '@mantine/core'
 
 import theme from '@/utils/theme'
 
 import '@mantine/core/styles.css'
 import '../styles/global.css'
-
-import { MantineProvider } from '@mantine/core'
 
 const MyApp = ({ Component, pageProps }: AppProps) => (
   <MantineProvider theme={theme}>

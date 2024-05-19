@@ -15,6 +15,7 @@ module.exports = withBundleAnalyzer({
     '@/molecules/*': ['src/components/molecules/*'],
     '@/globals/*': ['src/components/globals/*'],
     '@/organisms/*': ['src/components/organisms/*'],
+    '@/helpers/*': ['src/helpers/*'],
     '@/utils/*': ['src/utils/*'],
     '@/templates/*': ['src/components/templates/*'],
   },

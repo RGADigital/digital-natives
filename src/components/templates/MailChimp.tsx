@@ -1,5 +1,8 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { useFormFields, useMailChimpForm } from 'use-mailchimp-form'
+import { Button, Container, Text, TextInput } from '@mantine/core'
+
+import cn from '@/utils/cn'
 
 const MailChimp = () => {
   const url =
@@ -7,23 +10,41 @@ const MailChimp = () => {
 
   const { loading, error, success, message, handleSubmit } = useMailChimpForm(url)
   const { fields, handleFieldChange } = useFormFields({
-    EMAIL: 'sam.brunno@rga.com',
+    EMAIL: '',
   })
+
   return (
-    <div>
+    <Container className={cn('dn-mailchimp-form', 'py-10 lg:pt-15 w-screen lg:w-fit')}>
       <form
         onSubmit={event => {
           event.preventDefault()
           handleSubmit(fields)
         }}
       >
-        <input id="EMAIL" autoFocus type="email" value={'sam.brunno@rga.com'} onChange={handleFieldChange} />
-        <button>submit</button>
+        <div className={cn('flex flex-col lg:flex-row', 'gap-4 lg:gap-2 h-8', 'lg:w-[400px]')}>
+          <TextInput
+            id="EMAIL"
+            autoFocus
+            type="email"
+            value={fields.EMAIL}
+            onChange={handleFieldChange}
+            placeholder="Your email"
+            className="h-[48px] w-full"
+          />
+          <Button
+            type="submit"
+            className={cn('w-[120px] text-black', {
+              'animate-pulse': loading,
+            })}
+            disabled={loading}
+          >
+            Submit
+          </Button>
+        </div>
       </form>
-      {loading && 'submitting'}
-      {error && message}
-      {success && message}
-    </div>
+      {error && <Text className="error mt-1 text-[11px] text-red-400">{message}</Text>}
+      {success && <Text className="success mt-1 text-[11px] text-black">{success}</Text>}
+    </Container>
   )
 }
 
