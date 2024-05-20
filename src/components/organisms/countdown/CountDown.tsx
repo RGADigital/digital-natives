@@ -29,7 +29,7 @@ function CounterBox({ value, label }: Readonly<CounterBoxProps>) {
   )
 }
 
-const LAUNCH_DATE = '2024-12-31'
+const LAUNCH_DATE = '2024-05-29'
 export default function CountDown() {
   const [showChild, setShowChild] = useState(false)
   const [timeLeft, setTimeLeft] = useState<TimeLeft | null>(calculateTimeLeft(LAUNCH_DATE))
