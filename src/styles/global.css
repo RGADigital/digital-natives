@@ -2,6 +2,141 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --input-placeholder-color: #000;
+  --input-height: 59.4px;
+  --input-radius: 16px;
+
+  --dn-checkbox-color: transparent;
+  --dn-checkbox-size: 19.2px;
+  --dn-checkbox-border-width: '0.8px';
+}
+
+@media screen {
+  :root {
+    --input-radius: 20px;
+    --dn-checkbox-size: 20px;
+    --dn-checkbox-border-width: '1px';
+  }
+}
+
+html,
 body {
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'HelveticaNowDisplay', sans-serif;
+}
+
+.dn-scroll-container {
+  @apply scroll-smooth;
+  overflow: scroll;
+  height: 100vh;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.dn-scroll-container section {
+  scroll-snap-align: start;
+  /* position: relative; */
+}
+
+.container {
+  @apply pl-[14px] pr-[15.64px] lg:!px-10;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('/fonts/HelveticaNowDisplay-Regular.woff2');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('/fonts/HelveticaNowDisplay-Medium.woff2');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('/fonts/HelveticaNowDisplay-Bold.woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('/fonts/HelveticaNowDisplay-ExtraBold.woff2');
+  font-weight: 800;
+}
+
+.mantine-Input-input {
+  @apply text-black h-[59.4px] rounded-md;
+  font-size: 12.8px;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.mantine-Checkbox-input,
+.mantine-Checkbox-input:checked,
+.mantine-Checkbox-inner {
+  height: var(--dn-checkbox-size);
+  background-color: var(--dn-checkbox-color);
+  width: var(--dn-checkbox-size);
+}
+
+.mantine-Checkbox-body,
+.mantine-Checkbox-input,
+.mantine-Checkbox-input:checked,
+.mantine-Checkbox-root {
+  @apply !border-none;
+}
+
+.mantine-Checkbox-root {
+  @apply border-neutrals-cool-gray rounded-none;
+  border-width: var(--dn-checkbox-border-width);
+}
+
+.mantine-Checkbox-inner {
+  @apply !border-neutrals-cool-gray;
+  width: 21px !important;
+  height: 21px !important;
+  border-width: var(--dn-checkbox-border-width) !important;
+}
+
+.mantine-InputWrapper-root {
+  @apply flex flex-col gap-2;
+}
+.mantine-InputWrapper-label {
+  @apply text-black;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+  letter-spacing: -0.7px;
+  text-transform: uppercase;
+}
+
+.mantine-InputWrapper-required {
+  @apply text-black;
+}
+
+.mantine-Input-input {
+  @apply border-neutrals-cool-gray placeholder:text-black ring-accents-pink;
+  height: 50px;
+  padding: 20px;
+  border-radius: var(--input-radius);
+}
+
+section.mantine-Modal-content {
+  @apply !w-full lg:!w-[528px] px-3 py-3 lg:p-10;
 }

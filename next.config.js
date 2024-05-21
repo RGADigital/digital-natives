@@ -10,6 +10,13 @@ module.exports = withBundleAnalyzer({
   poweredByHeader: false,
   trailingSlash: true,
   basePath: '',
+  redirects: async () => [
+    {
+      source: '/',
+      destination: '/coming-soon',
+      permanent: true,
+    },
+  ],
   paths: {
     '@/atoms/*': ['src/components/atoms/*'],
     '@/molecules/*': ['src/components/molecules/*'],

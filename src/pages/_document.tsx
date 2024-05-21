@@ -1,4 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document'
+import { ColorSchemeScript } from '@mantine/core'
 
 import { AppConfig } from '@/utils/AppConfig'
 
@@ -8,7 +9,9 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang={AppConfig.locale}>
-        <Head />
+        <Head>
+          <ColorSchemeScript />
+        </Head>
         <body>
           <Main />
           <NextScript />
