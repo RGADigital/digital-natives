@@ -34,7 +34,7 @@ const MailChimp = () => {
           <Button
             type="submit"
             className={cn('w-[120px] text-black', {
-              'animate-pulse': loading,
+              'animate-bounce duration-1000': loading,
             })}
             disabled={loading}
           >
