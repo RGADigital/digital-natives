@@ -45,7 +45,6 @@ export function Form() {
             id="FNAME"
             label="FIRST NAME"
             required
-            autoFocus
             type="text"
             value={fields.FNAME}
             onChange={handleFieldChange}
