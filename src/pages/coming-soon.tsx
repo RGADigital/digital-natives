@@ -1,13 +1,14 @@
 import dynamic from 'next/dynamic'
-import { Modal } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 
 import cn from '@/utils/cn'
 
-import { Form as RegisterForm } from '@/components/organisms/form/RegisterForm'
+import ModalRegister from '@/components/organisms/modalRegister/ModalRegister'
+import SectionFooter from '@/organisms/comingSoon/SectionFooter'
 import SectionOne from '@/organisms/comingSoon/SectionOne'
+import SectionRegister from '@/organisms/comingSoon/SectionRegister'
 import SectionThree from '@/organisms/comingSoon/SectionThree'
 import SectionTwo from '@/organisms/comingSoon/SectionTwo'
 
@@ -28,9 +29,10 @@ export default function ComingSoon() {
 
       <SectionTwo />
       <SectionThree />
-      <Modal opened={showRegisterModal} withCloseButton={false} onClose={close} size="auto">
-        <RegisterForm />
-      </Modal>
+
+      <SectionRegister />
+      <SectionFooter />
+      <ModalRegister showRegisterModal={showRegisterModal} withCloseButton={false} onClose={close} size="auto" />
     </div>
   )
 }

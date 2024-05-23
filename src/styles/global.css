@@ -34,15 +34,16 @@ body {
   @apply scroll-smooth;
   overflow: scroll;
   height: 100vh;
-  scroll-snap-points-y: repeat(100vh);
-  scroll-snap-type: y mandatory;
+  height: 100dvh;
 
-  -webkit-overflow-scrolling: touch;
+  scroll-snap-points-y: repeat(300px);
+  scroll-snap-type: y mandatory;
 }
 
 .dn-scroll-container section {
+  height: 100%;
   scroll-snap-align: start;
-  /* position: relative; */
+  scroll-snap-stop: always;
 }
 
 .container {
@@ -80,7 +81,7 @@ body {
 }
 
 .mantine-Input-input {
-  @apply text-black h-[59.4px] rounded-md;
+  @apply text-black h-10 lg:h-[59.4px] rounded-md;
   font-size: 12.8px;
   font-weight: 400;
   line-height: 120%;
@@ -114,7 +115,7 @@ body {
 }
 
 .mantine-InputWrapper-root {
-  @apply flex flex-col gap-2;
+  @apply flex flex-col gap-[6.4px] lg:gap-2;
 }
 .mantine-InputWrapper-label {
   @apply text-black;

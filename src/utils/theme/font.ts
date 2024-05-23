@@ -12,9 +12,9 @@ export const FONT_H1 = {
 }
 
 export const FONT_H1_MOBILE = {
-  fontSize: '27.3px',
+  fontSize: '29.1px',
   fontWeight: '400',
-  lineHeight: '107%',
+  lineHeight: '29.21px',
 }
 export const FONT_FORM = {
   fontSize: '12.8px',

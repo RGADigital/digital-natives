@@ -9,8 +9,8 @@ interface Props {
 
 export default function MicroDetail({ text, className }: Readonly<Props>) {
   return (
-    <div className="dn-micro-detail flex gap-[9px]">
-      <div className="mt-1 !size-[11px] shrink-0 bg-pink-600"></div>
+    <div className="dn-micro-detail flex items-center gap-[9px]">
+      <div className="!size-[11px] shrink-0 bg-accents-pink"></div>
       {text && (
         <Text
           className={cn(
