@@ -4,8 +4,6 @@ import Link from 'next/link'
 import { Button, em, Grid, NavLink, Text } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 
-import useCountDown from '@/hooks/useCountDown'
-
 import cn from '@/utils/cn'
 import { CONTAINER_SIZES } from '@/utils/theme/container'
 
@@ -18,7 +16,6 @@ interface Props {
 
 export default function Header({ mode = 'light', handleRegister }: Readonly<Props>) {
   const isMobile = useMediaQuery(`(max-width: ${em(CONTAINER_SIZES.sm)})`)
-  const { countDownText } = useCountDown('2024-05-25')
 
   return (
     <Grid
@@ -50,7 +47,7 @@ export default function Header({ mode = 'light', handleRegister }: Readonly<Prop
             'text-white': mode === 'dark',
           })}
         >
-          GEN ONE DESIGN • REPORT DROPS • 25.05.24 • {countDownText}
+          GEN ONE DESIGN • REPORT DROPS • 25.05.24 •
         </Text>
       </Grid.Col>
       <Grid.Col span="content">
@@ -59,7 +56,7 @@ export default function Header({ mode = 'light', handleRegister }: Readonly<Prop
             'bg-accents-cyan hover:bg-accents-cyan/50 !text-black hover:!text-black hover:ease-in-out transition-all',
 
             'h-[22px] lg:!h-[33px]',
-            '!px-[11px] py-[5px] lg:pt-[6px] lg:pb-2',
+            '!px-[11px] lg:pt-[6px] lg:pb-2',
 
             'text-m-disclaimer lg:!text-disclaimer',
           )}

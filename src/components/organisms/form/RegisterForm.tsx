@@ -26,7 +26,7 @@ export function Form() {
   const [subscribe, setSubscribe] = useState<boolean | undefined>(true)
 
   return (
-    <div className="col-span-12 lg:col-span-6">
+    <div className="col-span-12 mt-8 lg:col-span-6">
       <form
         onSubmit={event => {
           event.preventDefault()
@@ -118,7 +118,7 @@ export function Form() {
 }
 export default function RegisterForm() {
   return (
-    <div className="dn-register-form grid w-full grid-cols-12 border-t-[1px]  border-t-neutrals-cool-gray lg:pt-5">
+    <div className="dn-register-form grid w-full grid-cols-12 border-t-[1px]  border-t-neutrals-cool-gray pt-4 lg:pt-5">
       <div className="dn-register-form__left col-span-12 lg:col-span-4">
         <Title order={2}>
           We’ll be releasing chapters of our report over the coming weeks: sign up now to be the first to access it when
