@@ -17,11 +17,6 @@ export default function SectionThree() {
             New research has revealed that when we create experiences for Gen One – we improve technology for everyone.
           </Title>
         </div>
-        {/* For blob */}
-        {/* <div
-          className={cn('dp-section__right', 'col-span-12 lg:col-span-4', 'flex lg:justify-end', 'mt-[37px] lg:mt-0')}
-        >
-        </div> */}
       </div>
     </SectionTemplate>
   )

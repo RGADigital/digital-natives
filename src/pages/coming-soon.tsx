@@ -41,7 +41,7 @@ export default function ComingSoon() {
   const blueX = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(50) - 300, viewportWidth - 280])
   const blueY = useTransform(scrollYProgress, [0.3, section2Start], [vhToPx(100) - 520, vhToPx(120) + 140])
 
-  const redX = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(40), viewportWidth - 280])
+  const redX = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(45), viewportWidth - 280])
   const redY = useTransform(scrollYProgress, [0.3, section2Start], [-100, vhToPx(120) + 111.7])
   const redH = useTransform(scrollYProgress, [0.3, section2Start], [160, 44])
   const redW = useTransform(scrollYProgress, [0.3, section2Start], [201, 87])
@@ -55,12 +55,12 @@ export default function ComingSoon() {
   const yellowX = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(50), -100])
   const yellowY = useTransform(scrollYProgress, [0.3, section2Start], [vhToPx(100) - 50, vhToPx(150) + 45])
 
-  const cyan1X = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(45) - 300, -200])
+  const cyan1X = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(35) - 300, -200])
   const cyan1Y = useTransform(scrollYProgress, [0.3, section2Start], [viewportHeight - 161, vhToPx(150) - 143])
   const cyan1H = useTransform(scrollYProgress, [0.3, section2Start], [161, 300])
   const cyan1W = useTransform(scrollYProgress, [0.3, section2Start], [573, 399.7])
 
-  const cyan2X = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(45) - 300, -200])
+  const cyan2X = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(35) - 300, -200])
   const cyan2Y = useTransform(scrollYProgress, [0.3, section2Start], [viewportHeight - 161, vhToPx(150) - 143])
   const cyan2H = useTransform(scrollYProgress, [0.3, section2Start], [161, 300])
   const cyan2W = useTransform(scrollYProgress, [0.3, section2Start], [373, 300])
@@ -98,7 +98,7 @@ export default function ComingSoon() {
       <motion.div
         className={cn(
           'dn-pink-white-box absolute mix-blend-plus-lighter',
-          '!w-[201.276px] !h-[196px] lg:top-[-160px] lg:!left-[40vw]',
+          '!w-[201.276px] !h-[196px] lg:top-[-160px] lg:!left-[45vw]',
           'bg-gr-pink-white',
         )}
         initial={{ opacity: 0.1 }}
@@ -139,7 +139,7 @@ export default function ComingSoon() {
         transition={{ delay: 0, ease: 'easeInOut' }}
       />
 
-      <div ref={ref} className="flex h-full flex-col bg-white">
+      <div ref={ref} className=" flex h-full flex-col bg-white">
         <SectionThree />
         <SectionRegister />
         <SectionFooter />

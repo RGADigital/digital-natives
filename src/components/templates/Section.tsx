@@ -41,10 +41,8 @@ export default function SectionTemplate({
         'dn-section-wrapper',
         'flex flex-col justify-between !w-screen ',
         {
-          // 'bg-black': mode === 'dark',
           '!min-h-screen': isFullScreen,
-          '!snap-start snap-always': !isFullScreen,
-          // 'pt-[95px] lg:pt-[132px] pb-[41px] lg:pb-4': isFullScreen,
+          '!snap-start snap-always container mx-auto': !isFullScreen,
         },
         {
           relative: mdBottomRight,

@@ -61,7 +61,7 @@ export default function Header({ mode = 'light', handleRegister }: Readonly<Prop
             )}
           >
             THE GEN ONE REPORT
-            <br />
+            {isMobile ? <br /> : ' / '}
             coming soon
           </Text>
         </Grid.Col>
