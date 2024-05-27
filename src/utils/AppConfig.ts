@@ -1,7 +1,7 @@
 export const AppConfig = {
   site_name: 'Digital Native',
-  title: 'Digital Native',
-  // TODO: add the correct description
-  description: '...digital native descriptions goes here',
+  title: 'Gen One Report | Digital Native Research Project',
+  description:
+    'Discover the digital behaviors of Digital Natives and Digital Immigrants in Australia. Our research report outlines key strategies to enhance digital engagement.',
   locale: 'en',
 }
