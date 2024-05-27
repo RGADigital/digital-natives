@@ -24,7 +24,7 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
       className="dn-coming-soon dn-section-one"
       contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
     >
-      <div className="dn-section relative grid h-full max-w-full grid-cols-12 border-4 border-red-500">
+      <div className="dn-section relative grid h-full max-w-full grid-cols-12">
         {isMobile ? (
           <div className={cn('dp-section--mobile', 'relative', 'col-span-12')}>
             <Image

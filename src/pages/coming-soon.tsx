@@ -30,6 +30,9 @@ export default function ComingSoon() {
   const { isIntersecting, ref } = useIntersectionObserver({
     threshold: 0.3,
   })
+  const { isIntersecting: isIntersecting2, ref: ref2 } = useIntersectionObserver({
+    threshold: 0.3,
+  })
 
   const section2Start = 0.35
 
@@ -47,12 +50,22 @@ export default function ComingSoon() {
   const yellowX = useTransform(scrollYProgress, [0.2, section2Start], [vwToPx(50), -100])
   const yellowY = useTransform(scrollYProgress, [0.2, section2Start], [vhToPx(100) - 50, vhToPx(150) + 45])
 
+  const cyan1X = useTransform(scrollYProgress, [0.2, section2Start], [vwToPx(30) - 275, -200])
+  const cyan1Y = useTransform(scrollYProgress, [0.2, section2Start], [viewportHeight - 161, vhToPx(150) - 143])
+  const cyan1H = useTransform(scrollYProgress, [0, section2Start], [161, 300])
+  const cyan1W = useTransform(scrollYProgress, [0, section2Start], [573, 399.7])
+
+  const cyan2X = useTransform(scrollYProgress, [0.2, section2Start], [vwToPx(30) - 275, -200])
+  const cyan2Y = useTransform(scrollYProgress, [0.2, section2Start], [viewportHeight - 161, vhToPx(150) - 143])
+  const cyan2H = useTransform(scrollYProgress, [0, section2Start], [161, 260])
+  const cyan2W = useTransform(scrollYProgress, [0, section2Start], [373, 300])
+
   return (
     <div
       className={cn(
         'px-0 mx-0',
         '!w-screen !max-w-screen min-h-screen !h-full',
-        'flex flex-col dn-scroll-container overflow-hidden relative bg-black',
+        'flex flex-col dn-scroll-container overflow-hidden relative',
       )}
       ref={scrollRef}
     >
@@ -67,21 +80,45 @@ export default function ComingSoon() {
       />
 
       <SectionOneTwo isMobile={isMobile} />
-      <SectionTwo isMobile={isMobile} />
+      <div ref={ref2}>
+        <SectionTwo isMobile={isMobile} />
+      </div>
       <motion.div
-        className="dn-box-6 absolute h-[195.102px] w-[201.276px] bg-gr-pink-yellow !mix-blend-plus-lighter"
+        className="dn-pink-yellow-box absolute h-[195.102px] w-[201.276px] bg-gr-pink-yellow !mix-blend-plus-lighter"
         style={{ x: pinkYellowX, y: pinkYellowY, rotate: pinkYellowRotate, width: pinkYellowW, height: pinkYellowH }}
         initial={{ opacity: 0.3 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0, ease: 'easeInOut' }}
       />
+
+      {/* */}
+
       <motion.div
-        className="dn-box-5 absolute bg-accents-yellow mix-blend-difference lg:h-[112px] lg:w-[345px]"
+        className={cn('dn-cyan-box absolute bg-accents-cyan', {
+          'mix-blend-normal': isIntersecting2,
+          'mix-blend-overlay': !isIntersecting2,
+        })}
+        style={{ x: cyan1X, y: cyan1Y, width: cyan1W, height: cyan1H }}
+        initial={{ opacity: 0.3 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0, ease: 'easeInOut' }}
+      ></motion.div>
+      <motion.div
+        className="dn-cyan-box absolute bg-gr-green-white"
+        style={{ x: cyan2X, y: cyan2Y, width: cyan2W, height: cyan2H }}
+        initial={{ opacity: 0.3 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0, ease: 'easeInOut' }}
+      ></motion.div>
+
+      <motion.div
+        className="dn-yellow-box absolute bg-accents-yellow mix-blend-difference lg:h-[112px] lg:w-[345px]"
         style={{ x: yellowX, y: yellowY }}
         initial={{ opacity: 0.3 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0, ease: 'easeInOut' }}
       />
+
       <div ref={ref} className="flex h-full flex-col bg-white">
         <SectionThree />
         <SectionRegister />

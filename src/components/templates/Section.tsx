@@ -39,7 +39,7 @@ export default function SectionTemplate({
     <section
       className={cn(
         'dn-section-wrapper',
-        'flex flex-col justify-between !w-screen border-white border-4',
+        'flex flex-col justify-between !w-screen ',
         {
           // 'bg-black': mode === 'dark',
           '!min-h-screen': isFullScreen,
