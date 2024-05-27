@@ -38,7 +38,7 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
           </div>
         ) : (
           <motion.div
-            className={cn('dp-section--desktop', 'relative', 'col-start-2 col-end-11')}
+            className={cn('dp-section--desktop', 'relative', 'col-start-2 col-end-12')}
             initial={{ opacity: 0.3 }}
             whileInView={{ opacity: 1 }}
             transition={{ ease: 'easeOut', duration: 1 }}
@@ -48,7 +48,7 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
               src="/assets/coming-soon/hero-lg.png"
               loading="eager"
               objectFit="scale-down"
-              className="!-bottom-0 !top-[unset] !h-auto"
+              className="!-bottom-0 !top-[unset] !h-auto !max-h-screen"
               fill
             />
           </motion.div>
