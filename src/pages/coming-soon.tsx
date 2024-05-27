@@ -9,12 +9,14 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 import cn from '@/utils/cn'
 import { CONTAINER_SIZES } from '@/utils/theme/container'
 
-import { SectionTwo } from '@/components/organisms'
-import SectionOneTwo from '@/components/organisms/comingSoon/SectionOneTwo'
-import SectionFooter from '@/organisms/comingSoon/SectionFooter'
-import SectionRegister from '@/organisms/comingSoon/SectionRegister'
-import SectionThree from '@/organisms/comingSoon/SectionThree'
-import ModalRegister from '@/organisms/modalRegister/ModalRegister'
+import {
+  ModalRegister,
+  SectionFooter,
+  SectionOneTwo,
+  SectionRegister,
+  SectionThree,
+  SectionTwo,
+} from '@/organisms/index'
 
 const Header = dynamic(() => import('@/organisms/header/Header'), { ssr: false })
 
@@ -26,10 +28,12 @@ export default function ComingSoon() {
   const vwToPx = (vw: number) => (vw / 100) * viewportWidth
 
   const [showRegisterModal, { open, close }] = useDisclosure(false)
-  // change header to light when section 3 is intersecting
+  // change header to light background when section 3 is intersecting
   const { isIntersecting, ref } = useIntersectionObserver({
     threshold: 0.3,
   })
+
+  // start changing mix blend mode on section 2
   const { isIntersecting: isIntersecting2, ref: ref2 } = useIntersectionObserver({
     threshold: 0.5,
   })
@@ -38,6 +42,7 @@ export default function ComingSoon() {
 
   const isMobile = useMediaQuery(`(max-width: ${em(CONTAINER_SIZES.lg)})`)
 
+  // set animation value
   const blueX = useTransform(scrollYProgress, [0.3, section2Start], [vwToPx(50) - 300, viewportWidth - 280])
   const blueY = useTransform(scrollYProgress, [0.3, section2Start], [vhToPx(100) - 520, vhToPx(120) + 140])
 
