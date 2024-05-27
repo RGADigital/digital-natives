@@ -95,18 +95,16 @@ export default function ComingSoon() {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.1, ease: 'easeInOut' }}
       />
-      {/* <motion.div
+      <motion.div
         className={cn(
-          'dn-box-2',
-          'absolute',
-          '!w-[201.276px] !h-[196px]',
+          'dn-pink-white-box absolute mix-blend-plus-lighter',
+          '!w-[201.276px] !h-[196px] lg:top-[-160px] lg:left-[40vw]',
           'bg-gr-pink-white',
-          'mix-blend-plus-lighter',
         )}
-        initial={{ opacity: 0.3, y: '-232px', x: '33%' }}
-        whileInView={{ opacity: 1, y: '-214px' }}
-        transition={{ delay: 0.3, ease: 'easeInOut' }}
-      ></motion.div> */}
+        initial={{ opacity: 0.1 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.1, ease: 'easeIn' }}
+      ></motion.div>
       <motion.div
         className="dn-pink-yellow-box absolute h-[195.102px] w-[201.276px] bg-gr-pink-yellow !mix-blend-plus-lighter"
         style={{ x: pinkYellowX, y: pinkYellowY, rotate: pinkYellowRotate, width: pinkYellowW, height: pinkYellowH }}
