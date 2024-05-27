@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/next-script-for-ga */
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
@@ -5,8 +6,8 @@ import { NextSeo } from 'next-seo'
 import { AppConfig } from '@/utils/AppConfig'
 
 type IMetaProps = {
-  title: string
-  description: string
+  title?: string
+  description?: string
   canonical?: string
 }
 
@@ -24,12 +25,12 @@ const Meta = (props: IMetaProps) => {
         <link rel="icon" href={`${router.basePath}/favicon.ico`} key="favicon" />
       </Head>
       <NextSeo
-        title={props.title}
-        description={props.description}
+        title={props.title ?? AppConfig.title}
+        description={props.description ?? AppConfig.description}
         canonical={props.canonical}
         openGraph={{
-          title: props.title,
-          description: props.description,
+          title: props.title ?? AppConfig.title,
+          description: props.description ?? AppConfig.description,
           url: props.canonical,
           locale: AppConfig.locale,
           site_name: AppConfig.site_name,
