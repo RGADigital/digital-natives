@@ -24,25 +24,20 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
-  /* border: 1px solid red; */
 }
 
-/* html,
+html,
 body {
   height: 100vh;
-} */
-
-body {
-  @apply overflow-hidden;
-  font-family: 'HelveticaNowDisplay', sans-serif;
+  height: 100dvh;
 }
+body {
+  @apply overflow-hidden bg-black scroll-smooth;
+  font-family: 'HelveticaNowDisplay', sans-serif;
 
-html {
-  @apply scroll-smooth bg-black;
   scroll-snap-type: y mandatory;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   /* height: 100vh;
   height: 100dvh; */
 
@@ -51,7 +46,7 @@ html {
 
 .dn-scroll-container section {
   height: 100%;
-  scroll-snap-align: start;
+  scroll-snap-align: start !important;
   scroll-snap-stop: always !important;
 }
 

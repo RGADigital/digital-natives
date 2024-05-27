@@ -22,7 +22,7 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
       microDetailBoxClassName="bg-accents-yellow "
       contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
     >
-      <div className="dn-section  flex !h-full !w-full max-w-full  items-center justify-center">
+      <div className="dn-section container mx-auto flex !h-full items-center justify-center">
         <Title order={1} className="text-m-h1 text-neutrals-cream lg:w-1/2 lg:!text-h1 ">
           This means we have to evolve digital experiences to address their needs and expectations
         </Title>
