@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import dynamic from 'next/dynamic'
 import { em } from '@mantine/core'
@@ -9,9 +9,9 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 import cn from '@/utils/cn'
 import { CONTAINER_SIZES } from '@/utils/theme/container'
 
-// import SectionOneAnimationLayer from '@/components/organisms/comingSoon/SectionOneAnimationLayer'
+import { SectionTwo } from '@/components/organisms'
+import SectionOneTwo from '@/components/organisms/comingSoon/SectionOneTwo'
 import SectionFooter from '@/organisms/comingSoon/SectionFooter'
-import SectionOneTwo from '@/organisms/comingSoon/SectionOneTwo'
 import SectionRegister from '@/organisms/comingSoon/SectionRegister'
 import SectionThree from '@/organisms/comingSoon/SectionThree'
 import ModalRegister from '@/organisms/modalRegister/ModalRegister'
@@ -19,7 +19,6 @@ import ModalRegister from '@/organisms/modalRegister/ModalRegister'
 const Header = dynamic(() => import('@/organisms/header/Header'), { ssr: false })
 
 export default function ComingSoon() {
-  const scrollRef = useRef(null)
   const { scrollYProgress } = useScroll()
   const { height: viewportHeight, width: viewportWidth } = useViewportSize()
   const vhToPx = (vh: number) => (vh / 100) * viewportHeight
@@ -42,10 +41,8 @@ export default function ComingSoon() {
       className={cn(
         'px-0 mx-0',
         '!w-screen !max-w-screen min-h-screen !h-full',
-        'flex flex-col dn-scroll-container relative bg-black overflow-y-scroll !overflow-x-hidden',
-        'snap-mandatory snap-y',
+        'flex flex-col dn-scroll-container relative bg-black',
       )}
-      ref={scrollRef}
     >
       <Header mode={isIntersecting ? 'light' : 'dark'} handleRegister={open} />
       <motion.div
@@ -71,6 +68,7 @@ export default function ComingSoon() {
       /> */}
 
       <SectionOneTwo isMobile={isMobile} />
+      <SectionTwo isMobile={isMobile} />
 
       <div ref={ref} className="flex h-full flex-col bg-white">
         <SectionThree />

@@ -28,24 +28,25 @@
   /* border: 1px solid red; */
 }
 
-html,
+/* html,
 body {
   height: 100vh;
-  /* overflow: hidden; */
-}
+} */
 
 body {
+  @apply overflow-hidden;
   font-family: 'HelveticaNowDisplay', sans-serif;
 }
 
-.dn-scroll-container {
-  @apply scroll-smooth;
-  overflow: scroll;
-  height: 100vh;
-  height: 100dvh;
+html {
+  @apply scroll-smooth bg-black;
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  overflow-y: auto;
+  /* height: 100vh;
+  height: 100dvh; */
 
   scroll-snap-points-y: repeat(300px);
-  scroll-snap-type: y mandatory;
 }
 
 .dn-scroll-container section {

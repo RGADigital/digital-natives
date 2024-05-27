@@ -6,8 +6,6 @@ import cn from '@/utils/cn'
 
 import SectionTemplate from '@/templates/Section'
 
-import SectionTwo from './SectionTwo'
-
 interface Props {
   isMobile?: boolean
 }
@@ -103,7 +101,6 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
       </React.Fragment> */}
       {/* END: layer 2 */}
       {/* START: Section 2 */}
-      <SectionTwo isMobile={isMobile} />
       {/* END: Section 2 */}
     </SectionTemplate>
   )
