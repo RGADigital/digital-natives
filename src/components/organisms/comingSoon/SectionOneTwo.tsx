@@ -38,7 +38,7 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
           </div>
         ) : (
           <motion.div
-            className={cn('dp-section--desktop', 'relative', 'col-start-2 col-end-12')}
+            className={cn('dp-section--desktop', 'relative', 'col-start-2 col-end-12 max-w-[1153px]')}
             initial={{ opacity: 0.3 }}
             whileInView={{ opacity: 1 }}
             transition={{ ease: 'easeOut', duration: 1 }}

@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion'
 import { Title } from '@mantine/core'
 
 import cn from '@/utils/cn'
@@ -22,11 +23,16 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
       microDetailBoxClassName="bg-accents-yellow "
       contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
     >
-      <div className="dn-section container mx-auto flex !h-full items-center justify-center">
+      <motion.div
+        className="dn-section container mx-auto flex !h-full items-center justify-center"
+        initial={{ opacity: 0.5 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.9, ease: 'easeIn' }}
+      >
         <Title order={1} className="text-m-h1 text-neutrals-cream lg:w-1/2 lg:!text-h1 ">
           This means we have to evolve digital experiences to address their needs and expectations
         </Title>
-      </div>
+      </motion.div>
     </SectionTemplate>
   )
 }
