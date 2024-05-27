@@ -1,5 +1,7 @@
 import { Title } from '@mantine/core'
 
+import cn from '@/utils/cn'
+
 import SectionTemplate from '@/templates/Section'
 
 interface Props {
@@ -7,7 +9,6 @@ interface Props {
 }
 
 export default function SectionTwo({ isMobile }: Readonly<Props>) {
-  console.log('isMobile', isMobile)
   return (
     <SectionTemplate
       mode="dark"
@@ -19,9 +20,10 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
       showScrollIcon
       showMicroDetail
       microDetailBoxClassName="bg-accents-yellow "
+      contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
     >
-      <div className="dn-section container mx-auto flex !h-full !w-full items-center justify-center lg:w-2/3">
-        <Title order={1} className="text-m-h1 text-neutrals-cream lg:!text-h1 ">
+      <div className="dn-section  flex !h-full !w-full max-w-full  items-center justify-center">
+        <Title order={1} className="text-m-h1 text-neutrals-cream lg:w-1/2 lg:!text-h1 ">
           This means we have to evolve digital experiences to address their needs and expectations
         </Title>
       </div>

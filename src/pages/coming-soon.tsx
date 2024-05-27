@@ -40,11 +40,12 @@ export default function ComingSoon() {
 
   const pinkYellowX = useTransform(scrollYProgress, [0.1, section2Start], [vwToPx(50) - 90, viewportWidth - 180])
   const pinkYellowY = useTransform(scrollYProgress, [0.1, section2Start], [vhToPx(60) - 170, vhToPx(120)])
-
   const pinkYellowRotate = useTransform(scrollYProgress, [0.21, section2Start], [90, -90])
   const pinkYellowW = useTransform(scrollYProgress, [0.3, section2Start], [201, 44])
   const pinkYellowH = useTransform(scrollYProgress, [0.3, section2Start], [195, 267])
-  console.log('useProgress', scrollYProgress)
+
+  const yellowX = useTransform(scrollYProgress, [0.2, section2Start], [vwToPx(50), -100])
+  const yellowY = useTransform(scrollYProgress, [0.2, section2Start], [vhToPx(100) - 50, vhToPx(150) + 45])
 
   return (
     <div
@@ -74,7 +75,13 @@ export default function ComingSoon() {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0, ease: 'easeInOut' }}
       />
-
+      <motion.div
+        className="dn-box-5 absolute bg-accents-yellow mix-blend-difference lg:h-[112px] lg:w-[345px]"
+        style={{ x: yellowX, y: yellowY }}
+        initial={{ opacity: 0.3 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0, ease: 'easeInOut' }}
+      />
       <div ref={ref} className="flex h-full flex-col bg-white">
         <SectionThree />
         <SectionRegister />
