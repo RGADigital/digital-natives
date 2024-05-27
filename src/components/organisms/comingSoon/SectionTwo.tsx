@@ -1,39 +1,29 @@
-import Image from 'next/image'
 import { Title } from '@mantine/core'
 
-import cn from '@/utils/cn'
+import SectionTemplate from '@/templates/Section'
 
-import SectionTemplate from '@/components/templates/Section'
+interface Props {
+  isMobile?: boolean
+}
 
-export default function SectionTwo() {
+export default function SectionTwo({ isMobile }: Readonly<Props>) {
+  console.log('isMobile', isMobile)
   return (
     <SectionTemplate
-      mode="light"
+      mode="dark"
+      className="h-screen overflow-hidden"
       microDetailText="02/03"
+      microDetailPosition="bottom-right"
       scrollText="Keep scrolling"
       isFullScreen
       showScrollIcon
       showMicroDetail
+      microDetailBoxClassName="bg-accents-yellow"
     >
-      <div className="dp-section grid grid-cols-12">
-        <div className="dp-section__left col-span-12 lg:col-span-7">
-          <Title order={1} className="text-m-h1 text-black lg:!text-h1">
-            This means we have to evolve digital experiences to address their needs and expectations.
-          </Title>
-        </div>
-        <div className="col-span-12 lg:col-span-1"></div>
-        <div
-          className={cn('dp-section__right', 'col-span-12 lg:col-span-4', 'flex lg:justify-end', 'mt-[37px] lg:mt-0')}
-        >
-          <div className="relative aspect-square size-full lg:w-[438px]">
-            <Image
-              alt="holding gadget"
-              src="/assets/coming-soon/coming-soon__section-2.jpg"
-              fill
-              className="rounded-sm object-cover"
-            />
-          </div>
-        </div>
+      <div className="dn-section container mx-auto flex h-full items-center justify-center lg:w-2/3">
+        <Title order={1} className="text-m-h1 text-neutrals-cream lg:!text-h1 ">
+          This means we have to evolve digital experiences to address their needs and expectations
+        </Title>
       </div>
     </SectionTemplate>
   )

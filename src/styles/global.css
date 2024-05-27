@@ -20,10 +20,18 @@
   }
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  /* border: 1px solid red; */
+}
+
 html,
 body {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 body {
@@ -43,7 +51,7 @@ body {
 .dn-scroll-container section {
   height: 100%;
   scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-stop: always !important;
 }
 
 .container {
@@ -140,4 +148,8 @@ body {
 
 section.mantine-Modal-content {
   @apply !w-full lg:!w-[528px] px-3 py-3 lg:p-10;
+}
+
+.dn-section {
+  /* border: 10px solid red; */
 }
