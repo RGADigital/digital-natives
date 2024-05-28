@@ -1,4 +1,5 @@
 const {
+  FONT_BODY,
   FONT_EYEBROW,
   FONT_EYEBROW_MOBILE,
   FONT_FAMILY,
@@ -110,6 +111,13 @@ module.exports = {
           {
             lineHeight: FONT_FORM.lineHeight,
             fontWeight: FONT_FORM.fontWeight,
+          },
+        ],
+        body: [
+          FONT_BODY.fontSize,
+          {
+            lineHeight: FONT_BODY.lineHeight,
+            fontWeight: FONT_BODY.fontWeight,
           },
         ],
       },

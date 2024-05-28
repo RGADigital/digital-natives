@@ -22,7 +22,7 @@ export default function CheckboxForm({ id, checked, label, setChecked }: Readonl
       autoContrast={false}
       icon={() => checked && <Checked className="absolute inset-0" onClick={() => setChecked(!checked)} />}
       classNames={{
-        label: 'text-font-form text-black',
+        label: 'text-body text-black',
         labelWrapper: 'w-full',
         root: 'dn-form-checkbox w-full',
         body: 'w-inherit flex items-center',
