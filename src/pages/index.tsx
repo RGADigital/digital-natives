@@ -82,7 +82,7 @@ export default function ComingSoon() {
   const yellowY1 = isMobile ? vhToPx(100) + 91 : vhToPx(150) + 45
   const yellowY = useTransform(scrollYProgress, [0.3, section2Start], [yellowY0, yellowY1])
 
-  const cyan1X0 = isMobile ? vwToPx(100) - 123 : vwToPx(35) - 300
+  const cyan1X0 = isMobile ? vwToPx(100) - 123 : vwToPx(40) - 250
   const cyan1X1 = isMobile ? vwToPx(100) - 223 - 80 : -200
   const cyan1X = useTransform(scrollYProgress, [0.3, section2Start], [cyan1X0, cyan1X1])
   const cyan1Y0 = isMobile ? 100 : vhToPx(100) - 161
@@ -95,7 +95,7 @@ export default function ComingSoon() {
   const cyan1W1 = isMobile ? 310 : 399.7
   const cyan1W = useTransform(scrollYProgress, [0.3, section2Start], [cyan1W0, cyan1W1])
 
-  const cyan2X0 = isMobile ? vwToPx(100) - 123 : vwToPx(35) - 300
+  const cyan2X0 = isMobile ? vwToPx(100) - 123 : vwToPx(40) - 250
   const cyan2X1 = isMobile ? vwToPx(100) - 223 - 80 : -200
   const cyan2X = useTransform(scrollYProgress, [0.3, section2Start], [cyan2X0, cyan2X1])
   const cyan2Y0 = isMobile ? 100 : vhToPx(100) - 161
@@ -106,8 +106,6 @@ export default function ComingSoon() {
   const cyan2H = useTransform(scrollYProgress, [0.3, section2Start], [cyan2H0, cyan2H1])
   const cyan2W0 = isMobile ? 201 : 573
   const cyan2W1 = isMobile ? 310 : 399.7
-  // const cyan2W0 = isMobile ? 201 : 373
-  // const cyan2W1 = isMobile ? 310 : 300
 
   const cyan2W = useTransform(scrollYProgress, [0.3, section2Start], [cyan2W0, cyan2W1])
 
