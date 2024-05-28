@@ -48,10 +48,10 @@ export default function ComingSoon() {
   const blueY1 = isMobile ? vhToPx(200) - 117 : vhToPx(120) + 140
   const blueY = useTransform(scrollYProgress, [0.3, section2Start], [blueY0, blueY1])
 
-  const redX0 = isMobile ? vwToPx(100) - 87 : vwToPx(45)
+  const redX0 = isMobile ? vwToPx(100) - 87 : vwToPx(39.5)
   const redX1 = isMobile ? viewportWidth - 70 : viewportWidth - 280
   const redX = useTransform(scrollYProgress, [0.3, section2Start], [redX0, redX1])
-  const redY0 = isMobile ? -62 : -100
+  const redY0 = isMobile ? -62 : -27.81
   const redY1 = isMobile ? vhToPx(200) - 158 : vhToPx(120) + 115
   const redY = useTransform(scrollYProgress, [0.3, section2Start], [redY0, redY1])
   const redH0 = 160
@@ -146,7 +146,7 @@ export default function ComingSoon() {
       <motion.div
         className={cn(
           'dn-pink-white-box absolute mix-blend-plus-lighter transition-colors',
-          '!w-[201.276px] !h-[196px] top-[-112px] lg:top-[-160px] right-[-115px] lg:!left-[45vw] lg:!right-[unset]',
+          '!w-[201.276px] !h-[195.99px] top-[-112px] lg:top-[-88px] right-[-115px] lg:!left-[39.5vw] lg:!right-[unset]',
           'bg-gr-pink-white',
         )}
         initial={{ opacity: 0.1 }}
