@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { em } from '@mantine/core'
 import { useMediaQuery, useViewportSize } from '@mantine/hooks'
@@ -11,9 +10,7 @@ import cn from '@/utils/cn'
 import { BREAKPOINTS } from '@/utils/theme/container'
 
 import { Meta } from '@/globals/index'
-import { SectionFooter, SectionOne, SectionRegister, SectionThree, SectionTwo } from '@/organisms/index'
-
-const Header = dynamic(() => import('@/organisms/header/Header'), { ssr: false })
+import { Header, SectionFooter, SectionOne, SectionRegister, SectionThree, SectionTwo } from '@/organisms/index'
 
 export default function ComingSoon() {
   const router = useRouter()
@@ -122,7 +119,11 @@ export default function ComingSoon() {
       )}
       ref={scrollRef}
     >
-      <Header mode={isIntersecting ? 'light' : 'dark'} handleRegister={handleRegister} />
+      <Header
+        mode={isIntersecting ? 'light' : 'dark'}
+        handleRegister={handleRegister}
+        key={`intersecting-${isIntersecting}`}
+      />
       <Meta />
       <motion.div
         className="dn-blue-box absolute h-[317px] w-[223px] bg-ford-blue mix-blend-plus-lighter transition-colors lg:!h-[292px] lg:!w-[743px]"
