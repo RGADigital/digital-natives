@@ -13,9 +13,10 @@ import RgaLogo from '@/atoms/icon/RgaLogo'
 interface Props {
   mode?: 'dark' | 'light'
   handleRegister: (...props: any) => void
+  showHeaderGradient?: boolean
 }
 
-export default function Header({ mode = 'dark', handleRegister }: Readonly<Props>) {
+export default function Header({ mode = 'dark', handleRegister, showHeaderGradient = false }: Readonly<Props>) {
   const isMobile = useMediaQuery(`(max-width: ${em(CONTAINER_SIZES.lg)})`)
 
   return (
@@ -25,6 +26,7 @@ export default function Header({ mode = 'dark', handleRegister }: Readonly<Props
         '!bg-white header--light': mode === 'light',
         'header--dark': mode === 'dark',
         'fixed z-30': true,
+        'bg-gr-header': showHeaderGradient && mode === 'dark',
       })}
     >
       <Grid

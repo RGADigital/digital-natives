@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { em } from '@mantine/core'
@@ -14,8 +14,9 @@ import { Header, SectionFooter, SectionOne, SectionRegister, SectionThree, Secti
 
 export default function ComingSoon() {
   const router = useRouter()
-  const scrollRef = useRef(null)
+  const scrollRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: scrollRef, offset: ['start end', 'end start'] })
+  const [showHeaderGradient, setShowHeaderGradient] = useState(false)
   const { height: viewportHeight, width: viewportWidth } = useViewportSize()
   const vhToPx = (vh: number) => {
     const height = viewportHeight > 755 ? 755 : viewportHeight
@@ -110,6 +111,28 @@ export default function ComingSoon() {
     router.push('#register-form')
   }
 
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const handleScroll = () => {
+      if (typeof window === 'undefined') return
+
+      const scrollTop = window.scrollY
+      if (scrollTop > 220) {
+        setShowHeaderGradient(true)
+      } else {
+        setShowHeaderGradient(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+
+    // eslint-disable-next-line consistent-return
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+  console.log('scrollTop', showHeaderGradient)
+
   return (
     <div
       className={cn(
@@ -117,13 +140,18 @@ export default function ComingSoon() {
         '!w-screen !max-w-screen min-h-screen !h-full',
         'flex flex-col dn-scroll-container overflow-hidden relative',
       )}
-      ref={scrollRef}
+      ref={scrollRef as React.RefObject<HTMLDivElement>}
     >
       <Header
         mode={isIntersecting ? 'light' : 'dark'}
         handleRegister={handleRegister}
         key={`intersecting-${isIntersecting}`}
+        showHeaderGradient={showHeaderGradient}
       />
+      <motion.div
+        style={{ background: 'linear-gradient(180deg, darkgray, gray)' }}
+        className="absolute left-0 top-0 h-[80px] w-screen mix-blend-multiply transition-colors lg:h-[76px]"
+      ></motion.div>
       <Meta />
       <motion.div
         className="dn-blue-box absolute h-[317px] w-[223px] bg-ford-blue mix-blend-plus-lighter transition-colors lg:!h-[292px] lg:!w-[743px]"
