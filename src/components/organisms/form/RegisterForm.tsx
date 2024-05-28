@@ -80,7 +80,7 @@ export function Form() {
 
           <TextInput
             id="BUSINESS"
-            label="ORGANIZATION"
+            label="ORGANISATION"
             type="text"
             value={fields.BUSINESS}
             onChange={handleFieldChange}
