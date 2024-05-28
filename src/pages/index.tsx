@@ -61,10 +61,10 @@ export default function ComingSoon() {
   const redW1 = isMobile ? 160 : 59.8
   const redW = useTransform(scrollYProgress, [0.3, section2Start], [redW0, redW1])
 
-  const pinkYellowX0 = isMobile ? -67 : vwToPx(50) + 140
+  const pinkYellowX0 = isMobile ? -67 : vwToPx(50) + 280
   const pinkYellowX1 = isMobile ? viewportWidth + 30 : viewportWidth - 99.97
   const pinkYellowX = useTransform(scrollYProgress, [0.3, section2Start], [pinkYellowX0, pinkYellowX1])
-  const pinkYellowY0 = isMobile ? vhToPx(100) - 249 : vhToPx(100) - 200
+  const pinkYellowY0 = isMobile ? vhToPx(100) - 249 : vhToPx(100) - 260
   const pinkYellowY1 = isMobile ? vhToPx(200) - 222 : vhToPx(120) - 6
   const pinkYellowY = useTransform(scrollYProgress, [0.3, section2Start], [pinkYellowY0, pinkYellowY1])
   const pinkYellowRotate = useTransform(scrollYProgress, [0.3, section2Start], [90, -90])
