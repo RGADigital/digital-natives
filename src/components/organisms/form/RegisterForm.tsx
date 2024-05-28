@@ -26,7 +26,7 @@ export function Form() {
   const [subscribe, setSubscribe] = useState<boolean | undefined>(true)
 
   return (
-    <div className="col-span-12 mt-8 lg:col-span-6">
+    <div className="col-span-12 lg:col-span-6">
       <form
         onSubmit={event => {
           event.preventDefault()
@@ -111,8 +111,8 @@ export function Form() {
           </Button>
         </div>
       </form>
-      {error && <Text className="error mt-1 text-[11px] text-red-400">{message}</Text>}
-      {success && <Text className="success text-blue mt-1 text-[11px]">{message}</Text>}
+      {error && <Text className="error text-body text-red-400 first-letter:mt-1">{message}</Text>}
+      {success && <Text className="success text-blue mt-1 text-body">{message}</Text>}
     </div>
   )
 }

@@ -129,7 +129,7 @@ body {
 }
 
 .mantine-Input-input {
-  @apply border-neutrals-cool-gray placeholder:text-black ring-accents-pink;
+  @apply border-neutrals-cool-gray placeholder:text-black ring-accents-pink placeholder:text-body;
   height: 50px;
   padding: 20px;
   border-radius: var(--input-radius);

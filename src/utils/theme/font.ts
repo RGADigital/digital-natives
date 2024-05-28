@@ -18,6 +18,12 @@ export const FONT_EYEBROW_MOBILE = {
   letterSpacing: '0.1px',
 }
 
+export const FONT_BODY = {
+  fontSize: '16px',
+  fontWeight: 400,
+  lineHeight: '19.2px',
+}
+
 export const FONT_NAV = {
   fontSize: '16px',
   fontWeight: '500',

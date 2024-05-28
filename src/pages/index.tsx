@@ -55,24 +55,24 @@ export default function ComingSoon() {
   const redY1 = isMobile ? vhToPx(200) - 158 : vhToPx(120) + 115
   const redY = useTransform(scrollYProgress, [0.3, section2Start], [redY0, redY1])
   const redH0 = 160
-  const redH1 = isMobile ? 44 : 26.7
+  const redH1 = isMobile ? 44 : 44
   const redH = useTransform(scrollYProgress, [0.3, section2Start], [redH0, redH1])
   const redW0 = 201
-  const redW1 = isMobile ? 160 : 87
+  const redW1 = isMobile ? 160 : 59.8
   const redW = useTransform(scrollYProgress, [0.3, section2Start], [redW0, redW1])
 
-  const pinkYellowX0 = isMobile ? -67 : vwToPx(50) + 140
-  const pinkYellowX1 = isMobile ? viewportWidth + 30 : viewportWidth - 100
+  const pinkYellowX0 = isMobile ? -67 : vwToPx(50) + 280
+  const pinkYellowX1 = isMobile ? viewportWidth + 30 : viewportWidth - 99.97
   const pinkYellowX = useTransform(scrollYProgress, [0.3, section2Start], [pinkYellowX0, pinkYellowX1])
-  const pinkYellowY0 = isMobile ? vhToPx(100) - 249 : vhToPx(100) - 200
-  const pinkYellowY1 = isMobile ? vhToPx(200) - 222 : vhToPx(120) - 5
+  const pinkYellowY0 = isMobile ? vhToPx(100) - 249 : vhToPx(100) - 260
+  const pinkYellowY1 = isMobile ? vhToPx(200) - 222 : vhToPx(120) - 6
   const pinkYellowY = useTransform(scrollYProgress, [0.3, section2Start], [pinkYellowY0, pinkYellowY1])
   const pinkYellowRotate = useTransform(scrollYProgress, [0.3, section2Start], [90, -90])
   const pinkYellowW0 = 201
-  const pinkYellowW1 = isMobile ? 38.7 : 26.7
+  const pinkYellowW1 = isMobile ? 38.7 : 44
   const pinkYellowW = useTransform(scrollYProgress, [0.3, section2Start], [pinkYellowW0, pinkYellowW1])
   const pinkYellowH0 = 195
-  const pinkYellowH1 = isMobile ? 196 : 267
+  const pinkYellowH1 = isMobile ? 196 : 285.5
   const pinkYellowH = useTransform(scrollYProgress, [0.3, section2Start], [pinkYellowH0, pinkYellowH1])
 
   const yellowX0 = isMobile ? vwToPx(100) - 126 : vwToPx(50)
@@ -104,8 +104,11 @@ export default function ComingSoon() {
   const cyan2H0 = isMobile ? 127 : 161
   const cyan2H1 = isMobile ? 127 : 300
   const cyan2H = useTransform(scrollYProgress, [0.3, section2Start], [cyan2H0, cyan2H1])
-  const cyan2W0 = isMobile ? 201 : 373
-  const cyan2W1 = isMobile ? 310 : 300
+  const cyan2W0 = isMobile ? 201 : 573
+  const cyan2W1 = isMobile ? 310 : 399.7
+  // const cyan2W0 = isMobile ? 201 : 373
+  // const cyan2W1 = isMobile ? 310 : 300
+
   const cyan2W = useTransform(scrollYProgress, [0.3, section2Start], [cyan2W0, cyan2W1])
 
   const handleRegister = () => {
@@ -164,9 +167,8 @@ export default function ComingSoon() {
       />
 
       <motion.div
-        className={cn('dn-cyan-box absolute bg-accents-cyan transition-colors', {
-          'mix-blend-normal': isIntersecting2 || isMobile,
-          'mix-blend-overlay': !isIntersecting2 && !isMobile,
+        className={cn('dn-cyan-box absolute bg-accents-cyan transition-colors ', {
+          'mix-blend-overlay': true,
           '-z-20': isMobile,
         })}
         style={{ x: cyan1X, y: cyan1Y, width: cyan1W, height: cyan1H }}
@@ -175,7 +177,7 @@ export default function ComingSoon() {
         transition={{ delay: 0, ease: 'easeOut' }}
       ></motion.div>
       <motion.div
-        className="dn-cyan-box absolute bg-gr-green-white transition-colors"
+        className="dn-cyan-box absolute -z-10 bg-gr-green-white transition-colors"
         style={{ x: cyan2X, y: cyan2Y, width: cyan2W, height: cyan2H }}
         initial={{ opacity: 0.3 }}
         whileInView={{ opacity: 1 }}
@@ -191,7 +193,7 @@ export default function ComingSoon() {
       />
 
       <div ref={ref} className=" flex h-full flex-col bg-white">
-        <SectionThree />
+        <SectionThree isMobile={isMobile} />
         <SectionRegister />
         <SectionFooter />
       </div>
