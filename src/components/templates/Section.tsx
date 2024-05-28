@@ -43,7 +43,7 @@ export default function SectionTemplate({
         'dn-section-wrapper',
         'flex flex-col justify-between w-screen ',
         {
-          '!min-h-screen': isFullScreen,
+          'h-screen max-h-[755px]': isFullScreen,
           '!snap-start snap-always container mx-auto': !isFullScreen,
         },
         {

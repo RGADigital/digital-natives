@@ -44,6 +44,7 @@ body {
 
 .dn-scroll-container section {
   height: 100%;
+  max-height: 755px !important;
   scroll-snap-align: start !important;
   scroll-snap-stop: always !important;
 }

@@ -18,7 +18,10 @@ export default function ComingSoon() {
   const scrollRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: scrollRef, offset: ['start end', 'end start'] })
   const { height: viewportHeight, width: viewportWidth } = useViewportSize()
-  const vhToPx = (vh: number) => (vh / 100) * viewportHeight
+  const vhToPx = (vh: number) => {
+    const height = viewportHeight > 755 ? 755 : viewportHeight
+    return (vh / 100) * height
+  }
   const vwToPx = (vw: number) => (vw / 100) * viewportWidth
 
   const [showRegisterModal, { open, close }] = useDisclosure(false)
@@ -29,7 +32,7 @@ export default function ComingSoon() {
 
   // start changing mix blend mode on section 2
   const { isIntersecting: isIntersecting2, ref: ref2 } = useIntersectionObserver({
-    threshold: 0.5,
+    threshold: 0.95,
   })
 
   const section2Start = 0.35
@@ -81,7 +84,7 @@ export default function ComingSoon() {
   const cyan1X0 = isMobile ? vwToPx(100) - 123 : vwToPx(35) - 300
   const cyan1X1 = isMobile ? vwToPx(100) - 223 - 80 : -200
   const cyan1X = useTransform(scrollYProgress, [0.3, section2Start], [cyan1X0, cyan1X1])
-  const cyan1Y0 = isMobile ? 100 : viewportHeight - 161
+  const cyan1Y0 = isMobile ? 100 : vhToPx(100) - 161
   const cyan1Y1 = isMobile ? vhToPx(100) + 133 : vhToPx(150) - 143
   const cyan1Y = useTransform(scrollYProgress, [0.3, section2Start], [cyan1Y0, cyan1Y1])
   const cyan1H0 = isMobile ? 127 : 161
@@ -94,7 +97,7 @@ export default function ComingSoon() {
   const cyan2X0 = isMobile ? vwToPx(100) - 123 : vwToPx(35) - 300
   const cyan2X1 = isMobile ? vwToPx(100) - 223 - 80 : -200
   const cyan2X = useTransform(scrollYProgress, [0.3, section2Start], [cyan2X0, cyan2X1])
-  const cyan2Y0 = isMobile ? 100 : viewportHeight - 161
+  const cyan2Y0 = isMobile ? 100 : vhToPx(100) - 161
   const cyan2Y1 = isMobile ? vhToPx(100) + 133 : vhToPx(150) - 143
   const cyan2Y = useTransform(scrollYProgress, [0.3, section2Start], [cyan2Y0, cyan2Y1])
   const cyan2H0 = isMobile ? 127 : 161
