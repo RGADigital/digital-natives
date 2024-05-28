@@ -14,13 +14,10 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
     <SectionTemplate
       mode="dark"
       className="!h-screen !w-screen"
-      microDetailText="02/03"
-      microDetailPosition="bottom-right"
       scrollText="Keep scrolling"
       isFullScreen
       isMobile={isMobile}
       showScrollIcon
-      showMicroDetail
       microDetailBoxClassName="bg-accents-yellow "
       contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
     >

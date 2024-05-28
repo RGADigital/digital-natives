@@ -4,13 +4,7 @@ import SectionTemplate from '@/components/templates/Section'
 
 export default function SectionThree() {
   return (
-    <SectionTemplate
-      mode="light"
-      className="pt-[95px] lg:pt-[132px]"
-      microDetailText="03/03"
-      showMicroDetail
-      microDetailPosition="top-left"
-    >
+    <SectionTemplate mode="light" className="pt-[95px] lg:pt-[132px]">
       <div className="dp-section grid grid-cols-12">
         <div className="dp-section__left lg:!max-w-2/3 col-span-12 lg:col-span-8">
           <Title order={1} className="text-m-h1 text-black lg:!text-h1">

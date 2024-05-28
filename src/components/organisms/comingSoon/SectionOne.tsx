@@ -15,12 +15,9 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
     <SectionTemplate
       mode="dark"
       scrollText="Scroll down"
-      microDetailText="01/03"
-      microDetailPosition="bottom-right"
       isFullScreen
       isMobile={isMobile}
       showScrollIcon
-      showMicroDetail
       microDetailBoxClassName="bg-accents-yellow"
       className="dn-coming-soon dn-section-one"
       contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
