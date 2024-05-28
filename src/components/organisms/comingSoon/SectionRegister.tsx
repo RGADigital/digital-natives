@@ -3,7 +3,7 @@ import RegisterForm from '@/organisms/form/RegisterForm'
 
 export default function SectionRegister() {
   return (
-    <SectionTemplate mode="light" className="mt-[57px] lg:mt-[120px] lg:pb-0">
+    <SectionTemplate mode="light" className="mt-[57px] lg:mt-[120px] lg:pb-0" id="register-form">
       <RegisterForm />
     </SectionTemplate>
   )

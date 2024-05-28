@@ -11,6 +11,7 @@ interface Props {
   children?: React.ReactNode
   className?: string
   contentClassName?: string
+  id?: string
   isMobile?: boolean
   isFullScreen?: boolean
   microDetailBoxClassName?: string
@@ -22,6 +23,7 @@ interface Props {
 }
 
 export default function SectionTemplate({
+  id,
   mode,
   className,
   children,
@@ -39,6 +41,7 @@ export default function SectionTemplate({
   const mdBottomRight = microDetailPosition === 'bottom-right' && showMicroDetail
   return (
     <section
+      id={id}
       className={cn(
         'dn-section-wrapper',
         'flex flex-col justify-between w-screen ',

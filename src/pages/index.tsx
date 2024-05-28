@@ -1,8 +1,9 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import dynamic from 'next/dynamic'
+import { useRouter } from 'next/router'
 import { em } from '@mantine/core'
-import { useDisclosure, useMediaQuery, useViewportSize } from '@mantine/hooks'
+import { useMediaQuery, useViewportSize } from '@mantine/hooks'
 
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 
@@ -10,11 +11,12 @@ import cn from '@/utils/cn'
 import { BREAKPOINTS } from '@/utils/theme/container'
 
 import { Meta } from '@/globals/index'
-import { ModalRegister, SectionFooter, SectionOne, SectionRegister, SectionThree, SectionTwo } from '@/organisms/index'
+import { SectionFooter, SectionOne, SectionRegister, SectionThree, SectionTwo } from '@/organisms/index'
 
 const Header = dynamic(() => import('@/organisms/header/Header'), { ssr: false })
 
 export default function ComingSoon() {
+  const router = useRouter()
   const scrollRef = useRef(null)
   const { scrollYProgress } = useScroll({ target: scrollRef, offset: ['start end', 'end start'] })
   const { height: viewportHeight, width: viewportWidth } = useViewportSize()
@@ -24,7 +26,6 @@ export default function ComingSoon() {
   }
   const vwToPx = (vw: number) => (vw / 100) * viewportWidth
 
-  const [showRegisterModal, { open, close }] = useDisclosure(false)
   // change header to light background when section 3 is intersecting
   const { isIntersecting, ref } = useIntersectionObserver({
     threshold: 0.3,
@@ -107,6 +108,10 @@ export default function ComingSoon() {
   const cyan2W1 = isMobile ? 310 : 300
   const cyan2W = useTransform(scrollYProgress, [0.3, section2Start], [cyan2W0, cyan2W1])
 
+  const handleRegister = () => {
+    router.push('#register-form')
+  }
+
   return (
     <div
       className={cn(
@@ -116,7 +121,7 @@ export default function ComingSoon() {
       )}
       ref={scrollRef}
     >
-      <Header mode={isIntersecting ? 'light' : 'dark'} handleRegister={open} />
+      <Header mode={isIntersecting ? 'light' : 'dark'} handleRegister={handleRegister} />
       <Meta />
       <motion.div
         className="dn-blue-box absolute h-[317px] w-[223px] bg-ford-blue mix-blend-plus-lighter transition-colors lg:!h-[292px] lg:!w-[743px]"
@@ -190,7 +195,6 @@ export default function ComingSoon() {
         <SectionRegister />
         <SectionFooter />
       </div>
-      <ModalRegister showRegisterModal={showRegisterModal} withCloseButton={false} onClose={close} size="auto" />
     </div>
   )
 }
