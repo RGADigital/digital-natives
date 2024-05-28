@@ -44,13 +44,13 @@ export default function SectionTemplate({
       id={id}
       className={cn(
         'dn-section-wrapper',
-        'flex flex-col justify-between w-screen ',
+        'flex flex-col justify-between w-screen',
         {
-          'h-screen max-h-[755px]': isFullScreen,
+          'h-full lg:h-screen max-h-[755px]': isFullScreen,
           '!snap-start snap-always container mx-auto': !isFullScreen,
         },
         {
-          relative: mdBottomRight && !isMobile,
+          relative: mdBottomRight,
         },
         className,
       )}

@@ -32,7 +32,9 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
       >
         <Title
           order={1}
-          className={cn('text-m-h1 text-neutrals-cream lg:!text-h1 lg:border-[2px] lg:w-max lg:border-[#379FFF]', {
+          className={cn(' text-neutrals-cream lg:border-[2px] lg:w-max lg:border-[#379FFF]', {
+            'text-[31px] leading-[33.17px] font-normal': isMobile,
+            'lg:!text-h1 ': !isMobile,
             'lg:relative': !isMobile,
           })}
         >
