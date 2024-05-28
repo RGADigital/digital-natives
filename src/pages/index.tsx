@@ -193,7 +193,7 @@ export default function ComingSoon() {
       />
 
       <div ref={ref} className=" flex h-full flex-col bg-white">
-        <SectionThree />
+        <SectionThree isMobile={isMobile} />
         <SectionRegister />
         <SectionFooter />
       </div>
