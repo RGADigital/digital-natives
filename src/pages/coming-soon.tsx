@@ -9,14 +9,7 @@ import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 import cn from '@/utils/cn'
 import { BREAKPOINTS } from '@/utils/theme/container'
 
-import {
-  ModalRegister,
-  SectionFooter,
-  SectionOneTwo,
-  SectionRegister,
-  SectionThree,
-  SectionTwo,
-} from '@/organisms/index'
+import { ModalRegister, SectionFooter, SectionOne, SectionRegister, SectionThree, SectionTwo } from '@/organisms/index'
 
 const Header = dynamic(() => import('@/organisms/header/Header'), { ssr: false })
 
@@ -129,7 +122,7 @@ export default function ComingSoon() {
         transition={{ delay: 0, ease: 'easeInOut' }}
       />
 
-      <SectionOneTwo isMobile={isMobile} />
+      <SectionOne isMobile={isMobile} />
       <div ref={ref2}>
         <SectionTwo isMobile={isMobile} />
       </div>
