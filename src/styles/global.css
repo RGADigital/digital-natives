@@ -12,7 +12,7 @@
   --dn-checkbox-border-width: '0.8px';
 }
 
-@media screen {
+@media screen(lg) {
   :root {
     --input-radius: 20px;
     --dn-checkbox-size: 20px;
@@ -20,30 +20,32 @@
   }
 }
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100vh;
-  overflow: hidden;
-}
-
-body {
-  font-family: 'HelveticaNowDisplay', sans-serif;
-}
-
-.dn-scroll-container {
-  @apply scroll-smooth;
-  overflow: scroll;
-  height: 100vh;
   height: 100dvh;
+}
+body {
+  @apply overflow-hidden bg-black scroll-smooth;
+  font-family: 'HelveticaNowDisplay', sans-serif;
+
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+  overflow-y: scroll;
 
   scroll-snap-points-y: repeat(300px);
-  scroll-snap-type: y mandatory;
 }
 
 .dn-scroll-container section {
   height: 100%;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  scroll-snap-align: start !important;
+  scroll-snap-stop: always !important;
 }
 
 .container {
@@ -94,7 +96,6 @@ body {
   background-color: var(--dn-checkbox-color);
   width: var(--dn-checkbox-size);
 }
-
 .mantine-Checkbox-body,
 .mantine-Checkbox-input,
 .mantine-Checkbox-input:checked,
@@ -102,16 +103,11 @@ body {
   @apply !border-none;
 }
 
-.mantine-Checkbox-root {
-  @apply border-neutrals-cool-gray rounded-none;
-  border-width: var(--dn-checkbox-border-width);
-}
-
 .mantine-Checkbox-inner {
   @apply !border-neutrals-cool-gray;
-  width: 21px !important;
-  height: 21px !important;
   border-width: var(--dn-checkbox-border-width) !important;
+  height: var(--dn-checkbox-size);
+  width: var(--dn-checkbox-size);
 }
 
 .mantine-InputWrapper-root {

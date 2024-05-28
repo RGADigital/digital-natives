@@ -1,47 +1,39 @@
+import { motion } from 'framer-motion'
+
 import cn from '@/utils/cn'
 
-type IButtonProps = {
-  xl?: boolean
-  children: string
+import { buttonFramerConfig } from './animation'
+
+export interface ButtonProps {
+  children?: React.ReactNode
+  className?: string
+  handleClick: (...props: any) => void
+  type?: 'primary' | 'white'
 }
 
-const Button = (props: IButtonProps) => {
-  const btnClass = cn({
-    btn: true,
-    'btn-xl': props.xl,
-    'btn-base': !props.xl,
-    'btn-primary': true,
-  })
-
+export default function Button({ className, handleClick, children, type = 'primary' }: Readonly<ButtonProps>) {
   return (
-    <div className={btnClass}>
-      {props.children}
+    <motion.button
+      {...buttonFramerConfig}
+      className={cn(
+        'dn-button',
 
-      <style jsx>
-        {`
-          .btn {
-            @apply inline-block rounded-md text-center;
-          }
+        '!h-[28px] lg:!h-[33px]',
+        'px-4 lg:!px-8',
+        'text-m-nav lg:text-nav',
 
-          .btn-base {
-            @apply text-lg font-semibold py-2 px-4;
-          }
+        'rounded-[16px] lg:rounded-[46px]',
+        '!cursor-pointer',
 
-          .btn-xl {
-            @apply font-extrabold text-xl py-4 px-6;
-          }
-
-          .btn-primary {
-            @apply text-white bg-primary-500;
-          }
-
-          .btn-primary:hover {
-            @apply bg-primary-600;
-          }
-        `}
-      </style>
-    </div>
+        {
+          'bg-accents-cyan  text-black ': type === 'primary',
+          'bg-white text-black': type === 'white',
+        },
+        className,
+      )}
+      onClick={handleClick}
+    >
+      {children}
+    </motion.button>
   )
 }
-
-export { Button, type IButtonProps }

@@ -3,14 +3,15 @@ import { Text } from '@mantine/core'
 import cn from '@/utils/cn'
 
 interface Props {
+  boxClassName?: string
   text?: string
-  className?: string
+  textClassName?: string
 }
 
-export default function MicroDetail({ text, className }: Readonly<Props>) {
+export default function MicroDetail({ boxClassName, text, textClassName }: Readonly<Props>) {
   return (
-    <div className="dn-micro-detail flex items-center gap-[9px]">
-      <div className="!size-[11px] shrink-0 bg-accents-pink"></div>
+    <div className="dn-micro-detail z-20 flex items-center gap-[9px]">
+      <div className={cn('!size-[11px] shrink-0', 'bg-accents-pink', boxClassName)}></div>
       {text && (
         <Text
           className={cn(
@@ -18,7 +19,7 @@ export default function MicroDetail({ text, className }: Readonly<Props>) {
             'leading-3 lg:leading-[16.8px] -tracking-[0.5px] lg:-tracking-[0.7px]',
             'font-normal',
             'uppercase',
-            className,
+            textClassName,
           )}
           component="p"
         >

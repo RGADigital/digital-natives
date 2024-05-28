@@ -1,40 +1,39 @@
-import Image from 'next/image'
+import { motion } from 'framer-motion'
 import { Title } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import SectionTemplate from '@/components/templates/Section'
+import SectionTemplate from '@/templates/Section'
 
-export default function SectionTwo() {
+interface Props {
+  isMobile?: boolean
+}
+
+export default function SectionTwo({ isMobile }: Readonly<Props>) {
   return (
     <SectionTemplate
-      mode="light"
+      mode="dark"
+      className="!h-screen !w-screen"
       microDetailText="02/03"
+      microDetailPosition="bottom-right"
       scrollText="Keep scrolling"
       isFullScreen
+      isMobile={isMobile}
       showScrollIcon
       showMicroDetail
+      microDetailBoxClassName="bg-accents-yellow "
+      contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
     >
-      <div className="dp-section grid grid-cols-12">
-        <div className="dp-section__left col-span-12 lg:col-span-7">
-          <Title order={1} className="text-m-h1 text-black lg:!text-h1">
-            This means we have to evolve digital experiences to address their needs and expectations.
-          </Title>
-        </div>
-        <div className="col-span-12 lg:col-span-1"></div>
-        <div
-          className={cn('dp-section__right', 'col-span-12 lg:col-span-4', 'flex lg:justify-end', 'mt-[37px] lg:mt-0')}
-        >
-          <div className="relative aspect-square size-full lg:w-[438px]">
-            <Image
-              alt="holding gadget"
-              src="/assets/coming-soon/coming-soon__section-2.jpg"
-              fill
-              className="rounded-sm object-cover"
-            />
-          </div>
-        </div>
-      </div>
+      <motion.div
+        className="dn-section container mx-auto flex !h-full items-center justify-center"
+        initial={{ opacity: 0.5 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ delay: 0.9, ease: 'easeIn' }}
+      >
+        <Title order={1} className="text-m-h1 text-neutrals-cream lg:w-1/2 lg:!text-h1 ">
+          This means we have to evolve digital experiences to address their needs and expectations
+        </Title>
+      </motion.div>
     </SectionTemplate>
   )
 }

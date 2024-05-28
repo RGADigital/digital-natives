@@ -4,11 +4,11 @@ interface Props {
   fill?: string
 }
 
-export default function ScrollDown({ width = 24, height = 24, fill = '#FF00FF' }: Readonly<Props>) {
+export default function ScrollDown({ width = 9.865, height = 9.988, fill = '#ffffff' }: Readonly<Props>) {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 24 24" fill="none">
+    <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 11 11" fill="none">
       <path
-        d="M12.14 23.97L11.89 23.72L3 14.79L4.64 13.14L4.89 13.39L10.98 19.51V1H13.3V19.5L19.63 13.14L21.27 14.79L21.03 15.04L12.14 23.98V23.97Z"
+        d="M5.45607 10.9741L0.523438 6.04148L1.307 5.25915L4.90253 8.85469V0.98584H6.00961V8.85469L9.60514 5.25915L10.3887 6.04148L5.45607 10.9741Z"
         fill={fill}
       />
     </svg>

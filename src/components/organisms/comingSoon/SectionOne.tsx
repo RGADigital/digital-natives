@@ -1,46 +1,59 @@
+import React from 'react'
+import { motion } from 'framer-motion'
 import Image from 'next/image'
-import { Title } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import SectionTemplate from '@/components/templates/Section'
+import { SectionTemplate } from '@/components/templates'
 
-export default function SectionOne() {
+interface Props {
+  isMobile?: boolean
+}
+
+export default function SectionOne({ isMobile }: Readonly<Props>) {
   return (
     <SectionTemplate
       mode="dark"
       scrollText="Scroll down"
       microDetailText="01/03"
+      microDetailPosition="bottom-right"
       isFullScreen
+      isMobile={isMobile}
       showScrollIcon
       showMicroDetail
+      microDetailBoxClassName="bg-accents-yellow"
+      className="dn-coming-soon dn-section-one"
+      contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
     >
-      <div className="dp-section grid grid-cols-12">
-        <div className="dp-section__left col-span-12 lg:col-span-7">
-          <Title order={1} className="text-m-h1 text-neutrals-cream delay-200 lg:!text-h1">
-            Australia’s largest demographic is the one that’s never known a world without the internet.
-          </Title>
-        </div>
-        <div className="col-span-12 lg:col-span-1"></div>
-        <div
-          className={cn(
-            'dp-section__right',
-
-            'col-span-12 lg:col-span-4',
-            'flex lg:justify-end ',
-            'mt-[37px] lg:mt-0',
-          )}
-        >
-          <div className="relative aspect-square size-full rounded-sm bg-gray-800 lg:w-[438px]">
+      <div className="dn-section relative grid h-full grid-cols-12 lg:container lg:mx-auto">
+        {isMobile ? (
+          <div className={cn('dp-section--mobile', 'relative', 'col-span-12 max-w-full')}>
             <Image
-              alt="holding gadget"
-              src="/assets/coming-soon/coming-soon__section-1.jpg"
+              alt="Australia’s largest demographic is the one that’s never known a world without the internet."
+              src="/assets/coming-soon/hero-sm.png"
+              loading="eager"
+              objectFit="contain"
+              className="bottom-0 portrait:!inset-[unset] portrait:!bottom-[-130px] portrait:h-auto md:portrait:!right-[-70px] landscape:mx-auto landscape:max-h-[100vw] landscape:max-w-[100vh]"
               fill
-              className="rounded-sm object-cover"
-              loading="lazy"
             />
           </div>
-        </div>
+        ) : (
+          <motion.div
+            className={cn('dp-section--desktop', 'relative', 'col-start-2 col-end-12 max-w-[1153px]')}
+            initial={{ opacity: 0.3 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ ease: 'easeOut', duration: 1 }}
+          >
+            <Image
+              alt="Australia’s largest demographic is the one that’s never known a world without the internet."
+              src="/assets/coming-soon/hero-lg.png"
+              loading="eager"
+              objectFit="scale-down"
+              className="!-bottom-0 !top-[unset] !h-auto !max-h-screen"
+              fill
+            />
+          </motion.div>
+        )}
       </div>
     </SectionTemplate>
   )

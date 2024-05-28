@@ -34,4 +34,7 @@ export const SITE_COLOR = {
   'neutrals-cream': '#FAF8F3',
   'accents-cyan': '#09ffff',
   'accents-pink': '#ff00ff',
+  'accents-yellow': '#FFFF00',
+  'accents-red': '#ff0000',
+  'ford-blue': '#0000FF',
 }
