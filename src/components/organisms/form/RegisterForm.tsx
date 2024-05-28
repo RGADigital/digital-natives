@@ -26,7 +26,7 @@ export function Form() {
   const [subscribe, setSubscribe] = useState<boolean | undefined>(true)
 
   return (
-    <div className="col-span-12 mt-8 lg:col-span-6">
+    <div className="col-span-12 lg:col-span-6">
       <form
         onSubmit={event => {
           event.preventDefault()
