@@ -16,7 +16,7 @@ export default function MicroDetail({ boxClassName, text, textClassName }: Reado
         <Text
           className={cn(
             'text-[10px] lg:text-[14px]',
-            'leading-3 lg:leading-[16.8px] -tracking-[0.5px] lg:-tracking-[0.7px]',
+            'leading-3 lg:leading-[16.8px] -tracking-[0.5px]',
             'font-normal',
             'uppercase',
             textClassName,

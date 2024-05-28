@@ -35,12 +35,12 @@ export const FONT_H1 = {
 }
 
 export const FONT_H1_MOBILE = {
-  fontSize: '29.1px',
+  fontSize: '30px',
   fontWeight: '400',
   lineHeight: '29.21px',
 }
 export const FONT_FORM = {
-  fontSize: '12.8px',
+  fontSize: '14px',
   fontWeight: 400,
   lineHeight: '15.36px',
 }
