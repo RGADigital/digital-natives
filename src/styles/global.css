@@ -144,8 +144,9 @@ section.mantine-Modal-content {
 }
 
 .mantine-Checkbox-inner svg {
-  left: -1px;
-  top: -2px;
-  width: 15px;
-  height: 16px;
+  @apply -left-[1px] lg:-left-[2px] -top-[2px] w-[15px]  h-4 lg:!size-[19px];
+}
+
+#register-form {
+  scroll-margin-top: 100px;
 }
