@@ -48,16 +48,12 @@ export default function Header({ mode = 'dark', handleRegister }: Readonly<Props
         </Grid.Col>
         <Grid.Col span="auto">
           <Text
-            className={cn(
-              '!text-m-eyebrow lg:!text-eyebrow text-center',
-              'pl-[31px] pr-[35px]',
-              'flex-grow',
-              'uppercase',
-              {
-                '!text-black': mode === 'light',
-                'text-white': mode === 'dark',
-              },
-            )}
+            className={cn('text-center pl-[31px] pr-[35px]', 'uppercase', {
+              '!text-black': mode === 'light',
+              'text-white': mode === 'dark',
+              '!text-m-eyebrow': isMobile,
+              'lg:text-eyebrow': !isMobile,
+            })}
           >
             THE GEN ONE REPORT
             {isMobile ? <br /> : ' / '}
