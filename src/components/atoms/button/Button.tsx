@@ -20,7 +20,7 @@ export default function Button({ className, handleClick, children, type = 'prima
 
         '!h-[28px] lg:!h-[41px]',
         'px-4 lg:!px-6',
-        'text-m-nav lg:text-nav',
+        '!text-m-nav lg:!text-nav',
 
         'rounded-[16px] lg:rounded-[46px]',
         '!cursor-pointer',

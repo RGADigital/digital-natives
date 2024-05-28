@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import dynamic from 'next/dynamic'
 import { useRouter } from 'next/router'
 import { em } from '@mantine/core'
 import { useMediaQuery, useViewportSize } from '@mantine/hooks'
@@ -11,9 +10,7 @@ import cn from '@/utils/cn'
 import { BREAKPOINTS } from '@/utils/theme/container'
 
 import { Meta } from '@/globals/index'
-import { SectionFooter, SectionOne, SectionRegister, SectionThree, SectionTwo } from '@/organisms/index'
-
-const Header = dynamic(() => import('@/organisms/header/Header'), { ssr: false })
+import { Header, SectionFooter, SectionOne, SectionRegister, SectionThree, SectionTwo } from '@/organisms/index'
 
 export default function ComingSoon() {
   const router = useRouter()
@@ -48,10 +45,10 @@ export default function ComingSoon() {
   const blueY1 = isMobile ? vhToPx(200) - 117 : vhToPx(120) + 140
   const blueY = useTransform(scrollYProgress, [0.3, section2Start], [blueY0, blueY1])
 
-  const redX0 = isMobile ? vwToPx(100) - 87 : vwToPx(45)
+  const redX0 = isMobile ? vwToPx(100) - 87 : vwToPx(39.5)
   const redX1 = isMobile ? viewportWidth - 70 : viewportWidth - 280
   const redX = useTransform(scrollYProgress, [0.3, section2Start], [redX0, redX1])
-  const redY0 = isMobile ? -62 : -100
+  const redY0 = isMobile ? -62 : -27.81
   const redY1 = isMobile ? vhToPx(200) - 158 : vhToPx(120) + 115
   const redY = useTransform(scrollYProgress, [0.3, section2Start], [redY0, redY1])
   const redH0 = 160
@@ -122,7 +119,11 @@ export default function ComingSoon() {
       )}
       ref={scrollRef}
     >
-      <Header mode={isIntersecting ? 'light' : 'dark'} handleRegister={handleRegister} />
+      <Header
+        mode={isIntersecting ? 'light' : 'dark'}
+        handleRegister={handleRegister}
+        key={`intersecting-${isIntersecting}`}
+      />
       <Meta />
       <motion.div
         className="dn-blue-box absolute h-[317px] w-[223px] bg-ford-blue mix-blend-plus-lighter transition-colors lg:!h-[292px] lg:!w-[743px]"
@@ -146,7 +147,7 @@ export default function ComingSoon() {
       <motion.div
         className={cn(
           'dn-pink-white-box absolute mix-blend-plus-lighter transition-colors',
-          '!w-[201.276px] !h-[196px] top-[-112px] lg:top-[-160px] right-[-115px] lg:!left-[45vw] lg:!right-[unset]',
+          '!w-[201.276px] !h-[195.99px] top-[-112px] lg:top-[-88px] right-[-115px] lg:!left-[39.5vw] lg:!right-[unset]',
           'bg-gr-pink-white',
         )}
         initial={{ opacity: 0.1 }}

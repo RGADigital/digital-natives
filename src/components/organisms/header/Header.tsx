@@ -15,15 +15,15 @@ interface Props {
   handleRegister: (...props: any) => void
 }
 
-export default function Header({ mode = 'light', handleRegister }: Readonly<Props>) {
+export default function Header({ mode = 'dark', handleRegister }: Readonly<Props>) {
   const isMobile = useMediaQuery(`(max-width: ${em(CONTAINER_SIZES.lg)})`)
 
   return (
     <nav
-      className={cn('inset-0', 'w-screen h-[80px] lg:h-[76px]', {
+      className={cn('dn-header inset-0', 'w-screen h-[80px] lg:h-[76px]', 'transition-colors ease-in duration-300', {
         'bg-transparent': true,
-        '!bg-white': mode === 'light',
-
+        '!bg-white header--light': mode === 'light',
+        'header--dark': mode === 'dark',
         'fixed z-30': true,
       })}
     >
@@ -54,7 +54,7 @@ export default function Header({ mode = 'light', handleRegister }: Readonly<Prop
               'flex-grow',
               'uppercase',
               {
-                'text-black': mode === 'light',
+                '!text-black': mode === 'light',
                 'text-white': mode === 'dark',
               },
             )}

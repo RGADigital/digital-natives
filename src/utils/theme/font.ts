@@ -37,7 +37,7 @@ export const FONT_NAV_MOBILE = {
 export const FONT_H1 = {
   fontSize: '60px',
   fontWeight: '400',
-  lineHeight: '107%',
+  lineHeight: '64.2px',
 }
 
 export const FONT_H1_MOBILE = {
