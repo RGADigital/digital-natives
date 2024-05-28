@@ -138,3 +138,12 @@ body {
 section.mantine-Modal-content {
   @apply !w-full lg:!w-[528px] px-3 py-3 lg:p-10;
 }
+
+.mantine-Modal-body {
+  padding: 0;
+}
+
+.mantine-Checkbox-inner svg {
+  left: -2px;
+  top: -2px;
+}
