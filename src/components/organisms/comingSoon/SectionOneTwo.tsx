@@ -18,21 +18,22 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
       microDetailText="01/03"
       microDetailPosition="bottom-right"
       isFullScreen
+      isMobile={isMobile}
       showScrollIcon
       showMicroDetail
       microDetailBoxClassName="bg-accents-yellow"
       className="dn-coming-soon dn-section-one"
       contentClassName={cn('relative w-screen h-screen', isMobile ? '!pr-0 pl-4' : '')}
     >
-      <div className="dn-section container relative mx-auto grid h-full grid-cols-12">
+      <div className="dn-section relative grid h-full grid-cols-12 lg:container lg:mx-auto">
         {isMobile ? (
-          <div className={cn('dp-section--mobile', 'relative', 'col-span-12')}>
+          <div className={cn('dp-section--mobile', 'relative', 'col-span-12 max-w-full')}>
             <Image
               alt="Australia’s largest demographic is the one that’s never known a world without the internet."
               src="/assets/coming-soon/hero-sm.png"
               loading="eager"
-              objectFit="scale-down"
-              className="!top-[unset] bottom-0 !h-auto lg:max-h-[526px]"
+              objectFit="contain"
+              className="bottom-0 portrait:!inset-[unset] portrait:!bottom-[-130px] portrait:h-auto md:portrait:!right-[-70px] landscape:mx-auto landscape:max-h-[100vw] landscape:max-w-[100vh]"
               fill
             />
           </div>

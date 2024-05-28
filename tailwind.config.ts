@@ -22,7 +22,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gr-pink-yellow': 'linear-gradient(180deg, #FF00FF 0%, #FFFF00 137.76%)',
+        'gr-pink-yellow': 'linear-gradient(270deg, #FF00FF 0%, #FFFF00 137.76%)',
+        'gr-pink-yellow-2': 'linear-gradient(180deg, #FF00FF 0%, #FFFF00 137.76%)',
         'gr-pink-white': 'linear-gradient(360deg, #F0F 0%, rgba(255, 0, 255, 0.00) 100%)',
         'gr-green-white': 'linear-gradient(90deg, #0F0 0%, rgba(0, 0, 0, 0.00) 100%)',
       },

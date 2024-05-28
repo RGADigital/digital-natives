@@ -35,7 +35,7 @@ export default function Header({ mode = 'light', handleRegister }: Readonly<Prop
           sm: '12px',
           lg: '24px',
         }}
-        className={cn('container mx-auto', 'py-7 lg:py-4 !px-0')}
+        className={cn('container mx-auto', 'py-7 lg:py-4 !lg:px-0')}
       >
         <Grid.Col span="content">
           <motion.div {...buttonFramerConfig}>

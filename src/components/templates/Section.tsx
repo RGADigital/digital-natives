@@ -11,6 +11,7 @@ interface Props {
   children?: React.ReactNode
   className?: string
   contentClassName?: string
+  isMobile?: boolean
   isFullScreen?: boolean
   microDetailBoxClassName?: string
   microDetailPosition?: 'top-left' | 'bottom-right'
@@ -26,6 +27,7 @@ export default function SectionTemplate({
   children,
   contentClassName,
   isFullScreen = false,
+  isMobile = false,
   showMicroDetail = false,
   microDetailText,
   microDetailPosition = 'top-left',
@@ -39,13 +41,13 @@ export default function SectionTemplate({
     <section
       className={cn(
         'dn-section-wrapper',
-        'flex flex-col justify-between !w-screen ',
+        'flex flex-col justify-between w-screen ',
         {
           '!min-h-screen': isFullScreen,
           '!snap-start snap-always container mx-auto': !isFullScreen,
         },
         {
-          relative: mdBottomRight,
+          relative: mdBottomRight && !isMobile,
         },
         className,
       )}
@@ -55,8 +57,8 @@ export default function SectionTemplate({
           'grow lg:!px-0',
           {
             relative: true,
-            'flex flex-col': mdTopLeft,
-            '!container !mx-auto': !isFullScreen,
+            'flex flex-col': mdTopLeft || isMobile,
+            '!container !mx-auto': isFullScreen,
           },
           contentClassName,
         )}
@@ -66,11 +68,12 @@ export default function SectionTemplate({
             className={cn({
               '': mdTopLeft,
               'lg:absolute lg:!bottom-8 lg:w-screen lg:left-0': mdBottomRight,
+              'pt-[95px]': mdBottomRight && isMobile,
             })}
           >
             <div
               className={cn({
-                'container mx-auto flex flex-row-reverse': mdBottomRight,
+                'container mx-auto flex flex-row-reverse': mdBottomRight && !isMobile,
               })}
             >
               <MicroDetail

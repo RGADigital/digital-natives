@@ -12,7 +12,7 @@
   --dn-checkbox-border-width: '0.8px';
 }
 
-@media screen {
+@media screen(lg) {
   :root {
     --input-radius: 20px;
     --dn-checkbox-size: 20px;
@@ -98,7 +98,6 @@ body {
   background-color: var(--dn-checkbox-color);
   width: var(--dn-checkbox-size);
 }
-
 .mantine-Checkbox-body,
 .mantine-Checkbox-input,
 .mantine-Checkbox-input:checked,
@@ -106,16 +105,11 @@ body {
   @apply !border-none;
 }
 
-.mantine-Checkbox-root {
-  @apply border-neutrals-cool-gray rounded-none;
-  border-width: var(--dn-checkbox-border-width);
-}
-
 .mantine-Checkbox-inner {
   @apply !border-neutrals-cool-gray;
-  width: 21px !important;
-  height: 21px !important;
   border-width: var(--dn-checkbox-border-width) !important;
+  height: var(--dn-checkbox-size);
+  width: var(--dn-checkbox-size);
 }
 
 .mantine-InputWrapper-root {

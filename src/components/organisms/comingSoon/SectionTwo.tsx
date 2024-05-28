@@ -18,6 +18,7 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
       microDetailPosition="bottom-right"
       scrollText="Keep scrolling"
       isFullScreen
+      isMobile={isMobile}
       showScrollIcon
       showMicroDetail
       microDetailBoxClassName="bg-accents-yellow "
