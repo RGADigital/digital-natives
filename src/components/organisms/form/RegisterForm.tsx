@@ -97,7 +97,7 @@ export function Form() {
           <Button
             type="submit"
             className={cn(
-              'w-full lg:h-[50px] bg-accents-cyan hover:bg-accents-cyan/50 !text-black hover:!text-black text-body',
+              'w-full lg:h-[50px] bg-accents-cyan hover:bg-accents-cyan/50 !text-black hover:!text-black text-m-nav lg:text-nav',
               {
                 'animate-bounce duration-1000': loading,
                 'cursor-loading': loading,
@@ -128,7 +128,11 @@ export default function RegisterForm() {
       <div className="hidden lg:col-span-1 lg:block"></div>
       <Form />
       <div className="col-span-6 mt-[20.4px] lg:col-span-4 lg:mt-[120px]">
-        <MicroDetail text="opt in to get the latest thought leadership from R/GA" />
+        <MicroDetail
+          text="opt in to get the latest thought leadership from R/GA"
+          containerClassName="items-start"
+          textClassName="max-w-[209px]"
+        />
       </div>
     </div>
   )

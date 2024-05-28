@@ -112,12 +112,7 @@ body {
   @apply flex flex-col gap-[6.4px] lg:gap-2;
 }
 .mantine-InputWrapper-label {
-  @apply text-black;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; /* 16.8px */
-  letter-spacing: -0.7px;
+  @apply text-black text-m-eyebrow lg:text-eyebrow;
   text-transform: uppercase;
 }
 
