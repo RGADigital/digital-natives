@@ -30,8 +30,18 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.9, ease: 'easeIn' }}
       >
-        <Title order={1} className="text-m-h1 text-neutrals-cream lg:w-1/2 lg:!text-h1 ">
-          This means we have to evolve digital experiences to address their needs and expectations
+        <Title
+          order={1}
+          className={cn('text-m-h1 text-neutrals-cream lg:!text-h1 lg:border-[2px] lg:w-max lg:border-[#379FFF]', {
+            'lg:relative': !isMobile,
+          })}
+        >
+          <div className={cn({ hidden: isMobile, 'absolute -top-1 -left-1 w-2 h-2 bg-[#379FFF]': !isMobile })} />
+          <div className={cn({ hidden: isMobile, 'absolute -bottom-1 -left-1 w-2 h-2 bg-[#379FFF]': !isMobile })} />
+          <div className={cn({ hidden: isMobile, 'absolute -top-1 -right-1 w-2 h-2 bg-[#379FFF]': !isMobile })} />
+          <div className={cn({ hidden: isMobile, 'absolute -bottom-1 -right-1 w-2 h-2 bg-[#379FFF]': !isMobile })} />
+          This means we have to evolve {!isMobile && <br />}digital experiences to address {!isMobile && <br />} their
+          needs and expectations
         </Title>
       </motion.div>
     </SectionTemplate>
