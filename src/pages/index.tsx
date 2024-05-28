@@ -32,7 +32,7 @@ export default function ComingSoon() {
 
   // start changing mix blend mode on section 2
   const { isIntersecting: isIntersecting2, ref: ref2 } = useIntersectionObserver({
-    threshold: 0.95,
+    threshold: 0.6,
   })
 
   const section2Start = 0.35
@@ -119,7 +119,7 @@ export default function ComingSoon() {
       <Header mode={isIntersecting ? 'light' : 'dark'} handleRegister={open} />
       <Meta />
       <motion.div
-        className="dn-blue-box absolute h-[317px] w-[223px] bg-ford-blue mix-blend-plus-lighter lg:!h-[292px] lg:!w-[743px]"
+        className="dn-blue-box absolute h-[317px] w-[223px] bg-ford-blue mix-blend-plus-lighter transition-colors lg:!h-[292px] lg:!w-[743px]"
         style={{ x: blueX, y: blueY }}
         initial={{ opacity: 0.3 }}
         whileInView={{ opacity: 1 }}
@@ -131,7 +131,7 @@ export default function ComingSoon() {
         <SectionTwo isMobile={isMobile} />
       </div>
       <motion.div
-        className={cn('dn-red-box absolute bg-accents-red')}
+        className={cn('dn-red-box absolute bg-accents-red transition-colors')}
         style={{ x: redX, y: redY, width: redW, height: redH }}
         initial={{ opacity: 0.7 }}
         whileInView={{ opacity: 1 }}
@@ -139,7 +139,7 @@ export default function ComingSoon() {
       />
       <motion.div
         className={cn(
-          'dn-pink-white-box absolute mix-blend-plus-lighter',
+          'dn-pink-white-box absolute mix-blend-plus-lighter transition-colors',
           '!w-[201.276px] !h-[196px] top-[-112px] lg:top-[-160px] right-[-115px] lg:!left-[45vw] lg:!right-[unset]',
           'bg-gr-pink-white',
         )}
@@ -148,7 +148,7 @@ export default function ComingSoon() {
         transition={{ delay: 0.1, ease: 'easeIn' }}
       ></motion.div>
       <motion.div
-        className={cn('dn-pink-yellow-box absolute  !mix-blend-plus-lighter', {
+        className={cn('dn-pink-yellow-box absolute  !mix-blend-plus-lighter transition-colors', {
           'bg-gr-pink-yellow': !isIntersecting2,
           'bg-gr-pink-yellow-2': isIntersecting2,
         })}
@@ -159,7 +159,7 @@ export default function ComingSoon() {
       />
 
       <motion.div
-        className={cn('dn-cyan-box absolute bg-accents-cyan', {
+        className={cn('dn-cyan-box absolute bg-accents-cyan transition-colors', {
           'mix-blend-normal': isIntersecting2 || isMobile,
           'mix-blend-overlay': !isIntersecting2 && !isMobile,
           '-z-20': isMobile,
@@ -167,18 +167,18 @@ export default function ComingSoon() {
         style={{ x: cyan1X, y: cyan1Y, width: cyan1W, height: cyan1H }}
         initial={{ opacity: 0.3 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0, ease: 'easeInOut' }}
+        transition={{ delay: 0, ease: 'easeOut' }}
       ></motion.div>
       <motion.div
-        className="dn-cyan-box absolute bg-gr-green-white"
+        className="dn-cyan-box absolute bg-gr-green-white transition-colors"
         style={{ x: cyan2X, y: cyan2Y, width: cyan2W, height: cyan2H }}
         initial={{ opacity: 0.3 }}
         whileInView={{ opacity: 1 }}
-        transition={{ delay: 0, ease: 'easeInOut' }}
+        transition={{ delay: 0, ease: 'easeOut' }}
       ></motion.div>
 
       <motion.div
-        className="dn-yellow-box absolute h-[112px] w-[345px] bg-accents-yellow mix-blend-difference"
+        className="dn-yellow-box absolute h-[112px] w-[345px] bg-accents-yellow mix-blend-difference transition-colors"
         style={{ x: yellowX, y: yellowY }}
         initial={{ opacity: 0.3 }}
         whileInView={{ opacity: 1 }}
