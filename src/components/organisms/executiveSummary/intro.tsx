@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { em } from '@mantine/core'
 import { useMediaQuery, useViewportSize } from '@mantine/hooks'
