@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { em, Grid, NavLink, Text } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
@@ -8,7 +7,7 @@ import { useMediaQuery } from '@mantine/hooks'
 import cn from '@/utils/cn'
 import { CONTAINER_SIZES } from '@/utils/theme/container'
 
-import { Button, buttonFramerConfig } from '@/atoms/button'
+import { Button } from '@/atoms/button'
 import RgaLogo from '@/atoms/icon/RgaLogo'
 
 interface Props {
@@ -38,14 +37,14 @@ export default function Header({ mode = 'light', handleRegister }: Readonly<Prop
         className={cn('container mx-auto', 'py-7 lg:py-4 !lg:px-0')}
       >
         <Grid.Col span="content">
-          <motion.div {...buttonFramerConfig}>
+          <div>
             <NavLink
               component={Link}
               href="https://rga.com/"
               leftSection={<RgaLogo mode={mode} width={isMobile ? 53.12 : 83} height={isMobile ? 11.92 : 18.623} />}
               className="m-0 p-0 hover:bg-transparent"
             />
-          </motion.div>
+          </div>
         </Grid.Col>
         <Grid.Col span="auto">
           <Text
