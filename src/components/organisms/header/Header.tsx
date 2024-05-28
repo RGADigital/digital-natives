@@ -41,7 +41,7 @@ export default function Header({ mode = 'light', handleRegister }: Readonly<Prop
           <motion.div {...buttonFramerConfig}>
             <NavLink
               component={Link}
-              href="/"
+              href="https://rga.com/"
               leftSection={<RgaLogo mode={mode} width={isMobile ? 53.12 : 83} height={isMobile ? 11.92 : 18.623} />}
               className="m-0 p-0 hover:bg-transparent"
             />
