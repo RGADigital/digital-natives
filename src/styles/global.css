@@ -84,10 +84,7 @@ body {
 }
 
 .mantine-Input-input {
-  @apply text-black h-10 lg:h-[59.4px] rounded-md;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 120%;
+  @apply text-black text-body h-10 lg:h-[59.4px] rounded-md;
 }
 
 .mantine-Checkbox-input,
@@ -144,7 +141,7 @@ section.mantine-Modal-content {
 }
 
 .mantine-Checkbox-inner svg {
-  @apply -left-[1px] lg:-left-[2px] -top-[2px] w-[15px]  h-4 lg:!size-[19px];
+  @apply -left-[2px] -top-[2px] !size-[19px];
 }
 
 #register-form {

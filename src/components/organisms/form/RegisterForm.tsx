@@ -118,14 +118,14 @@ export function Form() {
 }
 export default function RegisterForm() {
   return (
-    <div className="dn-register-form grid w-full grid-cols-12 border-t-[1px]  border-t-neutrals-cool-gray pt-4 lg:pt-5">
+    <div className="dn-register-form grid w-full grid-cols-12 gap-8 border-t-[1px] border-t-neutrals-cool-gray pt-8 lg:gap-0 lg:pt-5">
       <div className="dn-register-form__left col-span-12 lg:col-span-4">
         <Title order={2}>
           We’ll be releasing chapters of our report over the coming weeks: sign up now to be the first to access it when
           it drops.
         </Title>
       </div>
-      <div className="lg:col-span-1"></div>
+      <div className="hidden lg:col-span-1 lg:block"></div>
       <Form />
       <div className="col-span-6 mt-[20.4px] lg:col-span-4 lg:mt-[120px]">
         <MicroDetail text="opt in to get the latest thought leadership from R/GA" />
