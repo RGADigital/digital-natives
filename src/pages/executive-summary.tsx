@@ -56,12 +56,18 @@ export default function ExecutiveSummary() {
               <div className="pt-8" style={isMobile ? {} : { borderBottom: '1px solid black' }}>
                 <div className="grid w-full grid-cols-12">
                   <div className="col-span-10">
-                    <Title order={2} className="text-m-h2 lg:!text-h2 border-b-2 py-[25px] pl-5 text-black">
+                    <Title
+                      order={2}
+                      className="text-m-h2 lg:!text-h2 border-t-2 py-[25px] text-black lg:border-b-2 lg:pl-5"
+                    >
                       The Challenge
                     </Title>
                   </div>
                   <div className="col-span-2 text-right">
-                    <Title order={2} className="text-m-h2 lg:!text-h2 border-b-2 py-[25px] pl-5 text-black">
+                    <Title
+                      order={2}
+                      className="text-m-h2 lg:!text-h2 border-t-2 py-[25px] pl-5 text-black lg:border-b-2"
+                    >
                       01
                     </Title>
                   </div>
@@ -103,11 +109,12 @@ export default function ExecutiveSummary() {
                     <img
                       src="/assets/exec-summary/the-challenge-1.jpg"
                       alt="Image with text that says Gen one is 18% Of Gen One are more likely to be concerned about their screen time than Digital Adopters"
+                      className="w-full"
                     />
                     <img
                       src="/assets/exec-summary/the-challenge-2.jpg"
                       alt="Image with text that says They're out here living this luscious life and the average person is just at home watching them."
-                      className="mt-6"
+                      className="mt-6 w-full"
                     />
                   </div>
                 </div>
@@ -117,29 +124,36 @@ export default function ExecutiveSummary() {
               <div className="pt-8" style={isMobile ? {} : { borderBottom: '1px solid black' }}>
                 <div className="grid w-full grid-cols-12">
                   <div className="col-span-10">
-                    <Title order={2} className="text-m-h2 lg:!text-h2 border-b-2 py-[25px] pl-5 text-black">
+                    <Title
+                      order={2}
+                      className="text-m-h2 lg:!text-h2 border-t-2 py-[25px] text-black lg:border-b-2 lg:pl-5"
+                    >
                       The Opportunity
                     </Title>
                   </div>
                   <div className="col-span-2 text-right">
-                    <Title order={2} className="text-m-h2 lg:!text-h2 border-b-2 py-[25px] pl-5 text-black">
+                    <Title
+                      order={2}
+                      className="text-m-h2 lg:!text-h2 border-t-2 py-[25px] pl-5 text-black lg:border-b-2"
+                    >
                       02
                     </Title>
                   </div>
                 </div>
                 <div className="grid w-full grid-cols-12">
-                  <div className="col-span-12 mb-12 mt-6 pl-5 lg:col-span-3">
+                  <div className="col-span-12 mb-12 mt-6 lg:col-span-3 lg:pl-5">
                     <img
                       src="/assets/exec-summary/the-opportunity-1.jpg"
                       alt="Image with text that says Gen one is 18% Of Gen One are more likely to be concerned about their screen time than Digital Adopters"
+                      className="w-full"
                     />
                     <img
                       src="/assets/exec-summary/the-opportunity-2.jpg"
                       alt="Image with text that says They're out here living this luscious life and the average person is just at home watching them."
-                      className="mt-6"
+                      className="mt-6 w-full"
                     />
                   </div>
-                  <div className="col-span-12 pl-6 lg:col-span-9 lg:mx-6 lg:border-l-2">
+                  <div className="col-span-12 lg:col-span-9 lg:mx-6 lg:border-l-2 lg:pl-6">
                     <div className="mt-6 grid w-full grid-cols-12">
                       <div className="col-span-12 lg:col-span-5">
                         <Title order={3} className="mb-6 text-black">
@@ -180,12 +194,18 @@ export default function ExecutiveSummary() {
               <div className="pt-8" style={isMobile ? {} : { borderBottom: '1px solid black' }}>
                 <div className="grid w-full grid-cols-12">
                   <div className="col-span-10">
-                    <Title order={2} className="text-m-h2 lg:!text-h2 border-b-2 py-[25px] pl-5 text-black">
+                    <Title
+                      order={2}
+                      className="text-m-h2 lg:!text-h2 border-t-2 py-[25px] text-black lg:border-b-2 lg:pl-5"
+                    >
                       Our Research
                     </Title>
                   </div>
                   <div className="col-span-2 text-right">
-                    <Title order={2} className="text-m-h2 lg:!text-h2 border-b-2 py-[25px] pl-5 text-black">
+                    <Title
+                      order={2}
+                      className="text-m-h2 lg:!text-h2 border-t-2 py-[25px] pl-5 text-black lg:border-b-2"
+                    >
                       03
                     </Title>
                   </div>
@@ -230,11 +250,12 @@ export default function ExecutiveSummary() {
                     <img
                       src="/assets/exec-summary/the-research-1.jpg"
                       alt="Image with text that says 2x Gen One are twice more  likely to identify as neurodiverse or LGBTIQ+ than Digital Adopters"
+                      className="w-full"
                     />
                     <img
                       src="/assets/exec-summary/the-research-2.jpg"
                       alt="Image with text that says I think it's entertaining to just kind of sit there and watch someone talk about all this stuff that's going on in their lives."
-                      className="mt-6"
+                      className="mt-6 w-full"
                     />
                   </div>
                 </div>
