@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRouter } from 'next/router'
 import { em } from '@mantine/core'
-import { useMediaQuery } from '@mantine/hooks'
+import { useMediaQuery, useOrientation } from '@mantine/hooks'
 
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 import useViewport from '@/hooks/useViewport'
@@ -26,7 +26,12 @@ export default function ComingSoon() {
 
   const [showHeaderGradient, setShowHeaderGradient] = useState(false)
 
+  const { type } = useOrientation()
+  const isLandscape = type === 'landscape-primary'
+
   const { viewportWidth, vhToPx, vwToPx } = useViewport({ maxHeight: 755 })
+
+  const isMobile = useMediaQuery(`(max-width: ${em(BREAKPOINTS.md)})`)
 
   // change header to light background when section 3 is intersecting
   const { isIntersecting: isIntersectingSection3, ref: section3Ref } = useIntersectionObserver({
@@ -37,8 +42,6 @@ export default function ComingSoon() {
   const { isIntersecting: isIntersectingSection2, ref: section2Ref } = useIntersectionObserver({
     threshold: SECTION_2_THRESHOLD,
   })
-
-  const isMobile = useMediaQuery(`(max-width: ${em(BREAKPOINTS.lg)})`)
 
   // START: box animation
   // - [Stop] on section 2 start
@@ -85,14 +88,14 @@ export default function ComingSoon() {
     [pinkYellowStartHeight, pinkYellowEndHeight],
   )
 
-  const yellowStartX = isMobile ? vwToPx(100) - 126 : vwToPx(50)
+  const yellowStartX = isMobile ? vwToPx(100) - 200 : vwToPx(50)
   const yellowEndX = isMobile ? vwToPx(100) - 223 : -100
   const yellowPositionX = useTransform(scrollYProgress, [0.3, SECTION_2_START], [yellowStartX, yellowEndX])
   const yellowStartY = isMobile ? vhToPx(100) - 110 : vhToPx(100) - 50
   const yellowEndY = isMobile ? vhToPx(100) + 91 : vhToPx(150) + 45
   const yellowPositionY = useTransform(scrollYProgress, [0.3, SECTION_2_START], [yellowStartY, yellowEndY])
 
-  const cyan1StartX = isMobile ? vwToPx(100) - 123 : vwToPx(40) - 250
+  const cyan1StartX = isMobile ? vwToPx(100) - 200 : vwToPx(40) - 250
   const cyan1EndX = isMobile ? vwToPx(100) - 223 - 80 : -200
   const cyan1X = useTransform(scrollYProgress, [0.3, SECTION_2_START], [cyan1StartX, cyan1EndX])
   const cyan1StartY = isMobile ? 100 : vhToPx(100) - 161
@@ -105,7 +108,7 @@ export default function ComingSoon() {
   const cyan1EndWidth = isMobile ? 310 : 399.7
   const cyan1Width = useTransform(scrollYProgress, [0.3, SECTION_2_START], [cyan1StartWidth, cyan1EndWidth])
 
-  const cyan2StartX = isMobile ? vwToPx(100) - 123 : vwToPx(40) - 250
+  const cyan2StartX = isMobile ? vwToPx(100) - 200 : vwToPx(40) - 250
   const cyan2EndX = isMobile ? vwToPx(100) - 223 - 80 : -200
   const cyan2X = useTransform(scrollYProgress, [0.3, SECTION_2_START], [cyan2StartX, cyan2EndX])
   const cyan2StartY = isMobile ? 100 : vhToPx(100) - 161
@@ -155,7 +158,7 @@ export default function ComingSoon() {
         mode={isIntersectingSection3 ? 'light' : 'dark'}
         handleRegister={handleRegister}
         key={`intersecting-${isIntersectingSection3}`}
-        showHeaderGradient={showHeaderGradient}
+        showHeaderGradient={showHeaderGradient || (isMobile && isLandscape)}
       />
       <Meta />
       <motion.div
