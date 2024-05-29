@@ -29,11 +29,15 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
       >
         <Title
           order={1}
-          className={cn(' text-neutrals-cream lg:border-[2px] lg:w-max lg:border-[#379FFF]', {
-            'text-[31px] leading-[33.17px] font-normal': isMobile,
-            'lg:!text-h1 ': !isMobile,
-            'lg:relative': !isMobile,
-          })}
+          className={cn(
+            ' text-neutrals-cream lg:border-[2px] lg:w-max lg:border-[#379FFF]',
+            {
+              'text-[31px] leading-[33.17px] font-normal': isMobile,
+              'lg:!text-h1 ': !isMobile,
+              'lg:relative': !isMobile,
+            },
+            '!z-20',
+          )}
         >
           <div className={cn({ hidden: isMobile, 'absolute -top-1 -left-1 w-2 h-2 bg-[#379FFF]': !isMobile })} />
           <div className={cn({ hidden: isMobile, 'absolute -bottom-1 -left-1 w-2 h-2 bg-[#379FFF]': !isMobile })} />
