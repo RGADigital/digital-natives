@@ -30,15 +30,15 @@ export interface MotionDivProps {
   children?: React.ReactNode
   fadeIn?: boolean
   delay?: number
-  motionValue?: MotionValue
-  inputRange?: [number, number]
-  size?: IMotionDivSize
-  position?: IMotionDivPosition
+  motionValue: MotionValue<number>
+  inputRange: [number, number]
+  size: IMotionDivSize
+  position: IMotionDivPosition
   ease?: 'easeInOut' | 'easeOut' | 'easeIn' | 'linear'
 }
 
 export interface IMotionDiv {
-  className: string
+  className?: string
   delay?: number
   inputRange?: [number, number]
   positionInPercent: IMotionDivPosition

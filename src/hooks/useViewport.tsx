@@ -1,5 +1,5 @@
 import { em } from '@mantine/core'
-import { useMediaQuery, useOrientation, useViewportSize } from '@mantine/hooks'
+import { useMediaQuery, useViewportSize } from '@mantine/hooks'
 
 import { BREAKPOINTS } from '@/utils/theme/container'
 
@@ -10,7 +10,6 @@ interface Props {
 
 export default function useViewport({ maxWidth, maxHeight }: Readonly<Props>) {
   const { height: viewportHeight, width: viewportWidth } = useViewportSize()
-  const { type } = useOrientation()
 
   const isMobile = useMediaQuery(`(max-width: ${em(BREAKPOINTS.md)})`)
   // Convert VH to Pixel with optional width constraint
@@ -25,8 +24,8 @@ export default function useViewport({ maxWidth, maxHeight }: Readonly<Props>) {
     return (vw / 100) * width
   }
 
-  const isLandscape = type === 'landscape-primary'
-  const isPortrait = type === 'portrait-primary'
+  const isLandscape = viewportHeight < viewportWidth
+  const isPortrait = viewportHeight >= viewportWidth
 
   return {
     isMobile,
