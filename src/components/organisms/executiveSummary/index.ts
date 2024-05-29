@@ -1,1 +1,1 @@
-export { default as ExecutiveSummaryIntro } from './Intro'
+export { default as ExecutiveSummaryIntro } from './IntroSection'
