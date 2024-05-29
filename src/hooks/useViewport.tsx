@@ -14,13 +14,14 @@ export default function useViewport({ maxWidth, maxHeight }: Readonly<Props>) {
 
   const isMobile = useMediaQuery(`(max-width: ${em(BREAKPOINTS.md)})`)
   // Convert VH to Pixel with optional width constraint
+  const height = maxHeight && viewportHeight > maxHeight ? maxHeight : viewportHeight
   const vhToPx = (vh: number) => {
-    const height = maxHeight && viewportHeight > maxHeight ? maxHeight : viewportHeight
     return (vh / 100) * height
   }
   // Convert VW to Pixel with optional width constraint
+
+  const width = maxWidth && viewportWidth > maxWidth ? maxWidth : viewportWidth
   const vwToPx = (vw: number) => {
-    const width = maxWidth && viewportWidth > maxWidth ? maxWidth : viewportWidth
     return (vw / 100) * width
   }
 
@@ -31,6 +32,8 @@ export default function useViewport({ maxWidth, maxHeight }: Readonly<Props>) {
     isMobile,
     viewportHeight,
     viewportWidth,
+    constraintWidth: width,
+    constraintHeight: height,
     vhToPx,
     vwToPx,
     isSmallLandscape: isLandscape && isMobile,
