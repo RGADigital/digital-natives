@@ -13,9 +13,10 @@ import RgaLogo from '@/atoms/icon/RgaLogo'
 interface Props {
   mode?: 'dark' | 'light'
   handleRegister: (...props: any) => void
+  showHeaderGradient?: boolean
 }
 
-export default function Header({ mode = 'dark', handleRegister }: Readonly<Props>) {
+export default function Header({ mode = 'dark', handleRegister, showHeaderGradient = false }: Readonly<Props>) {
   const isMobile = useMediaQuery(`(max-width: ${em(CONTAINER_SIZES.lg)})`)
 
   return (
@@ -25,6 +26,7 @@ export default function Header({ mode = 'dark', handleRegister }: Readonly<Props
         '!bg-white header--light': mode === 'light',
         'header--dark': mode === 'dark',
         'fixed z-30': true,
+        'bg-gr-header': showHeaderGradient && mode === 'dark',
       })}
     >
       <Grid
@@ -48,16 +50,12 @@ export default function Header({ mode = 'dark', handleRegister }: Readonly<Props
         </Grid.Col>
         <Grid.Col span="auto">
           <Text
-            className={cn(
-              '!text-m-eyebrow lg:!text-eyebrow text-center',
-              'pl-[31px] pr-[35px]',
-              'flex-grow',
-              'uppercase',
-              {
-                '!text-black': mode === 'light',
-                'text-white': mode === 'dark',
-              },
-            )}
+            className={cn('text-center pl-[31px] pr-[35px]', 'uppercase', {
+              '!text-black': mode === 'light',
+              'text-white': mode === 'dark',
+              '!text-m-eyebrow': isMobile,
+              'lg:text-eyebrow': !isMobile,
+            })}
           >
             THE GEN ONE REPORT
             {isMobile ? <br /> : ' / '}
