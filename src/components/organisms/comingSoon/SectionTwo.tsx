@@ -33,7 +33,7 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
             ' text-neutrals-cream lg:border-[2px] lg:w-max lg:border-[#379FFF]',
             {
               'text-[31px] leading-[33.17px] font-normal': isMobile,
-              'lg:!text-h1 ': !isMobile,
+              'lg:!text-h1 lg:mix-blend-difference ': !isMobile,
               'lg:relative': !isMobile,
             },
             '!z-20',
