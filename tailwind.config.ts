@@ -27,7 +27,6 @@ module.exports = {
         'gr-pink-yellow-2': 'linear-gradient(180deg, #FF00FF 0%, #FF00FF 60.26%, #FFFF00 101.25%)',
         'gr-pink-white': 'linear-gradient(360deg, #F0F 0%, rgba(255, 0, 255, 0.00) 100%)',
         'gr-green-white': 'linear-gradient(90deg, #0F0 0%, #00FFFF 100%)',
-        'gr-header': 'linear-gradient(180deg, rgba(169,169,169, 0.7) 0%, rgba(192,192,192, 0.7) 100%)',
       },
       colors: {
         ...SITE_COLOR,
