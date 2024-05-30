@@ -7,11 +7,15 @@ import { type ITwoColumnStat, TWO_COLUMN_STAT, TwoColumnStatTemplate } from '@/t
 interface Props {
   type: ITwoColumnStat
   isMobile?: boolean
+
+  isInView?: boolean
+  id: string
   title: string
   titleNumber: string
   bodyTitle: string
   paragraph1Content: string[]
   paragraph2Content: string[]
+  sectionRef?: React.RefObject<HTMLDivElement>
   statContent?: {
     src: string
     alt: string
@@ -19,7 +23,7 @@ interface Props {
   }[]
 }
 
-function TitleContent({ title, titleNumber }: { title: Props['title']; titleNumber: Props['titleNumber'] }) {
+function TitleContent({ title, titleNumber }: Readonly<{ title: Props['title']; titleNumber: Props['titleNumber'] }>) {
   return (
     <>
       <div className="col-span-10">
@@ -46,11 +50,11 @@ function TextContent({
   bodyTitle,
   paragraph1Content,
   paragraph2Content,
-}: {
+}: Readonly<{
   bodyTitle: Props['bodyTitle']
   paragraph1Content: Props['paragraph1Content']
   paragraph2Content: Props['paragraph2Content']
-}) {
+}>) {
   return (
     <>
       <div className={cn('dn-two-column-stat__text-content__title', 'mt-6 grid w-full grid-cols-12')}>
@@ -82,38 +86,43 @@ function TextContent({
   )
 }
 
-function StatContent({ statContent, type }: { statContent: Props['statContent']; type: Props['type'] }) {
+function StatContent({ statContent, type }: Readonly<{ statContent: Props['statContent']; type: Props['type'] }>) {
   return (
     <>
-      {statContent &&
-        statContent.map(({ src, alt, className }) => (
-          <div
-            key={alt}
-            className={cn('w-full', 'lg:border-b-[1px] lg:border-b-neutrals-cool-gray-5 lg:last:border-b-0', {
-              'lg:pl-5': type === TWO_COLUMN_STAT.textLeft,
-              'lg:px-5': type === TWO_COLUMN_STAT.textRight,
-              'lg:py-5': true,
-            })}
-          >
-            <img src={src} alt={alt} className={cn(className)} />
-          </div>
-        ))}
+      {statContent?.map(({ src, alt, className }) => (
+        <div
+          key={alt}
+          className={cn('w-full', 'lg:border-b-[1px] lg:border-b-neutrals-cool-gray-5 lg:last:border-b-0', {
+            'lg:pl-5': type === TWO_COLUMN_STAT.textLeft,
+            'lg:px-5': type === TWO_COLUMN_STAT.textRight,
+            'lg:py-5': true,
+          })}
+        >
+          <img src={src} alt={alt} className={cn(className)} />
+        </div>
+      ))}
     </>
   )
 }
 
 export default function TwoColumnStat({
   type,
+  id,
   isMobile,
   title,
+  isInView,
   titleNumber,
   bodyTitle,
   paragraph1Content,
   paragraph2Content,
   statContent,
+  sectionRef,
 }: Readonly<Props>) {
   return (
     <TwoColumnStatTemplate
+      id={id}
+      isInView={isInView}
+      columnRef={sectionRef}
       isMobile={isMobile}
       type={type}
       titleContent={<TitleContent title={title} titleNumber={titleNumber} />}
