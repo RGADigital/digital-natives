@@ -1,68 +1,90 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react'
-import { Title } from '@mantine/core'
+import React, { useRef } from 'react'
+import type { UseInViewOptions } from 'framer-motion'
+import { useInView } from 'framer-motion'
 
-import { SectionTemplate } from '@/components/templates'
-import TwoColumnStat from '@/organisms/twoColumnStat/TwoColumnStat'
-import { type ITwoColumnStat, TWO_COLUMN_STAT } from '@/templates/twoColumnStat'
+import TwoColumnStat from '@/components/organisms/twoColumnStatText/TwoColumnStatText'
+import ArticleBody from '@/components/templates/articleBody/ArticleBody'
+import { type ITwoColumnStatText, TWO_COLUMN_STAT } from '@/templates/twoColumnStatText'
 
-import { LANG } from './Body.constant'
+import { LANG, NAVIGATION_HEADER } from './Body.constant'
 
 interface Props {
   isMobile?: boolean
 }
 
 export default function Body({ isMobile = false }: Readonly<Props>) {
+  const section1Ref = useRef<HTMLDivElement>(null)
+  const section2Ref = useRef<HTMLDivElement>(null)
+  const section3Ref = useRef<HTMLDivElement>(null)
+
+  const inViewSetting: UseInViewOptions = {
+    amount: 'all',
+    // margin: '-100px 0px 0px 0px',
+    // root: containerRef,
+  }
+  const isInView1 = useInView(section1Ref, inViewSetting)
+  const isInView2 = useInView(section2Ref, inViewSetting)
+  const isInView3 = useInView(section3Ref, inViewSetting)
+
+  const activeStatus: { [key: string]: any } = {
+    isInView1,
+    isInView2,
+    isInView3,
+  }
+
+  const Section1 = (
+    <TwoColumnStat
+      type={TWO_COLUMN_STAT.textLeft as ITwoColumnStatText}
+      isMobile={isMobile}
+      title={LANG.section1.title}
+      titleNumber={LANG.section1.titleNumber}
+      bodyTitle={LANG.section1.bodyTitle}
+      paragraph1Content={LANG.section1.paragraph1Content}
+      paragraph2Content={LANG.section1.paragraph2Content}
+      statContent={LANG.section1.statContent}
+    />
+  )
+
+  const Section2 = (
+    <TwoColumnStat
+      type={TWO_COLUMN_STAT.textRight as ITwoColumnStatText}
+      isMobile={isMobile}
+      title={LANG.section2.title}
+      titleNumber={LANG.section2.titleNumber}
+      bodyTitle={LANG.section2.bodyTitle}
+      paragraph1Content={LANG.section2.paragraph1Content}
+      paragraph2Content={LANG.section2.paragraph2Content}
+      statContent={LANG.section2.statContent}
+    />
+  )
+
+  const Section3 = (
+    <TwoColumnStat
+      type={TWO_COLUMN_STAT.textLeft as ITwoColumnStatText}
+      isMobile={isMobile}
+      title={LANG.section3.title}
+      titleNumber={LANG.section3.titleNumber}
+      bodyTitle={LANG.section3.bodyTitle}
+      paragraph1Content={LANG.section3.paragraph1Content}
+      paragraph2Content={LANG.section3.paragraph2Content}
+      statContent={LANG.section3.statContent}
+    />
+  )
+
   return (
-    <SectionTemplate mode="light" className="pt-[95px] lg:pt-[132px]">
-      <div className="dp-section grid grid-cols-12">
-        <div className="dp-section__left lg:!max-w-2/3 col-span-12 lg:col-span-8">
-          <Title order={1} className="pb-6 text-m-h1 text-black lg:!text-h1">
-            Executive Summary
-          </Title>
-        </div>
-      </div>
-      {/* START: content */}
-      <div className="grid w-full grid-cols-12 border-t-[1px] border-t-neutrals-cool-gray bg-white pt-4 lg:pt-0">
-        <div className="relative col-span-12 lg:col-span-2">Menu goes here</div>
-        <div className="lg:col-span-1"></div>
-        <div className="col-span-12 lg:col-span-9 " style={isMobile ? {} : { borderLeft: '1px solid black' }}>
-          <TwoColumnStat
-            type={TWO_COLUMN_STAT.textLeft as ITwoColumnStat}
-            isMobile={isMobile}
-            title={LANG.section1.title}
-            titleNumber={LANG.section1.titleNumber}
-            bodyTitle={LANG.section1.bodyTitle}
-            paragraph1Content={LANG.section1.paragraph1Content}
-            paragraph2Content={LANG.section1.paragraph2Content}
-            statContent={LANG.section1.statContent}
-          />
-
-          <TwoColumnStat
-            type={TWO_COLUMN_STAT.textRight as ITwoColumnStat}
-            isMobile={isMobile}
-            title={LANG.section2.title}
-            titleNumber={LANG.section2.titleNumber}
-            bodyTitle={LANG.section2.bodyTitle}
-            paragraph1Content={LANG.section2.paragraph1Content}
-            paragraph2Content={LANG.section2.paragraph2Content}
-            statContent={LANG.section2.statContent}
-          />
-
-          <TwoColumnStat
-            type={TWO_COLUMN_STAT.textLeft as ITwoColumnStat}
-            isMobile={isMobile}
-            title={LANG.section3.title}
-            titleNumber={LANG.section3.titleNumber}
-            bodyTitle={LANG.section3.bodyTitle}
-            paragraph1Content={LANG.section3.paragraph1Content}
-            paragraph2Content={LANG.section3.paragraph2Content}
-            statContent={LANG.section3.statContent}
-          />
-        </div>
-      </div>
-      {/* END: content */}
-    </SectionTemplate>
+    <ArticleBody
+      chapterTitle={LANG.chapterTitle}
+      title={LANG.title}
+      menu={NAVIGATION_HEADER}
+      activeStatus={activeStatus}
+      isMobile={isMobile}
+      content={{
+        section1: { Component: Section1, ref: section1Ref, id: '1', isActive: activeStatus.isInView1 },
+        section2: { Component: Section2, ref: section2Ref, id: '2', isActive: activeStatus.isInView1 },
+        section3: { Component: Section3, ref: section3Ref, id: '3', isActive: activeStatus.isInview3 },
+      }}
+    />
   )
 }

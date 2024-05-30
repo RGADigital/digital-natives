@@ -133,3 +133,15 @@ section.mantine-Modal-content {
   transition: background 0.2s ease-in-out;
   background-color: rgba(0, 0, 0, 0.8);
 }
+
+.mantine-Accordion-control[data-active='true'] .dn-micro-detail > div {
+  @apply !bg-accents-blue;
+}
+
+.mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > div {
+  @apply !bg-neutrals-cool-gray-5;
+}
+
+.mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > p {
+  @apply !text-neutrals-cool-gray-5;
+}

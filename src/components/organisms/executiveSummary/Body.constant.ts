@@ -1,5 +1,7 @@
-export const LANG = {
+export const LANG_SECTION = {
   section1: {
+    navigation: 'Challenge',
+    navigationLink: 'challenge',
     title: 'The Challenge',
     titleNumber: '01',
     bodyTitle: 'Our digital landscape has been shaped by, and for, Digital Adopters',
@@ -27,6 +29,8 @@ export const LANG = {
     ],
   },
   section2: {
+    navigation: 'Opportunity',
+    navigationLink: 'opportunity',
     title: 'The Opportunity',
     titleNumber: '02',
     bodyTitle: 'In contrast, Gen One have grown up with technology as pervasive and integral to their lives.',
@@ -57,6 +61,8 @@ export const LANG = {
     ],
   },
   section3: {
+    navigation: 'Research',
+    navigationLink: 'research',
     title: 'Our Research',
     titleNumber: '03',
     bodyTitle:
@@ -88,3 +94,21 @@ export const LANG = {
     ],
   },
 }
+
+export const LANG = {
+  ...LANG_SECTION,
+  title: 'Executive Summary',
+  chapterTitle: 'Chapter One',
+}
+
+export const NAVIGATION_HEADER = Object.entries(LANG_SECTION)
+  .map(([key, { navigation, navigationLink }]) => {
+    if (!navigation) return null
+    return {
+      sectionName: key,
+      key: key?.replace('section', ''),
+      label: navigation,
+      href: `#${navigationLink}`,
+    }
+  })
+  .filter(Boolean)

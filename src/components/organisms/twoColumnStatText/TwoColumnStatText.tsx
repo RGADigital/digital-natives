@@ -2,10 +2,10 @@ import { Title } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import { type ITwoColumnStat, TWO_COLUMN_STAT, TwoColumnStatTemplate } from '@/templates/twoColumnStat'
+import { type ITwoColumnStatText, TWO_COLUMN_STAT, TwoColumnStatTemplate } from '@/templates/twoColumnStatText'
 
-interface Props {
-  type: ITwoColumnStat
+export interface TwoColumnStatTextProps {
+  type: ITwoColumnStatText
   isMobile?: boolean
   title: string
   titleNumber: string
@@ -19,7 +19,10 @@ interface Props {
   }[]
 }
 
-function TitleContent({ title, titleNumber }: { title: Props['title']; titleNumber: Props['titleNumber'] }) {
+function TitleContent({
+  title,
+  titleNumber,
+}: Readonly<{ title: TwoColumnStatTextProps['title']; titleNumber: TwoColumnStatTextProps['titleNumber'] }>) {
   return (
     <>
       <div className="col-span-10">
@@ -46,11 +49,11 @@ function TextContent({
   bodyTitle,
   paragraph1Content,
   paragraph2Content,
-}: {
-  bodyTitle: Props['bodyTitle']
-  paragraph1Content: Props['paragraph1Content']
-  paragraph2Content: Props['paragraph2Content']
-}) {
+}: Readonly<{
+  bodyTitle: TwoColumnStatTextProps['bodyTitle']
+  paragraph1Content: TwoColumnStatTextProps['paragraph1Content']
+  paragraph2Content: TwoColumnStatTextProps['paragraph2Content']
+}>) {
   return (
     <>
       <div className={cn('dn-two-column-stat__text-content__title', 'mt-6 grid w-full grid-cols-12')}>
@@ -82,22 +85,24 @@ function TextContent({
   )
 }
 
-function StatContent({ statContent, type }: { statContent: Props['statContent']; type: Props['type'] }) {
+function StatContent({
+  statContent,
+  type,
+}: Readonly<{ statContent: TwoColumnStatTextProps['statContent']; type: TwoColumnStatTextProps['type'] }>) {
   return (
     <>
-      {statContent &&
-        statContent.map(({ src, alt, className }) => (
-          <div
-            key={alt}
-            className={cn('w-full', 'lg:border-b-[1px] lg:border-b-neutrals-cool-gray-5 lg:last:border-b-0', {
-              'lg:pl-5': type === TWO_COLUMN_STAT.textLeft,
-              'lg:px-5': type === TWO_COLUMN_STAT.textRight,
-              'lg:py-5': true,
-            })}
-          >
-            <img src={src} alt={alt} className={cn(className)} />
-          </div>
-        ))}
+      {statContent?.map(({ src, alt, className }) => (
+        <div
+          key={alt}
+          className={cn('w-full', 'lg:border-b-[1px] lg:border-b-neutrals-cool-gray-5 lg:last:border-b-0', {
+            'lg:pl-5': type === TWO_COLUMN_STAT.textLeft,
+            'lg:px-5': type === TWO_COLUMN_STAT.textRight,
+            'lg:py-5': true,
+          })}
+        >
+          <img src={src} alt={alt} className={cn(className)} />
+        </div>
+      ))}
     </>
   )
 }
@@ -111,7 +116,7 @@ export default function TwoColumnStat({
   paragraph1Content,
   paragraph2Content,
   statContent,
-}: Readonly<Props>) {
+}: Readonly<TwoColumnStatTextProps>) {
   return (
     <TwoColumnStatTemplate
       isMobile={isMobile}
