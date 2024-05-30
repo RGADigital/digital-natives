@@ -26,26 +26,13 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html {
   height: 100vh;
   height: 100dvh;
 }
 body {
-  @apply overflow-hidden bg-black scroll-smooth;
+  @apply scroll-smooth;
   font-family: 'HelveticaNowDisplay', sans-serif;
-
-  scroll-snap-type: y mandatory;
-  overflow-x: hidden;
-  overflow-y: scroll;
-
-  scroll-snap-points-y: repeat(300px);
-}
-
-.dn-scroll-container section {
-  height: 100%;
-  scroll-snap-align: start !important;
-  scroll-snap-stop: always !important;
 }
 
 .container {
@@ -83,10 +70,7 @@ body {
 }
 
 .mantine-Input-input {
-  @apply text-black h-10 lg:h-[59.4px] rounded-md;
-  font-size: 12.8px;
-  font-weight: 400;
-  line-height: 120%;
+  @apply text-black text-body h-10 lg:h-[59.4px] rounded-md;
 }
 
 .mantine-Checkbox-input,
@@ -114,12 +98,7 @@ body {
   @apply flex flex-col gap-[6.4px] lg:gap-2;
 }
 .mantine-InputWrapper-label {
-  @apply text-black;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 120%; /* 16.8px */
-  letter-spacing: -0.7px;
+  @apply text-black text-m-eyebrow lg:text-eyebrow;
   text-transform: uppercase;
 }
 
@@ -128,7 +107,7 @@ body {
 }
 
 .mantine-Input-input {
-  @apply border-neutrals-cool-gray placeholder:text-black ring-accents-pink;
+  @apply border-neutrals-cool-gray placeholder:text-black ring-accents-pink placeholder:text-body;
   height: 50px;
   padding: 20px;
   border-radius: var(--input-radius);
@@ -136,4 +115,21 @@ body {
 
 section.mantine-Modal-content {
   @apply !w-full lg:!w-[528px] px-3 py-3 lg:p-10;
+}
+
+.mantine-Modal-body {
+  padding: 0;
+}
+
+.mantine-Checkbox-inner svg {
+  @apply -left-[2px] -top-[2px] !size-[19px];
+}
+
+#register-form {
+  scroll-margin-top: 100px;
+}
+
+.bg-gr-header {
+  transition: background 0.2s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.8);
 }

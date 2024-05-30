@@ -2,17 +2,19 @@ interface Props {
   className?: string
   width?: number | `${number}`
   height?: number | `${number}`
+  onClick?: (...props: any) => void
 }
 
-export default function Checked({ width = '20', height = '20', className }: Readonly<Props>) {
+export default function Checked({ width = '18', height = '18', className, onClick }: Readonly<Props>) {
   return (
     <svg
       width={width}
       height={height}
-      viewBox="0 0 20 20"
+      viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
+      onClick={onClick}
     >
       <path
         fillRule="evenodd"

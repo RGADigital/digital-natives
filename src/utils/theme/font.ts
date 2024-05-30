@@ -18,6 +18,18 @@ export const FONT_EYEBROW_MOBILE = {
   letterSpacing: '0.1px',
 }
 
+export const FONT_BODY = {
+  fontSize: '16px',
+  fontWeight: 400,
+  lineHeight: '19.2px',
+}
+
+export const FONT_BODY_MOBILE = {
+  fontSize: '12px',
+  fontWeight: 400,
+  lineHeight: '14.4px',
+}
+
 export const FONT_NAV = {
   fontSize: '16px',
   fontWeight: '500',
@@ -31,16 +43,22 @@ export const FONT_NAV_MOBILE = {
 export const FONT_H1 = {
   fontSize: '60px',
   fontWeight: '400',
-  lineHeight: '107%',
+  lineHeight: '64.2px',
 }
 
 export const FONT_H1_MOBILE = {
-  fontSize: '29.1px',
+  fontSize: '40px',
   fontWeight: '400',
-  lineHeight: '29.21px',
+  lineHeight: '42.8px',
+}
+
+export const FONT_H3_MOBILE = {
+  fontSize: '26px',
+  fontWeight: '500',
+  lineHeight: '31.2px',
 }
 export const FONT_FORM = {
-  fontSize: '12.8px',
+  fontSize: '14px',
   fontWeight: 400,
   lineHeight: '15.36px',
 }

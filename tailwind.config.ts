@@ -1,10 +1,13 @@
 const {
+  FONT_BODY,
+  FONT_BODY_MOBILE,
   FONT_EYEBROW,
   FONT_EYEBROW_MOBILE,
   FONT_FAMILY,
   FONT_SIZES,
   FONT_H1,
   FONT_H1_MOBILE,
+  FONT_H3_MOBILE,
   FONT_FORM,
   FONT_DISCLAIMER,
   FONT_DISCLAIMER_MOBILE,
@@ -23,9 +26,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         'gr-pink-yellow': 'linear-gradient(270deg, #FF00FF 0%, #FFFF00 137.76%)',
-        'gr-pink-yellow-2': 'linear-gradient(180deg, #FF00FF 0%, #FFFF00 137.76%)',
+        'gr-pink-yellow-2': 'linear-gradient(180deg, #FF00FF 0%, #FF00FF 60.26%, #FFFF00 101.25%)',
         'gr-pink-white': 'linear-gradient(360deg, #F0F 0%, rgba(255, 0, 255, 0.00) 100%)',
-        'gr-green-white': 'linear-gradient(90deg, #0F0 0%, rgba(0, 0, 0, 0.00) 100%)',
+        'gr-green-white': 'linear-gradient(90deg, #0F0 0%, #00FFFF 100%)',
       },
       colors: {
         ...SITE_COLOR,
@@ -78,7 +81,7 @@ module.exports = {
           {
             lineHeight: FONT_NAV.lineHeight,
             fontWeight: FONT_NAV.fontWeight,
-            leading: FONT_NAV.letterSpacing,
+            letterSpacing: FONT_NAV.letterSpacing,
           },
         ],
         'm-nav': [
@@ -86,7 +89,7 @@ module.exports = {
           {
             lineHeight: FONT_NAV_MOBILE.lineHeight,
             fontWeight: FONT_NAV_MOBILE.fontWeight,
-            leading: FONT_NAV.letterSpacing,
+            letterSpacing: FONT_NAV.letterSpacing,
           },
         ],
         eyebrow: [
@@ -94,7 +97,7 @@ module.exports = {
           {
             lineHeight: FONT_EYEBROW.lineHeight,
             fontWeight: FONT_EYEBROW.fontWeight,
-            leading: FONT_EYEBROW.letterSpacing,
+            letterSpacing: FONT_EYEBROW.letterSpacing,
           },
         ],
         'm-eyebrow': [
@@ -102,7 +105,7 @@ module.exports = {
           {
             lineHeight: FONT_EYEBROW_MOBILE.lineHeight,
             fontWeight: FONT_EYEBROW_MOBILE.fontWeight,
-            leading: FONT_EYEBROW.letterSpacing,
+            letterSpacing: FONT_EYEBROW.letterSpacing,
           },
         ],
         form: [
@@ -110,6 +113,27 @@ module.exports = {
           {
             lineHeight: FONT_FORM.lineHeight,
             fontWeight: FONT_FORM.fontWeight,
+          },
+        ],
+        body: [
+          FONT_BODY.fontSize,
+          {
+            lineHeight: FONT_BODY.lineHeight,
+            fontWeight: FONT_BODY.fontWeight,
+          },
+        ],
+        'm-body': [
+          FONT_BODY_MOBILE.fontSize,
+          {
+            lineHeight: FONT_BODY_MOBILE.lineHeight,
+            fontWeight: FONT_BODY_MOBILE.fontWeight,
+          },
+        ],
+        'm-h3': [
+          FONT_H3_MOBILE.fontSize,
+          {
+            lineHeight: FONT_H3_MOBILE.lineHeight,
+            fontWeight: FONT_H3_MOBILE.fontWeight,
           },
         ],
       },

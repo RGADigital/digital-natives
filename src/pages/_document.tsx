@@ -29,7 +29,7 @@ class MyDocument extends Document {
         "alternateName": " Digital Native Research Project",
         "description": "Discover the digital behaviors of Digital Natives and Digital Immigrants in Australia. Our research report outlines key strategies to enhance digital engagement.",
         "publisher": {
-            "@type": "Organization",
+            "@type": "Organisation",
             "name": "R/GA Australia",
             "url": "https://rga.com/offices/australia"
         }
