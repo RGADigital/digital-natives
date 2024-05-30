@@ -94,14 +94,18 @@ export const LANG_SECTION = {
     ],
   },
 }
+
 export const LANG = {
   ...LANG_SECTION,
+  title: 'Executive Summary',
+  chapterTitle: 'Chapter One',
 }
 
 export const NAVIGATION_HEADER = Object.entries(LANG_SECTION)
   .map(([key, { navigation, navigationLink }]) => {
     if (!navigation) return null
     return {
+      sectionName: key,
       key: key?.replace('section', ''),
       label: navigation,
       href: `#${navigationLink}`,

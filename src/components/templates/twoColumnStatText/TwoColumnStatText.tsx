@@ -1,13 +1,10 @@
 import cn from '@/utils/cn'
 
-import { type ITwoColumnStat, TWO_COLUMN_STAT } from './TwoColumnStatText.type'
+import { type ITwoColumnStatText, TWO_COLUMN_STAT } from './TwoColumnStatText.type'
 
 interface Props {
-  type?: ITwoColumnStat
-  id?: string
+  type?: ITwoColumnStatText
   isMobile?: boolean
-  isInView?: boolean
-  columnRef?: React.RefObject<HTMLDivElement>
   titleContent: React.ReactNode
   textContent: React.ReactNode
   statContent: React.ReactNode
@@ -15,13 +12,10 @@ interface Props {
 
 export default function TwoColumnStatTemplate({
   type = TWO_COLUMN_STAT.textLeft,
-  id,
   isMobile,
-  isInView,
   statContent,
   titleContent,
   textContent,
-  columnRef,
 }: Readonly<Props>) {
   return (
     <div
@@ -31,12 +25,6 @@ export default function TwoColumnStatTemplate({
         'dn-two-column-stat--text-left': type === TWO_COLUMN_STAT.textLeft,
         'border-b-[1px] border-b-black': !isMobile,
       })}
-      ref={columnRef as React.RefObject<HTMLDivElement>}
-      id={id}
-      style={{
-        opacity: isInView ? 1 : 0.7,
-        transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
-      }}
     >
       <div className="grid w-full grid-cols-12">{titleContent}</div>
       <div className="dn-two-column-stat__content grid w-full grid-cols-12 ">
