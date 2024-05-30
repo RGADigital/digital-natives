@@ -1,6 +1,6 @@
 import cn from '@/utils/cn'
 
-import { type ITwoColumnStat, TWO_COLUMN_STAT } from './TwoColumnStat.type'
+import { type ITwoColumnStat, TWO_COLUMN_STAT } from './TwoColumnStatText.type'
 
 interface Props {
   type?: ITwoColumnStat

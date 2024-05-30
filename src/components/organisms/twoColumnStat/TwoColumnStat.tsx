@@ -2,7 +2,7 @@ import { Title } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import { type ITwoColumnStat, TWO_COLUMN_STAT, TwoColumnStatTemplate } from '@/templates/twoColumnStat'
+import { type ITwoColumnStat, TWO_COLUMN_STAT, TwoColumnStatTemplate } from '@/templates/twoColumnStatText'
 
 interface Props {
   type: ITwoColumnStat

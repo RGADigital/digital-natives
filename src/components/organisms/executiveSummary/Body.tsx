@@ -7,10 +7,9 @@ import { Title } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import MicroDetail from '@/components/atoms/microDetail/MicroDetail'
-import { SectionTemplate } from '@/components/templates'
+import MicroDetail from '@/atoms/microDetail/MicroDetail'
 import TwoColumnStat from '@/organisms/twoColumnStat/TwoColumnStat'
-import { type ITwoColumnStat, TWO_COLUMN_STAT } from '@/templates/twoColumnStat'
+import { type ITwoColumnStat, TWO_COLUMN_STAT } from '@/templates/twoColumnStatText'
 
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
 
@@ -39,7 +38,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
   }
 
   return (
-    <SectionTemplate mode="light" className="pt-[95px] lg:pt-[132px]">
+    <>
       <div
         className={cn('dp-section', 'sticky top-[95px] grid w-full grid-cols-12  bg-white z-[31]', {
           'top-[80px]': isMobile,
@@ -125,6 +124,6 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
         </div>
       </div>
       {/* END: content */}
-    </SectionTemplate>
+    </>
   )
 }
