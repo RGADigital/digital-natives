@@ -91,6 +91,7 @@ function StatContent({ statContent, type }: { statContent: Props['statContent'];
             key={alt}
             className={cn('w-full', 'lg:border-b-[1px] lg:border-b-neutrals-cool-gray-5 lg:last:border-b-0', {
               'lg:pl-5': type === TWO_COLUMN_STAT.textLeft,
+              'lg:px-5': type === TWO_COLUMN_STAT.textRight,
               'lg:py-5': true,
             })}
           >
