@@ -24,6 +24,12 @@ export const FONT_BODY = {
   lineHeight: '19.2px',
 }
 
+export const FONT_BODY_MOBILE = {
+  fontSize: '12px',
+  fontWeight: 400,
+  lineHeight: '14.4px',
+}
+
 export const FONT_NAV = {
   fontSize: '16px',
   fontWeight: '500',
@@ -41,9 +47,15 @@ export const FONT_H1 = {
 }
 
 export const FONT_H1_MOBILE = {
-  fontSize: '30px',
+  fontSize: '40px',
   fontWeight: '400',
-  lineHeight: '29.21px',
+  lineHeight: '42.8px',
+}
+
+export const FONT_H3_MOBILE = {
+  fontSize: '26px',
+  fontWeight: '500',
+  lineHeight: '31.2px',
 }
 export const FONT_FORM = {
   fontSize: '14px',

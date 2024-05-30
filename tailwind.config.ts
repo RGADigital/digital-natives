@@ -1,11 +1,13 @@
 const {
   FONT_BODY,
+  FONT_BODY_MOBILE,
   FONT_EYEBROW,
   FONT_EYEBROW_MOBILE,
   FONT_FAMILY,
   FONT_SIZES,
   FONT_H1,
   FONT_H1_MOBILE,
+  FONT_H3_MOBILE,
   FONT_FORM,
   FONT_DISCLAIMER,
   FONT_DISCLAIMER_MOBILE,
@@ -118,6 +120,20 @@ module.exports = {
           {
             lineHeight: FONT_BODY.lineHeight,
             fontWeight: FONT_BODY.fontWeight,
+          },
+        ],
+        'm-body': [
+          FONT_BODY_MOBILE.fontSize,
+          {
+            lineHeight: FONT_BODY_MOBILE.lineHeight,
+            fontWeight: FONT_BODY_MOBILE.fontWeight,
+          },
+        ],
+        'm-h3': [
+          FONT_H3_MOBILE.fontSize,
+          {
+            lineHeight: FONT_H3_MOBILE.lineHeight,
+            fontWeight: FONT_H3_MOBILE.fontWeight,
           },
         ],
       },
