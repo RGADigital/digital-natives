@@ -38,7 +38,7 @@ export default function SectionTwo({ handleRegister, sectionRef }: Readonly<Prop
           {LANG.section2Subtitle}
         </Text>
         <div className="col-span-3 shrink-0 lg:col-span-8 lg:col-start-3">
-          <Button handleClick={handleRegister}>{LANG.section2ScrollText}</Button>
+          <Button handleClick={handleRegister}>{LANG.section2Register}</Button>
         </div>
         <div className="col-span-3 shrink-0 animate-bounce pb-[10.7px] duration-500 ease-in lg:hidden">
           <ScrollDownIcon />
