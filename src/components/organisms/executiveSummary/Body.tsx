@@ -6,6 +6,10 @@ import { Title } from '@mantine/core'
 import cn from '@/utils/cn'
 
 import { SectionTemplate } from '@/components/templates'
+import TwoColumnStat from '@/organisms/twoColumnStat/TwoColumnStat'
+import { type ITwoColumnStat, TWO_COLUMN_STAT } from '@/templates/twoColumnStat'
+
+import { LANG } from './Body.constant'
 
 interface Props {
   isMobile?: boolean
@@ -164,75 +168,16 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           </div>
 
           {/* // TODO: Create as component: TEXT LEFT & STATS RIGHT */}
-          <div className="pt-8" style={isMobile ? {} : { borderBottom: '1px solid black' }}>
-            <div className="grid w-full grid-cols-12">
-              <div className="col-span-10">
-                <Title
-                  order={2}
-                  className="text-m-h2 lg:!text-h2 border-t-2 py-[25px] text-black lg:border-b-2 lg:border-t-0 lg:pl-5"
-                >
-                  Our Research
-                </Title>
-              </div>
-              <div className="col-span-2 text-right">
-                <Title
-                  order={2}
-                  className="text-m-h2 lg:!text-h2 border-t-2 py-[25px] pl-5 text-black lg:border-b-2 lg:border-t-0"
-                >
-                  03
-                </Title>
-              </div>
-            </div>
-            <div className="grid w-full grid-cols-12 ">
-              <div className="col-span-12 lg:col-span-9 lg:mx-6 lg:border-r-2">
-                <div className="mt-6 grid w-full grid-cols-12">
-                  <div className="col-span-12 lg:col-span-5">
-                    <Title order={3} className="mb-6 text-black">
-                      R/GA sought to uncover the ambitions, behaviours, motivations and barriers of using digital
-                      services among Gen One, and contrast that with Digital Adopters.
-                    </Title>
-                  </div>
-                </div>
-                <div className="grid w-full grid-cols-12 lg:pr-4 ">
-                  <div className="col-span-12 lg:col-span-6">
-                    <p>
-                      In particular, we wanted to know how we could use the distinct behaviours of Gen One to unlock new
-                      techniques to make digital services more accessible to vulnerable Australians - like First
-                      Nations, CALD, neurodiverse and LGBTIQ+ Australians.
-                    </p>
-                    <p className="mt-6">
-                      Our multimodal research with 1,579 Australians aged 15 and above included diary studies, in-depth
-                      interviews and a quantitative study. Our research included a diversity of demographics and
-                      geographies to ensure we heard from a
-                    </p>
-                  </div>
-                  <div className="col-span-12 lg:col-span-6 lg:pl-4">
-                    <p>
-                      broad cross-section of Australians, and narrowed in on their experience around key life stages
-                      like starting or finishing education, moving home or changing jobs.
-                    </p>
-                    <p className="mt-6">
-                      While those born after 1997 are generally considered Digital Natives, our research found that the
-                      characteristics of Gen One are even more prevalent among under 18s and present among those in
-                      their 20s and 30s - a continuum, not a monolithic group.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="col-span-12 mb-12 mt-6 lg:col-span-3">
-                <img
-                  src="/assets/exec-summary/the-research-1.jpg"
-                  alt="Image with text that says 2x Gen One are twice more  likely to identify as neurodiverse or LGBTIQ+ than Digital Adopters"
-                  className="w-full"
-                />
-                <img
-                  src="/assets/exec-summary/the-research-2.jpg"
-                  alt="Image with text that says I think it's entertaining to just kind of sit there and watch someone talk about all this stuff that's going on in their lives."
-                  className="mt-6 w-full"
-                />
-              </div>
-            </div>
-          </div>
+          <TwoColumnStat
+            type={TWO_COLUMN_STAT.textLeft as ITwoColumnStat}
+            isMobile={isMobile}
+            title={LANG.section3.title}
+            titleNumber={LANG.section3.titleNumber}
+            bodyTitle={LANG.section3.bodyTitle}
+            paragraph1Content={LANG.section3.paragraph1Content}
+            paragraph2Content={LANG.section3.paragraph2Content}
+            statContent={LANG.section3.statContent}
+          />
         </div>
       </div>
       {/* END: content */}
