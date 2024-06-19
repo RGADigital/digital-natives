@@ -68,6 +68,7 @@
         ],
         "simple-import-sort/exports": "error",
         "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/no-shadow": "off",
         "unused-imports/no-unused-imports": "error",
         "unused-imports/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
         "semi": "off", // Explicitly disable semicolon enforcement in TypeScript files

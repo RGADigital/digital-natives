@@ -2,7 +2,7 @@ import { Text } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-interface Props {
+interface IMicroDetail {
   containerClassName?: string
   boxClassName?: string
   text?: string
@@ -16,7 +16,7 @@ export default function MicroDetail({
   text,
   isCircle,
   textClassName,
-}: Readonly<Props>) {
+}: Readonly<IMicroDetail>) {
   return (
     <div className={cn('dn-micro-detail z-20 flex items-center gap-[9px]', containerClassName)}>
       <div
@@ -30,7 +30,7 @@ export default function MicroDetail({
         )}
       ></div>
       {text && (
-        <Text className={cn('text-m-eyebrow lg:text-eyebrow', 'uppercase', textClassName)} component="p">
+        <Text className={cn('!text-m-eyebrow lg:!text-eyebrow', 'uppercase', textClassName)} component="p">
           {text}
         </Text>
       )}
