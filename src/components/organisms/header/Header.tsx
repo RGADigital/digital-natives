@@ -3,7 +3,7 @@
 import { useRef, useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { Grid, NavLink, Text } from '@mantine/core'
+import { Grid, NavLink } from '@mantine/core'
 
 import { useDimensions } from '@/hooks/useDimension'
 import useViewport from '@/hooks/useViewport'
@@ -72,7 +72,7 @@ export default function Header({ mode = 'dark', handleRegister, showHeaderGradie
         className={cn(
           'dn-header inset-0',
           'w-screen h-[80px] lg:h-[76px]',
-          'transition-colors ease-in duration-300 delay-600',
+          'transition-colors ease-in-out duration-300 delay-600',
           {
             'bg-transparent': true,
             '!bg-white header--light': headerMode === 'light',
@@ -97,31 +97,18 @@ export default function Header({ mode = 'dark', handleRegister, showHeaderGradie
                 component={Link}
                 href="https://rga.com/"
                 leftSection={
-                  <RgaLogo mode={headerMode} width={isMobile ? 53.12 : 83} height={isMobile ? 11.92 : 18.623} />
+                  <RgaLogo
+                    mode={headerMode}
+                    width={isMobile ? 53.12 : 83}
+                    height={isMobile ? 11.92 : 18.623}
+                    className="transition-colors delay-500 duration-300 ease-in"
+                  />
                 }
                 className="m-0 p-0 hover:bg-transparent"
               />
             </div>
           </Grid.Col>
-          <Grid.Col span="auto">
-            <Text
-              className={cn(
-                'text-center pl-[31px] pr-[35px]',
-                'uppercase',
-                'transition-colors ease-in duration-300 delay-600',
-                {
-                  'text-white': headerMode === 'dark',
-                  '!text-black': headerMode === 'light',
-                  '!text-m-eyebrow': isMobile,
-                  'lg:text-eyebrow': !isMobile,
-                },
-              )}
-            >
-              THE GEN ONE REPORT
-              {isMobile ? <br /> : ' / '}
-              coming soon
-            </Text>
-          </Grid.Col>
+          <Grid.Col span="auto"></Grid.Col>
           <Grid.Col span="content" className="flex gap-[15px]">
             <Button
               handleClick={() => {
