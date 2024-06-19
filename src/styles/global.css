@@ -145,3 +145,7 @@ section.mantine-Modal-content {
 .mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > p {
   @apply !text-neutrals-cool-gray-5;
 }
+
+.dn-header__wrapper {
+  overscroll-behavior: contain;
+}
