@@ -120,8 +120,8 @@ section.mantine-Modal-content {
   scrollbar-width: none; /* Firefox */
 }
 
-.dn-modal-register section.mantine-Modal-content {
-  @apply px-3 py-3 lg:p-10;
+.dn-modal-register .mantine-Modal-content {
+  @apply !px-3 !py-3 lg:!p-10;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
 .mantine-Modal-content::-webkit-scrollbar {
@@ -173,6 +173,7 @@ section.mantine-Modal-content {
   @apply max-h-none;
 }
 
-.dn-modal-article .mantine-Modal-content {
+.dn-modal-article .mantine-Modal-content,
+.dn-modal-register .mantine-Modal-content {
   @apply !rounded-none;
 }
