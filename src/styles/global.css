@@ -147,5 +147,8 @@ section.mantine-Modal-content {
 }
 
 .dn-header__wrapper {
-  overscroll-behavior: contain;
+  overscroll-behavior: auto;
+}
+.dn-header__wrapper.dn-header__wrapper--open {
+  overscroll-behavior: contain !important;
 }

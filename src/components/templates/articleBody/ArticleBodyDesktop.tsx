@@ -7,13 +7,13 @@ import MicroDetail from '@/atoms/microDetail/MicroDetail'
 
 import type { ArticleBodyProps } from './ArticleBody.type'
 
-export default function ArticleBodyDesktop({ title, menu, content, activeStatus }: ArticleBodyProps) {
+export default function ArticleBodyDesktop({ title, menu, content, activeStatus }: Readonly<ArticleBodyProps>) {
   // change active status
   const containerRef = useRef<HTMLDivElement>(null)
 
   return (
     <div className={cn('dn-article-body--desktop', 'container mx-auto')}>
-      <div className={cn('dp-section', 'sticky grid w-full grid-cols-12  bg-white z-[31] top-[70px]')}>
+      <div className={cn('dp-section', 'sticky grid w-full grid-cols-12  bg-white z-30 top-[70px]')}>
         <div className={cn('dp-section__title', 'col-span-12 lg:col-span-8')}>
           <Title order={1} className="lg:!max-w-2/3 pb-6 text-m-h1 text-black lg:!text-h1 ">
             {title}

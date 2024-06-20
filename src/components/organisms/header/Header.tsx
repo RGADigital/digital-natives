@@ -60,8 +60,9 @@ export default function Header({ mode = 'dark', handleRegister, showHeaderGradie
       initial={'closed'}
       animate={isMenuOpen ? 'open' : 'closed'}
       className={cn('dn-header__wrapper', 'h-fit max-h-screen w-full flex flex-col', {
-        'fixed z-30': true,
-        'overflow-y-auto': true,
+        'fixed inset-0 z-50': true,
+        'overflow-y-auto': isMenuOpen,
+        'dn-header__wrapper--open': isMenuOpen,
       })}
       custom={{
         height,
@@ -125,7 +126,9 @@ export default function Header({ mode = 'dark', handleRegister, showHeaderGradie
       <motion.div
         initial={false}
         animate={isMenuOpen ? 'open' : 'closed'}
-        className="background bg-white"
+        className={cn('background bg-white', {
+          hidden: !isMenuOpen,
+        })}
         variants={sidebar}
       >
         <Menu />
