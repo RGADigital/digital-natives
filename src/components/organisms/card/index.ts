@@ -1,1 +1,1 @@
-export { default as CardArticle } from './CardArticle'
+export { default as CardArticlePreview } from './CardArticlePreview'

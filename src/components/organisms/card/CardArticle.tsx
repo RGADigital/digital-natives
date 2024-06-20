@@ -5,8 +5,6 @@ import useViewport from '@/hooks/useViewport'
 
 import cn from '@/utils/cn'
 
-import { Close as CloseIcon } from '@/atoms/index'
-
 interface ICardArticle {
   content?: string[]
   subtitle?: string
@@ -17,27 +15,7 @@ interface ICardArticle {
 export default function CardArticle({ content, subtitle, title, image, children }: Readonly<ICardArticle>) {
   const { isMobile } = useViewport({})
   return (
-    <div
-      className={cn(
-        'dn-card-article',
-        'bg-white',
-        'h-screen lg:max-h-[calc(100vh_-_110px)]',
-        'w-screen lg:max-w-[703px] mx-auto',
-        'flex flex-col',
-        'pl-[10.6px] lg:pl-5 pr-2.5 lg:pr-[25px]',
-      )}
-    >
-      {/* START: close modal */}
-      <div className={cn('flex flex-row-reverse', 'pt-5 pb-6 lg:pb-11')}>
-        <button className="size-fit bg-transparent text-black transition duration-200 ease-in">
-          <CloseIcon
-            width={isMobile ? 21.54 : 24}
-            height={isMobile ? 21.27 : 24}
-            className="hover:fill-black hover:text-white "
-          />
-        </button>
-      </div>
-      {/* END: close modal */}
+    <>
       {/* START: image */}
       {image && (
         <div
@@ -98,6 +76,6 @@ export default function CardArticle({ content, subtitle, title, image, children 
       {/* START: additional children */}
       {children}
       {/* END: additional children */}
-    </div>
+    </>
   )
 }

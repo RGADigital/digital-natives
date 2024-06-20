@@ -114,7 +114,18 @@ body {
 }
 
 section.mantine-Modal-content {
-  @apply !w-full lg:!w-[528px] px-3 py-3 lg:p-10;
+  @apply !w-screen lg:!w-[703px] lg:min-w-[703px];
+  /* Hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.dn-modal-register section.mantine-Modal-content {
+  @apply px-3 py-3 lg:p-10;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.mantine-Modal-content::-webkit-scrollbar {
+  display: none;
 }
 
 .mantine-Modal-body {
@@ -151,4 +162,17 @@ section.mantine-Modal-content {
 }
 .dn-header__wrapper.dn-header__wrapper--open {
   overscroll-behavior: contain !important;
+}
+
+/* START: Article Card */
+.dn-modal-article--mobile .mantine-Modal-inner {
+  @apply !p-0;
+}
+
+.dn-modal-article--mobile .mantine-Modal-content {
+  @apply max-h-none;
+}
+
+.dn-modal-article .mantine-Modal-content {
+  @apply !rounded-none;
 }

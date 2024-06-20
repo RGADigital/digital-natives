@@ -1,15 +1,62 @@
-import { CardArticle } from '../card'
+import { Modal } from '@mantine/core'
 
-export default function ModalArticle() {
+import useViewport from '@/hooks/useViewport'
+
+import cn from '@/utils/cn'
+
+import { Close as CloseIcon } from '@/atoms/index'
+import CardArticle from '@/organisms/card/CardArticle'
+
+interface IModalArticle {
+  isModalOpen?: boolean
+  image?: string
+  title?: string
+  subtitle?: string
+  content?: string[]
+  closeModal: () => void
+}
+export default function ModalArticle({
+  isModalOpen = false,
+  closeModal,
+  title,
+  subtitle,
+  image,
+  content,
+}: Readonly<IModalArticle>) {
+  const { isMobile } = useViewport({})
   return (
-    <CardArticle
-      title="Their relationship to technology"
-      content={[
-        'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.',
-        'Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.',
-      ]}
-      subtitle="Finding 01"
-      image="/assets/page-executive-summary/4-what-we-found-card-1-preview.jpg"
-    />
+    <Modal.Root
+      opened={isModalOpen}
+      onClose={closeModal}
+      className={cn('dn-modal-article', {
+        'dn-modal-article--mobile': isMobile,
+      })}
+    >
+      <Modal.Overlay />
+      <Modal.Content>
+        <Modal.Body
+          className={cn(
+            'dn-card-article',
+            'bg-white',
+            'h-screen lg:max-h-[calc(100vh_-_110px)]',
+            'flex flex-col',
+            '!pl-[10.6px] lg:!pl-5 !pr-2.5 lg:!pr-[25px]',
+          )}
+        >
+          {/* START: close modal */}
+          <div className={cn('flex flex-row-reverse', 'pt-5 pb-6 lg:pb-11')}>
+            <button className="size-fit bg-transparent text-black transition duration-200 ease-in" onClick={closeModal}>
+              <CloseIcon
+                width={isMobile ? 21.54 : 24}
+                height={isMobile ? 21.27 : 24}
+                className="hover:fill-black hover:text-white "
+              />
+            </button>
+          </div>
+          {/* END: close modal */}
+          <CardArticle image={image} title={title} subtitle={subtitle} content={content} />
+        </Modal.Body>
+      </Modal.Content>
+    </Modal.Root>
   )
 }
