@@ -1,11 +1,6 @@
-interface Props {
-  className?: string
-  height?: number | `${number}px`
-  fill?: string
-  width?: number | `${number}px`
-}
+import type { IconProps } from './icon.type'
 
-export default function HorizontalArrow({ className, width = 22, height = 23, fill = 'black' }: Readonly<Props>) {
+export default function HorizontalArrow({ className, width = 22, height = 23, fill = 'black' }: Readonly<IconProps>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

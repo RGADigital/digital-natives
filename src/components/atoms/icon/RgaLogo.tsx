@@ -1,11 +1,15 @@
-interface Props {
-  className?: string
-  height?: number | `${number}`
-  width?: number | `${number}`
-  mode?: 'dark' | 'light'
-}
+import type { IconProps } from './icon.type'
 
-export default function RgaLogo({ height = 83, width = 20, mode = 'light', className }: Readonly<Props>) {
+export default function RgaLogo({
+  height = 83,
+  width = 20,
+  mode = 'light',
+  className,
+}: Readonly<
+  IconProps & {
+    mode?: 'dark' | 'light'
+  }
+>) {
   const textColor = mode === 'light' ? '#000' : 'white'
   return (
     <svg width={width} height={height} viewBox="0 0 83 20" xmlns="http://www.w3.org/2000/svg" className={className}>

@@ -1,10 +1,6 @@
-interface Props {
-  className?: string
-  width?: number | `${number}px`
-  height?: number | `${number}px`
-}
+import type { IconProps } from './icon.type'
 
-export default function CloseIcon({ width, height, className = 'text-black' }: Readonly<Props>) {
+export default function CloseIcon({ width, height, className = 'text-black' }: Readonly<IconProps>) {
   return (
     <svg
       width={width}
