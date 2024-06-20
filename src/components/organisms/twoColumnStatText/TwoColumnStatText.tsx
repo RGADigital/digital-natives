@@ -57,7 +57,7 @@ function TextContent({
   return (
     <>
       <div className={cn('dn-two-column-stat__text-content__title', 'mt-6 grid w-full grid-cols-12')}>
-        <div className="col-span-12 lg:col-span-5">
+        <div className="col-span-12">
           <Title order={3} className="mb-6 text-black">
             {bodyTitle}
           </Title>
