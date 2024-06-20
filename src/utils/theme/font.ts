@@ -76,3 +76,15 @@ export const FONT_DISCLAIMER_MOBILE = {
 }
 
 export const FONT_FAMILY = 'HelveticaNowDisplay'
+
+export const FONT_QUOTE = {
+  fontSize: '22px',
+  fontWeight: '400',
+  lineHeight: '26.4px',
+}
+
+export const FONT_QUOTE_MOBILE = {
+  fontSize: '20px',
+  fontWeight: '400',
+  lineHeight: '24px',
+}

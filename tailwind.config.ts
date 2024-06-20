@@ -11,6 +11,8 @@ const {
   FONT_FORM,
   FONT_DISCLAIMER,
   FONT_DISCLAIMER_MOBILE,
+  FONT_QUOTE,
+  FONT_QUOTE_MOBILE,
 
   FONT_NAV,
   FONT_NAV_MOBILE,
@@ -134,6 +136,20 @@ module.exports = {
           {
             lineHeight: FONT_H3_MOBILE.lineHeight,
             fontWeight: FONT_H3_MOBILE.fontWeight,
+          },
+        ],
+        quote: [
+          FONT_QUOTE.fontSize,
+          {
+            lineHeight: FONT_QUOTE.lineHeight,
+            fontWeight: FONT_QUOTE.fontWeight,
+          },
+        ],
+        'm-quote': [
+          FONT_QUOTE_MOBILE.fontSize,
+          {
+            lineHeight: FONT_QUOTE_MOBILE.lineHeight,
+            fontWeight: FONT_QUOTE_MOBILE.fontWeight,
           },
         ],
       },
