@@ -56,6 +56,7 @@ export const FONT_H3_MOBILE = {
   fontSize: '26px',
   fontWeight: '500',
   lineHeight: '31.2px',
+  letterSpacing: '-0.78px',
 }
 export const FONT_FORM = {
   fontSize: '14px',
@@ -87,4 +88,10 @@ export const FONT_QUOTE_MOBILE = {
   fontSize: '20px',
   fontWeight: '400',
   lineHeight: '24px',
+}
+
+export const FONT_SUBHEADING = {
+  fontSize: '24px',
+  fontWeight: '400',
+  lineHeight: '28.8px',
 }

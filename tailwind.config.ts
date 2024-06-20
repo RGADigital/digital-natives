@@ -136,6 +136,7 @@ module.exports = {
           {
             lineHeight: FONT_H3_MOBILE.lineHeight,
             fontWeight: FONT_H3_MOBILE.fontWeight,
+            letterSpacing: FONT_H3_MOBILE.letterSpacing,
           },
         ],
         quote: [
