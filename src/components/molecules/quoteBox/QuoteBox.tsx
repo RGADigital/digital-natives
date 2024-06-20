@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Text } from '@mantine/core'
 
 import cn from '@/utils/cn'
@@ -5,6 +6,7 @@ import cn from '@/utils/cn'
 import { ColoredBox } from '@/atoms/index'
 
 export interface IQuoteBox {
+  avatar?: string
   edgeBoxClassName?: string
   edgeColor?: 'blue' | 'cyan' | 'red' | 'yellow' | 'magenta'
   quote?: string
@@ -13,6 +15,7 @@ export interface IQuoteBox {
 }
 
 export default function QuoteBox({
+  avatar,
   edgeBoxClassName,
   edgeColor = 'blue',
   quote,
@@ -24,12 +27,15 @@ export default function QuoteBox({
       className={cn(
         'dn-quote-box',
         'relative',
-        'flex flex-col justify-between gap-6',
+        'flex flex-col justify-between gap-[26.5px]',
         'p-5 m-5',
         'border border-black',
         wrapperClassName,
       )}
     >
+      {avatar && (
+        <Image width={63} height={63} loading="lazy" className="pulse" src={avatar} alt={`avatar of ${author}`} />
+      )}
       {/* START: edge */}
       <ColoredBox
         color={edgeColor}
