@@ -11,16 +11,18 @@ import cn from '@/utils/cn'
 import { Meta } from '@/globals/index'
 import Body from '@/organisms/executiveSummary/Body'
 import { ExecutiveSummaryIntro } from '@/organisms/executiveSummary/index'
+import FooterContent from '@/organisms/footer/FooterContent'
 import { Header, ModalRegister } from '@/organisms/index'
 
 const SHOW_GRADIENT_HEADER_Y = 220
 const SECTION_3_THRESHOLD_DESKTOP = 0.3
 const SECTION_3_THRESHOLD_MOBILE = 0.1
 
+// TODO: extract header & footer into template
 export default function ExecutiveSummary() {
   const scrollRef = useRef(null)
   const { isMobile, isSmallLandscape } = useViewport({})
-  const [showRegisterModal, { open, close }] = useDisclosure(false)
+  const [showRegisterModal, { open: openRegisterModal, close }] = useDisclosure(false)
   // change header to light background when section 3 is intersecting
   const { isIntersecting, ref } = useIntersectionObserver({
     threshold: isSmallLandscape ? SECTION_3_THRESHOLD_MOBILE : SECTION_3_THRESHOLD_DESKTOP,
@@ -57,7 +59,7 @@ export default function ExecutiveSummary() {
     >
       <Header
         mode={isIntersecting ? 'light' : 'dark'}
-        handleRegister={open}
+        handleRegister={openRegisterModal}
         key={`intersecting-${isIntersecting}-${isSmallLandscape}`}
         showHeaderGradient={showHeaderGradient}
       />
@@ -75,10 +77,11 @@ export default function ExecutiveSummary() {
           imageClassName="w-full h-auto md:aspect-[10/7] "
         />
       </div> */}
-      <ExecutiveSummaryIntro handleRegister={open} />
+      <ExecutiveSummaryIntro handleRegister={openRegisterModal} />
       <div ref={ref} className=" flex flex-col bg-white">
         <Body isMobile={isMobile} />
       </div>
+      <FooterContent handleRegister={openRegisterModal} />
       <ModalRegister
         showRegisterModal={showRegisterModal}
         withCloseButton={false}

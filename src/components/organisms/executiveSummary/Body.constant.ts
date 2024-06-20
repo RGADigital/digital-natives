@@ -97,7 +97,7 @@ export const LANG_SECTION = {
 
 export const LANG = {
   ...LANG_SECTION,
-  title: 'Executive Summary',
+  title: 'The Report at a Glance',
   chapterTitle: 'Chapter One',
 }
 
