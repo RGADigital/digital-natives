@@ -1,3 +1,5 @@
+import type { IColoredBox } from '@/atoms/coloredBox'
+
 export interface ArticleBodyProps {
   isMobile?: boolean
   chapterTitle?: string
@@ -7,6 +9,7 @@ export interface ArticleBodyProps {
     label: string
     href: string
     sectionName: string
+    color: IColoredBox['color']
   } | null)[]
   activeStatus?: { [key: string]: any }
   content?: {

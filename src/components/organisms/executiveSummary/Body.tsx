@@ -4,8 +4,8 @@ import React, { useRef } from 'react'
 import type { UseInViewOptions } from 'framer-motion'
 import { useInView } from 'framer-motion'
 
-import TwoColumnStat from '@/components/organisms/twoColumnStatText/TwoColumnStatText'
-import ArticleBody from '@/components/templates/articleBody/ArticleBody'
+import TwoColumnStat from '@/organisms/twoColumnStatText/TwoColumnStatText'
+import ArticleBody from '@/templates/articleBody/ArticleBody'
 import { type ITwoColumnStatText, TWO_COLUMN_STAT } from '@/templates/twoColumnStatText'
 
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
@@ -81,9 +81,24 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
       activeStatus={activeStatus}
       isMobile={isMobile}
       content={{
-        section1: { Component: Section1, ref: section1Ref, id: '1', isActive: activeStatus.isInView1 },
-        section2: { Component: Section2, ref: section2Ref, id: '2', isActive: activeStatus.isInView1 },
-        section3: { Component: Section3, ref: section3Ref, id: '3', isActive: activeStatus.isInview3 },
+        section1: {
+          Component: Section1,
+          ref: section1Ref,
+          id: LANG.section1.id,
+          isActive: activeStatus.isInView1,
+        },
+        section2: {
+          Component: Section2,
+          ref: section2Ref,
+          id: LANG.section2.id,
+          isActive: activeStatus.isInView1,
+        },
+        section3: {
+          Component: Section3,
+          ref: section3Ref,
+          id: LANG.section3.id,
+          isActive: activeStatus.isInview3,
+        },
       }}
     />
   )

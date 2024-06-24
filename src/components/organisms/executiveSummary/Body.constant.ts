@@ -1,7 +1,10 @@
+import type { IColoredBox } from '@/atoms/coloredBox'
+
 export const LANG_SECTION = {
   section1: {
+    color: 'yellow',
     navigation: 'Challenge',
-    navigationLink: 'challenge',
+    id: 'challenge',
     title: 'The Challenge',
     titleNumber: '01',
     bodyTitle: 'Our digital landscape has been shaped by, and for, Digital Adopters',
@@ -29,8 +32,9 @@ export const LANG_SECTION = {
     ],
   },
   section2: {
+    color: 'cyan',
     navigation: 'Opportunity',
-    navigationLink: 'opportunity',
+    id: 'opportunity',
     title: 'The Opportunity',
     titleNumber: '02',
     bodyTitle: 'In contrast, Gen One have grown up with technology as pervasive and integral to their lives.',
@@ -61,8 +65,9 @@ export const LANG_SECTION = {
     ],
   },
   section3: {
+    color: 'magenta',
     navigation: 'Research',
-    navigationLink: 'research',
+    id: 'research',
     title: 'Our Research',
     titleNumber: '03',
     bodyTitle:
@@ -93,6 +98,22 @@ export const LANG_SECTION = {
                       their 20s and 30s - a continuum, not a monolithic group.`,
     ],
   },
+  section4: {
+    color: 'blue',
+    navigation: 'Our findings',
+    id: 'our-findings',
+    title: 'What We Found',
+    titleNumber: '04',
+  },
+  section5: {
+    color: 'red',
+    navigation: 'Reimagining',
+    id: 'reimagining',
+    title: 'Reimagining the Digital World',
+    titleNumber: '05',
+    bodyTitle:
+      'Our research highlighted the sharp division in the digital behaviours of Gen One and Digital Adopters in Australia, and their assessments of the current landscape of digital services.',
+  },
 }
 
 export const LANG = {
@@ -102,13 +123,14 @@ export const LANG = {
 }
 
 export const NAVIGATION_HEADER = Object.entries(LANG_SECTION)
-  .map(([key, { navigation, navigationLink }]) => {
+  .map(([key, { navigation, id, color }]) => {
     if (!navigation) return null
     return {
       sectionName: key,
       key: key?.replace('section', ''),
       label: navigation,
-      href: `#${navigationLink}`,
+      color: color as IColoredBox['color'],
+      href: `#${id}`,
     }
   })
   .filter(Boolean)
