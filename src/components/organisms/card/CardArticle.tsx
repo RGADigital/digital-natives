@@ -9,10 +9,19 @@ interface ICardArticle {
   content?: string[]
   subtitle?: string
   image?: string
+  imageClassName?: string
+  imagePosition?: 'top' | 'bottom' | 'center'
   title?: string
   children?: React.ReactNode
 }
-export default function CardArticle({ content, subtitle, title, image, children }: Readonly<ICardArticle>) {
+export default function CardArticle({
+  content,
+  subtitle,
+  title,
+  image,
+  children,
+  imageClassName,
+}: Readonly<ICardArticle>) {
   const { isMobile } = useViewport({})
   return (
     <>
@@ -27,9 +36,16 @@ export default function CardArticle({ content, subtitle, title, image, children 
               'aspect-[10/5.3]': !isMobile,
             },
             'bg-grey-300',
+            imageClassName,
           )}
         >
-          <Image src={image} loading="lazy" alt={`Image for ${title}`} fill className="object-cover object-top" />
+          <Image
+            src={image}
+            loading="lazy"
+            alt={`Image for ${title}`}
+            className={cn('object-cover object-top', imageClassName)}
+            fill
+          />
         </div>
       )}
       {/* END: image */}

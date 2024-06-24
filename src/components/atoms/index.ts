@@ -1,5 +1,5 @@
 export * from './button/Button'
-export { ColoredBox } from './coloredBox'
+export { ColoredBox, type IColoredBox } from './coloredBox'
 export * from './icon'
 export { default as MicroDetail } from './microDetail/MicroDetail'
 export { default as MotionDiv } from './motionDiv'

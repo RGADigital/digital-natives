@@ -144,13 +144,36 @@ section.mantine-Modal-content {
   transition: background 0.2s ease-in-out;
   background-color: rgba(0, 0, 0, 0.8);
 }
-.mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > div {
-  @apply !bg-neutrals-cool-gray-5;
-}
 
-.mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > p {
-  @apply !text-neutrals-cool-gray-5;
+/* START: Accordion */
+@media (max-width: 1024px) {
+  .mantine-Accordion-control {
+    @apply -mx-5 px-5 w-[calc(100vw_+_10px)] overflow-clip;
+  }
+  .mantine-Accordion-content::before {
+    @apply bg-white absolute top-0 right-0 bottom-0 -left-5 overflow-clip -z-10;
+    width: calc(100vw + 10px);
+    content: '';
+  }
+
+  .mantine-Accordion-content {
+    @apply p-0 relative bg-transparent;
+  }
+  .mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > div {
+    @apply !bg-neutrals-cool-gray-5;
+  }
+
+  .mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > p {
+    @apply !text-neutrals-cool-gray-5;
+  }
+
+  /* TODO[pops]: avoid scroll to accordion center */
+  /* .mantine-Accordion-item {
+    scroll-snap-align: start;
+    scroll-padding-top: 100px;
+  } */
 }
+/* END: Accordion */
 
 .dn-header__wrapper {
   overscroll-behavior: auto;

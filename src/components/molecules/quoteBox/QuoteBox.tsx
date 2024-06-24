@@ -3,12 +3,12 @@ import { Text } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import { ColoredBox } from '@/atoms/index'
+import { ColoredBox, type IColoredBox } from '@/atoms/index'
 
 export interface IQuoteBox {
   avatar?: string
   edgeBoxClassName?: string
-  edgeColor?: 'blue' | 'cyan' | 'red' | 'yellow' | 'magenta'
+  edgeColor?: IColoredBox['color']
   quote?: string
   author?: string
   wrapperClassName?: string

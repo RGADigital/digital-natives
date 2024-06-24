@@ -14,6 +14,8 @@ interface ICardArticlePreview {
   customImage?: React.ReactNode
   image?: string
   imageClassName?: string
+  modalImage?: string
+  modalImageClassName?: string
   titleClassName?: string
   title?: string
   subtitle?: string
@@ -24,6 +26,8 @@ export default function CardArticlePreview({
   customImage,
   image,
   imageClassName,
+  modalImage,
+  modalImageClassName,
   subtitle,
   title,
   titleClassName,
@@ -94,7 +98,8 @@ export default function CardArticlePreview({
         title={title}
         content={content}
         subtitle={subtitle}
-        image={image}
+        image={modalImage ?? image}
+        imageClassName={modalImageClassName}
         isModalOpen={isModalOpen}
       />
     </>

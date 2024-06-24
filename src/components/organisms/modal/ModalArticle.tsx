@@ -10,6 +10,7 @@ import CardArticle from '@/organisms/card/CardArticle'
 interface IModalArticle {
   isModalOpen?: boolean
   image?: string
+  imageClassName?: string
   title?: string
   subtitle?: string
   content?: string[]
@@ -17,6 +18,7 @@ interface IModalArticle {
 }
 export default function ModalArticle({
   isModalOpen = false,
+  imageClassName,
   closeModal,
   title,
   subtitle,
@@ -54,7 +56,13 @@ export default function ModalArticle({
             </button>
           </div>
           {/* END: close modal */}
-          <CardArticle image={image} title={title} subtitle={subtitle} content={content} />
+          <CardArticle
+            image={image}
+            title={title}
+            subtitle={subtitle}
+            content={content}
+            imageClassName={imageClassName}
+          />
         </Modal.Body>
       </Modal.Content>
     </Modal.Root>
