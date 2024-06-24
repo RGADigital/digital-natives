@@ -10,8 +10,8 @@ const SECTION_ONE_CONTENT = {
     'Our digital landscape has largely been shaped by, and for, Digital Adopters - those who were not born into the digital world but have had to adapt. However, the world is now majority Digital Natives or “Gen One”, the first generation of a true digital world.',
   statContent: [
     {
-      src: '/assets/page-executive-summary/1-challenge.png',
-      srcMobile: '/assets/page-executive-summary/1-challenge-mobile.jpg',
+      src: '/assets/executive-summary/1-challenge.png',
+      srcMobile: '/assets/executive-summary/1-challenge-mobile.jpg',
       alt: 'Image with text that says Gen one is 18% Of Gen One are more likely to be concerned about their screen time than Digital Adopters',
     },
   ],
@@ -37,8 +37,8 @@ const SECTION_TWO_CONTENT = {
   bodyTitle: 'In contrast, Gen One have grown up with technology as pervasive and integral to their lives.',
   statContent: [
     {
-      src: '/assets/page-executive-summary/2-opportunity-1.png',
-      srcMobile: '/assets/page-executive-summary/2-opportunity-1-mobile.png',
+      src: '/assets/executive-summary/2-opportunity-1.png',
+      srcMobile: '/assets/executive-summary/2-opportunity-1-mobile.png',
       alt: 'Image with text that says Gen one is 51% of Gen One are optimistic about the future of tech to enable  human connection, compared to 37% of Digital Adopters.',
     },
   ],
@@ -67,13 +67,13 @@ const SECTION_THREE_CONTENT = {
     'R/GA sought to uncover the ambitions, behaviours, motivations and barriers of using digital services among Gen One, and contrast that with Digital Adopters.',
   statContent: [
     {
-      src: '/assets/page-executive-summary/3-our-research-1.png',
-      srcMobile: '/assets/page-executive-summary/3-our-research-1-mobile.png',
+      src: '/assets/executive-summary/3-our-research-1.png',
+      srcMobile: '/assets/executive-summary/3-our-research-1-mobile.png',
       alt: `Image with text that says we heard from 1579 Australian to understand what makes Gen One different.`,
     },
     {
-      src: '/assets/page-executive-summary/3-our-research-2.png',
-      srcMobile: '/assets/page-executive-summary/3-our-research-2-mobile.jpg',
+      src: '/assets/executive-summary/3-our-research-2.png',
+      srcMobile: '/assets/executive-summary/3-our-research-2-mobile.jpg',
       alt: 'Image with text that says Gen One are twice as likely to identify as neurodiverse or LGBTIQ+ than Digital Adopters',
     },
   ],
@@ -97,7 +97,7 @@ const SECTION_FIVE_CONTENT = {
     'Our research highlighted the sharp division in the digital behaviours of Gen One and Digital Adopters in Australia, and their assessments of the current landscape of digital services.',
   statContent: [
     {
-      src: '/assets/page-executive-summary/5-reimagining-1.png',
+      src: '/assets/executive-summary/5-reimagining-1.png',
       alt: `Image with text that says 48% of Gen One prefer visually appealing imagery, bright colours and design online, compared to 33% of Digital Adopters`,
     },
   ],
@@ -131,14 +131,14 @@ export const LANG_SECTION = {
         preview: {
           subtitle: 'Finding01',
           title: 'Their relationship to technology',
-          image: '/assets/page-executive-summary/4-what-we-found-card-1-preview.jpg',
-          imageMobile: '/assets/page-executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
+          image: '/assets/executive-summary/4-what-we-found-card-1-preview.jpg',
+          imageMobile: '/assets/executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
         },
         modal: {
           subtitle: 'Finding01',
           title: 'Our objectives',
-          image: '/assets/page-executive-summary/4-what-we-found-card-1-preview.jpg',
-          imageMobile: '/assets/page-executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
+          image: '/assets/executive-summary/4-what-we-found-card-1-preview.jpg',
+          imageMobile: '/assets/executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
           content: [
             'Gen One are at ease with their relationship with technology, confident in its ability to positively influence their broader life ambitions.',
             'Our research found that while their technology habits are meaningfully different to digital adopters, they are far more optimistic about the future of technology, including AI (37% vs. 30%) and the potential for technology to enable greater human connection (51% vs. 37%)',
@@ -149,14 +149,14 @@ export const LANG_SECTION = {
         preview: {
           subtitle: 'Finding02',
           title: 'Digital diet and behaviours',
-          image: '/assets/page-executive-summary/4-what-we-found-card-2-preview.png',
-          imageMobile: '/assets/page-executive-summary/4-what-we-found-card-2-preview-mobile.jpg',
+          image: '/assets/executive-summary/4-what-we-found-card-2-preview.png',
+          imageMobile: '/assets/executive-summary/4-what-we-found-card-2-preview-mobile.jpg',
         },
         modal: {
           subtitle: 'Finding02',
           title: 'Digital diet and behaviours',
-          image: '/assets/page-executive-summary/4-what-we-found-card-2-modal.jpg',
-          imageMobile: '/assets/page-executive-summary/4-what-we-found-card-2-modal-mobile.jpg',
+          image: '/assets/executive-summary/4-what-we-found-card-2-modal.jpg',
+          imageMobile: '/assets/executive-summary/4-what-we-found-card-2-modal-mobile.jpg',
           content: [
             `Gen One knows that to be out of touch with technology is to be out of touch with the world. They want to balance their daily intake of technology with mindful awareness of potential drawbacks, finding it enjoyable and beneficial for various aspects of their life including education and work, social fulfilment and entertainment.`,
             `In practice, they have much higher daily screen time than Digital Adopters - and are more concerned about the effect this has on their wellbeing (18% more likely for those using screens for at least 4 hours a day).`,
@@ -167,14 +167,14 @@ export const LANG_SECTION = {
         preview: {
           subtitle: 'Finding03',
           title: 'The emotional toll of distraction',
-          image: '/assets/page-executive-summary/4-what-we-found-card-3-preview.png',
-          imageMobile: '/assets/page-executive-summary/4-what-we-found-card-3-preview-mobile.jpg',
+          image: '/assets/executive-summary/4-what-we-found-card-3-preview.png',
+          imageMobile: '/assets/executive-summary/4-what-we-found-card-3-preview-mobile.jpg',
         },
         modal: {
           subtitle: 'Finding03',
           title: 'The emotional toll of distraction',
-          image: '/assets/page-executive-summary/4-what-we-found-card-3-preview.png',
-          imageMobile: '/assets/page-executive-summary/4-what-we-found-card-3-modal-mobile.png',
+          image: '/assets/executive-summary/4-what-we-found-card-3-preview.png',
+          imageMobile: '/assets/executive-summary/4-what-we-found-card-3-modal-mobile.png',
           content: [
             `Despite being more entertaining and engaging, short form, ever-changing and easily consumable content has the highest appeal to Gen One - but these small seeds can blossom into distraction blackholes.`,
             `As a result, Gen One reports higher enjoyment, inspiration and empowerment from being online, but are also feeling more anxious, overwhelmed and, above all, distracted. Overall, both positive emotions (+7%) and negative emotions (+8%) are amplified among Gen One.`,
@@ -185,14 +185,14 @@ export const LANG_SECTION = {
         preview: {
           subtitle: 'Finding04',
           title: 'Trust, data and security',
-          image: '/assets/page-executive-summary/4-what-we-found-card-4-preview.png',
-          imageMobile: '/assets/page-executive-summary/4-what-we-found-card-4-preview-mobile.jpg',
+          image: '/assets/executive-summary/4-what-we-found-card-4-preview.png',
+          imageMobile: '/assets/executive-summary/4-what-we-found-card-4-preview-mobile.jpg',
         },
         modal: {
           subtitle: 'Finding04',
           title: 'Trust, data and security',
-          image: '/assets/page-executive-summary/4-what-we-found-card-4-preview.png',
-          imageMobile: '/assets/page-executive-summary/4-what-we-found-card-4-modal-mobile.jpg',
+          image: '/assets/executive-summary/4-what-we-found-card-4-preview.png',
+          imageMobile: '/assets/executive-summary/4-what-we-found-card-4-modal-mobile.jpg',
           content: [
             `Personal data is less and less personal - the genie is out of the bottle. Gen One feels confident they can stay in control but demands ethical usage.`,
             `Gen One are less concerned about data breaches, spam and the privacy of their personal data. However, they are less trusting of the government as custodian of their personal data than Digital Adopters, particularly for service history (54% vs. 63%) and location data (54% vs. 64%). The trend is reversed for private companies - they have higher comfort sharing data like their health (47% vs. 34%) and demographics (71% vs. 60%).`,

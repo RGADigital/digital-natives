@@ -1,8 +1,8 @@
 import type { IMotionDiv } from '@/atoms/motionDiv/motionDiv.type'
 
 export const ASSETS = {
-  heroSm: '/assets/exec-summary/hero-sm.png',
-  heroLg: '/assets/exec-summary/hero-lg.png',
+  heroSm: '/assets/executive-summary/hero-sm.png',
+  heroLg: '/assets/executive-summary/hero-lg.png',
 }
 
 export const LANG = {
