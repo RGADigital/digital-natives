@@ -13,8 +13,8 @@ export default function ArticleBodyDesktop({ title, menu, content, activeStatus 
 
   return (
     <div className={cn('dn-article-body--desktop', 'container mx-auto')}>
-      <div className={cn('dp-section', 'sticky grid w-full grid-cols-12  bg-white z-30 top-[70px]')}>
-        <div className={cn('dp-section__title', 'col-span-12 lg:col-span-8')}>
+      <div className={cn('dn-section', 'sticky grid w-full grid-cols-12  bg-white z-30 top-[70px]')}>
+        <div className={cn('dn-section__title', 'col-span-12 lg:col-span-8')}>
           <Title order={1} className="lg:!max-w-2/3 pb-6 text-m-h1 text-black lg:!text-h1 ">
             {title}
           </Title>
@@ -23,7 +23,7 @@ export default function ArticleBodyDesktop({ title, menu, content, activeStatus 
       </div>
       {/* START: content */}
       <div
-        className={cn('dp-section__article', 'grid w-full grid-cols-12 border-t-[1px]  bg-white pt-4 lg:pt-0')}
+        className={cn('dn-section__article', 'grid w-full grid-cols-12 border-t-[1px]  bg-white pt-4 lg:pt-0')}
         ref={containerRef}
       >
         <div className={cn('sticky h-fit self-start z-20', 'top-[159px]', 'col-span-12 lg:col-span-3 bg-white')}>

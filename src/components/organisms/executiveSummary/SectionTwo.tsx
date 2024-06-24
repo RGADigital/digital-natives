@@ -49,7 +49,7 @@ export default function SectionTwo({ handleRegister, sectionRef }: Readonly<Prop
       </div>
 
       <div
-        className={cn('dp-section__footer', 'hidden lg:block', 'animate-bounce duration-500 ease-in', {
+        className={cn('dn-section__footer', 'hidden lg:block', 'animate-bounce duration-500 ease-in', {
           'lg:absolute lg:!bottom-5 lg:w-screen': true,
         })}
       >

@@ -6,7 +6,7 @@ interface Props {
 export default function SectionDivider({ mode = 'light' }: Readonly<Props>) {
   return (
     <div
-      className={cn('dp-section-divider', 'border-y-1', 'h-2', {
+      className={cn('dn-section-divider', 'border-y-1', 'h-2', {
         'border-y-neutrals-beige': mode === 'light',
         'border-y-neutrals-cool-gray': mode === 'dark',
       })}
