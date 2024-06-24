@@ -116,9 +116,14 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                       <CardArticlePreview
                         title={LANG.section4.cards[0].preview.title}
                         subtitle={LANG.section4.cards[0].preview.subtitle}
-                        image={LANG.section4.cards[0].preview.image}
+                        image={
+                          isMobile ? LANG.section4.cards[0].preview.imageMobile : LANG.section4.cards[0].preview.image
+                        }
+                        modalImage={
+                          isMobile ? LANG.section4.cards[0].modal.imageMobile : LANG.section4.cards[0].modal.image
+                        }
                         content={LANG.section4.cards[0].modal.content}
-                        imageClassName="w-full h-auto md:aspect-[10/7]"
+                        imageClassName="w-full h-auto aspect-[10/7]"
                       />
                     </div>
                   )
@@ -129,9 +134,11 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                       <CardArticlePreview
                         title={LANG.section4.cards[1].preview.title}
                         subtitle={LANG.section4.cards[1].preview.subtitle}
-                        image={LANG.section4.cards[1].preview.image}
+                        image={
+                          isMobile ? LANG.section4.cards[1].preview.imageMobile : LANG.section4.cards[1].preview.image
+                        }
                         content={LANG.section4.cards[1].modal.content}
-                        imageClassName="w-full h-auto md:aspect-[10/8]"
+                        imageClassName="w-full h-auto aspect-[10/7] md:aspect-[10/8]"
                         modalImageClassName="object-scale-down bg-black"
                         modalImage={LANG.section4.cards[1].modal.image}
                       />
@@ -149,9 +156,14 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                       <CardArticlePreview
                         title={LANG.section4.cards[2].preview.title}
                         subtitle={LANG.section4.cards[2].preview.subtitle}
-                        image={LANG.section4.cards[2].preview.image}
+                        image={
+                          isMobile ? LANG.section4.cards[2].preview.imageMobile : LANG.section4.cards[2].preview.image
+                        }
+                        modalImage={
+                          isMobile ? LANG.section4.cards[2].modal.imageMobile : LANG.section4.cards[2].modal.image
+                        }
                         content={LANG.section4.cards[2].modal.content}
-                        imageClassName="w-full h-auto md:aspect-[34/32]"
+                        imageClassName="w-full h-auto aspect-[10/7] md:aspect-[34/32]"
                       />
                     </div>
                   )
@@ -162,11 +174,15 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                       <CardArticlePreview
                         title={LANG.section4.cards[3].preview.title}
                         subtitle={LANG.section4.cards[3].preview.subtitle}
-                        image={LANG.section4.cards[3].preview.image}
+                        image={
+                          isMobile ? LANG.section4.cards[3].preview.imageMobile : LANG.section4.cards[3].preview.image
+                        }
                         content={LANG.section4.cards[3].modal.content}
-                        imageClassName="w-full h-auto md:aspect-[6.4/2.2]"
+                        imageClassName="w-full h-auto aspect-[10/7] md:aspect-[6.4/2.2]"
                         modalImageClassName="object-scale-down bg-black"
-                        modalImage={LANG.section4.cards[3].modal.image}
+                        modalImage={
+                          isMobile ? LANG.section4.cards[3].modal.imageMobile : LANG.section4.cards[3].modal.image
+                        }
                       />
                     </div>
                   )

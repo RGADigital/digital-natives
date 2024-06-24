@@ -76,6 +76,7 @@ export default function CardArticlePreview({
               'text-m-h3 font-m-h3 lg:text-subheading lg:font-subheading',
               'mb-5 lg:mb-6',
               'flex gap-4 flex-wrap items-end',
+              'max-w-[80%] lg:max-w-[unset]',
               titleClassName,
             )}
           >
