@@ -36,6 +36,9 @@ export default function SectionTwo({ handleRegister, sectionRef }: Readonly<Prop
         </Title>
         <Text component="p" className="col-span-3 !text-m-body lg:col-span-4 lg:col-start-3 lg:!text-body">
           {LANG.section2Subtitle}
+          <br />
+          <br />
+          {LANG.section2Subtitle2}
         </Text>
         <div className="col-span-3 shrink-0 lg:col-span-8 lg:col-start-3">
           <Button handleClick={handleRegister}>{LANG.section2Register}</Button>
@@ -52,7 +55,7 @@ export default function SectionTwo({ handleRegister, sectionRef }: Readonly<Prop
       >
         <div className={cn('container mx-auto', 'flex flex-row lg:items-center gap-[3.03px]')}>
           <ScrollDownIcon />
-          <Text component="p" className={cn('hidden lg:block uppercase  lg:text-eyebrow text-neutrals-white')}>
+          <Text component="p" className={cn('hidden lg:block lg:text-eyebrow text-neutrals-white')}>
             {LANG.section2ScrollText}
           </Text>
         </div>

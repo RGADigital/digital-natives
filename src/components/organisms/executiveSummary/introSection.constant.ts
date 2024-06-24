@@ -8,10 +8,10 @@ export const ASSETS = {
 export const LANG = {
   heroAlt: 'The gen one report',
   section2Title: 'How can we create for the future if our digital experiences are stuck in the past?',
-  section2Subtitle:
-    'R/GA set out on a multi-modal research project to understand the generation born with phones in their hands. How do their expectations and behaviours differ from digital adopters? And, how can we use what we’ve learned to better design digital services for them in the future. We’ll be releasing chapters of our report over the coming weeks: sign up now to stay in the loop, or scroll down to read more about why we’re did this – and why it’s fundamental knowledge.',
-  section2ScrollText: 'SCROLL FOR MORE',
-  section2Register: 'Register for update',
+  section2Subtitle: `Australia’s largest demographic is the one that’s never known a world without the internet. This means we have to evolve digital experiences to address their needs and expectations. R/GA’s research has identified that Digitally Native Australians’ behaviour, perceptions and preferences can light the way for all of us - they’re the foundation for a new digital world.`,
+  section2Subtitle2: `We’ll be releasing new chapters over the coming weeks - register now to be among the first to access.`,
+  section2ScrollText: 'Scroll for more',
+  section2Register: 'Register for updates',
 }
 
 const blueDesktop: IMotionDiv = {
