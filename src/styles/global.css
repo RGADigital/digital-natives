@@ -195,3 +195,22 @@ section.mantine-Modal-content {
 .dn-modal-register .mantine-Modal-content {
   @apply !rounded-none;
 }
+
+/* START: sidebar */
+.dn-section__article
+  > .dn-section__article__sidebar-item--active:not(:first-of-type)
+  > .dn-micro-detail
+  > .dn-colored-box,
+.dn-section__article .dn-section__article__sidebar-item--inactive > .dn-micro-detail > .dn-colored-box {
+  @apply bg-[#eeeeee];
+}
+
+.dn-section__article
+  > .dn-section__article__sidebar-item--active:not(:first-of-type)
+  > .dn-micro-detail
+  > .dn-colored-box
+  + p,
+.dn-section__article .dn-section__article__sidebar-item--inactive > .dn-micro-detail > .dn-colored-box + p {
+  @apply !text-neutrals-cool-gray-5;
+}
+/* END: sidebar */

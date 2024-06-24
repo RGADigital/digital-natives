@@ -34,13 +34,22 @@ export default function ArticleBodyDesktop({ title, menu, content, activeStatus 
 
               const isActive = activeStatus?.[`isInView${key}`] ? activeStatus[`isInView${key}`] : false
               return (
-                <a href={href} key={key}>
+                <a
+                  href={href}
+                  key={key}
+                  className={cn('dn-section__article__sidebar-item', {
+                    'dn-section__article__sidebar-item--active': isActive,
+                    'dn-section__article__sidebar-item--inactive': !isActive,
+                  })}
+                >
                   <MicroDetail
                     text={label}
-                    color={isActive ? color : 'grey'}
+                    color={color}
                     boxClassName={cn('lg:size-[10px]')}
-                    containerClassName="lg:gap-[3.02px]"
-                    textClassName={cn({ 'text-black': isActive, 'text-neutrals-cool-gray-5': !isActive })}
+                    containerClassName={cn('lg:gap-[3.02px]')}
+                    textClassName={cn({
+                      'text-black': isActive,
+                    })}
                   />
                 </a>
               )

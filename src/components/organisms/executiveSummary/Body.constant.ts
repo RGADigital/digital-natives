@@ -88,7 +88,7 @@ const SECTION_THREE_CONTENT = {
 }
 
 const SECTION_FIVE_CONTENT = {
-  color: 'magenta',
+  color: 'red',
   navigation: 'Reimagining',
   id: 'reimagining',
   title: 'Reimagining the Digital World',
