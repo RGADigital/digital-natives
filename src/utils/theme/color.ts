@@ -29,6 +29,7 @@ export const cyan: MantineColorsTuple = [
 
 export const SITE_COLOR = {
   'neutrals-white': '#ffffff',
+  'neutrals-cool-gray-0': '#EEEEEE',
   'neutrals-cool-gray': '#333333',
   'neutrals-cool-gray-5': '#999999',
   'neutrals-beige': '#E8E3D8',

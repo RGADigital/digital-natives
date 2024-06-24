@@ -49,7 +49,15 @@ export const FONT_H1 = {
 export const FONT_H1_MOBILE = {
   fontSize: '40px',
   fontWeight: '400',
-  lineHeight: '42.8px',
+  lineHeight: '44px',
+  letterSpacing: '0.4px',
+}
+
+export const FONT_H2 = {
+  fontSize: '45px',
+  fontWeight: 400,
+  lineHeight: '54px',
+  letterSpacing: '-0.03em',
 }
 
 export const FONT_H3_MOBILE = {

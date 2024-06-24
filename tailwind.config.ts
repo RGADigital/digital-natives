@@ -13,6 +13,7 @@ const {
   FONT_DISCLAIMER_MOBILE,
   FONT_QUOTE,
   FONT_QUOTE_MOBILE,
+  FONT_SUBHEADING,
 
   FONT_NAV,
   FONT_NAV_MOBILE,
@@ -153,8 +154,16 @@ module.exports = {
             fontWeight: FONT_QUOTE_MOBILE.fontWeight,
           },
         ],
+        subheading: [
+          FONT_SUBHEADING.fontSize,
+          {
+            lineHeight: FONT_SUBHEADING.lineHeight,
+            fontWeight: FONT_SUBHEADING.fontWeight,
+          },
+        ],
       },
     },
   },
   plugins: [],
+  safelist: [],
 }
