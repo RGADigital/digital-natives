@@ -12,7 +12,13 @@ export interface ArticleBodyProps {
     color: IColoredBox['color']
   } | null)[]
   activeStatus?: { [key: string]: any }
+  nextSection?: React.ReactNode
   content?: {
-    [key: string]: { Component: React.ReactNode; ref: React.RefObject<HTMLDivElement>; id?: string; isActive?: boolean }
+    [key: string]: {
+      Component: React.ReactNode
+      ref: React.RefObject<HTMLDivElement>
+      id?: string
+      isActive?: boolean
+    }
   }
 }

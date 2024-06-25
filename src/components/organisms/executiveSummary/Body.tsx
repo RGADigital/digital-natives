@@ -11,6 +11,7 @@ import ArticleBody from '@/templates/articleBody/ArticleBody'
 import { type ITwoColumnStatText, TWO_COLUMN_STAT } from '@/templates/twoColumnStatText'
 
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
+import NextSection from './NextSection'
 
 interface Props {
   isMobile?: boolean
@@ -195,7 +196,6 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           id: LANG.section4.id,
           isActive: activeStatus.isInview4,
         },
-
         section5: {
           Component: (
             <TwoColumnStat
@@ -215,6 +215,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           isActive: activeStatus.isInview5,
         },
       }}
+      nextSection={<NextSection isMobile={isMobile} />}
     />
   )
 }

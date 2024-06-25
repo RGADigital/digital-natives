@@ -9,8 +9,7 @@ import useViewport from '@/hooks/useViewport'
 import cn from '@/utils/cn'
 
 import { Meta } from '@/globals/index'
-import Body from '@/organisms/executiveSummary/Body'
-import { ExecutiveSummaryIntro } from '@/organisms/executiveSummary/index'
+import { Body, ExecutiveSummaryIntro } from '@/organisms/executiveSummary/index'
 import FooterContent from '@/organisms/footer/FooterContent'
 import { Header, ModalRegister } from '@/organisms/index'
 

@@ -71,7 +71,7 @@ export default function CardArticlePreview({
         {/* START: title */}
         <div
           className={cn(
-            'flex justify-between items-end',
+            'flex justify-between items-end gap-2.5',
             'border border-black !border-t-0',
             'pt-2.5',
             'pb-5 lg:pb-[13px]',
@@ -94,8 +94,6 @@ export default function CardArticlePreview({
               className={cn(
                 'dn-card-article-preview__title',
                 'text-m-h3 font-m-h3 lg:text-subheading lg:font-subheading',
-                'flex gap-4 flex-wrap items-end',
-                'max-w-[80%] lg:max-w-[unset]',
                 titleClassName,
               )}
             >
@@ -103,7 +101,7 @@ export default function CardArticlePreview({
             </Title>
             {/* END: title */}
           </div>
-          <PlusIcon width={isMobile ? 19.5 : 32} height={isMobile ? 19.5 : 32} className=" fill-black text-white " />
+          <PlusIcon width={isMobile ? 19.5 : 32} height={isMobile ? 19.5 : 32} />
         </div>
       </div>
       <ModalArticle
