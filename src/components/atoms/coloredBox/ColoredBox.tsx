@@ -11,12 +11,12 @@ export default function ColoredBox({ className, color }: Readonly<IColoredBox>) 
       className={cn(
         'dn-colored-box',
         {
-          'bg-[#FFFF00]': color === 'yellow',
+          'bg-accents-yellow': color === 'yellow',
           'bg-[#01FFFF]': color === 'cyan',
-          'bg-[#FF00FF]': color === 'magenta',
-          'bg-[#0000FF]': color === 'blue',
+          'bg-accents-pink': color === 'magenta',
+          'bg-accents-blue': color === 'blue',
           'bg-[#E40004]': color === 'red',
-          'bg-[#eeeeee]': color === 'grey',
+          'bg-cool-gray-1': color === 'grey',
         },
         className,
       )}
