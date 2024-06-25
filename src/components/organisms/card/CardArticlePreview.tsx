@@ -45,12 +45,23 @@ export default function CardArticlePreview({
           'bg-white',
 
           'flex flex-col',
+          'mb-[22px] ',
+          'hover:scale-105 transition duration-200 ease-in',
         )}
+        onClick={openModal}
+        role="button"
       >
         {/* START: image */}
         {image && (
           <div
-            className={cn('dn-card-article-preview__image', 'relative', 'bg-grey-300', 'w-full h-auto', imageClassName)}
+            className={cn(
+              'dn-card-article-preview__image',
+              'relative',
+              'bg-grey-300',
+              'w-full h-auto',
+              'border border-black',
+              imageClassName,
+            )}
           >
             <Image src={image} loading="lazy" alt={`Image for ${title}`} fill className="object-cover object-top" />
           </div>
@@ -58,40 +69,41 @@ export default function CardArticlePreview({
         {customImage}
         {/* END: image */}
         {/* START: title */}
-        <div className="lg:max-w-1/2 flex flex-col">
-          <Text
-            component="p"
-            className={cn(
-              'dn-card-article-preview__subtitle',
-              'font-m-eyebrow lg:font-eyebrow text-m-eyebrow lg:text-eyebrow',
-              'mt-6 mb-1',
-            )}
-          >
-            {subtitle}
-          </Text>
-          <Title
-            order={3}
-            className={cn(
-              'dn-card-article-preview__title',
-              'text-m-h3 font-m-h3 lg:text-subheading lg:font-subheading',
-              'mb-5 lg:mb-6',
-              'flex gap-4 flex-wrap items-end',
-              'max-w-[80%] lg:max-w-[unset]',
-              titleClassName,
-            )}
-          >
-            {title}
-            {/* START: open modal */}
-            <button className="size-fit bg-transparent text-black transition duration-200 ease-in" onClick={openModal}>
-              <PlusIcon
-                width={isMobile ? 19.5 : 21.54}
-                height={isMobile ? 19.5 : 21.27}
-                className="hover:fill-black hover:text-white "
-              />
-            </button>
-            {/* END: open modal */}
-          </Title>
-          {/* END: title */}
+        <div
+          className={cn(
+            'flex justify-between items-end',
+            'border border-black !border-t-0',
+            'pt-2.5',
+            'pb-5 lg:pb-[13px]',
+            'pl-2.5 pr-[17px]',
+          )}
+        >
+          <div className={cn('flex flex-col')}>
+            <Text
+              component="p"
+              className={cn(
+                'dn-card-article-preview__subtitle',
+                'font-m-eyebrow lg:font-eyebrow text-m-eyebrow lg:text-eyebrow',
+                'mb-1',
+              )}
+            >
+              {subtitle}
+            </Text>
+            <Title
+              order={3}
+              className={cn(
+                'dn-card-article-preview__title',
+                'text-m-h3 font-m-h3 lg:text-subheading lg:font-subheading',
+                'flex gap-4 flex-wrap items-end',
+                'max-w-[80%] lg:max-w-[unset]',
+                titleClassName,
+              )}
+            >
+              {title}
+            </Title>
+            {/* END: title */}
+          </div>
+          <PlusIcon width={isMobile ? 19.5 : 32} height={isMobile ? 19.5 : 32} className=" fill-black text-white " />
         </div>
       </div>
       <ModalArticle
