@@ -33,6 +33,7 @@ export default function ModalArticle({
       className={cn('dn-modal-article', {
         'dn-modal-article--mobile': isMobile,
       })}
+      fullScreen
     >
       <Modal.Overlay />
       <Modal.Content>
