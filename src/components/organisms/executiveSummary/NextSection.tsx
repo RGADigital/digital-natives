@@ -20,7 +20,7 @@ export default function NextSection({ isMobile = false }: Readonly<Props>) {
       })}
     >
       <div
-        className="relative aspect-[51/22] h-auto text-clip bg-black lg:my-5 lg:ml-5 lg:aspect-[1028/448]"
+        className="relative aspect-[51/22] h-auto !overflow-clip bg-black lg:my-5 lg:ml-5 lg:aspect-[1028/448]"
         role="button"
       >
         <Image

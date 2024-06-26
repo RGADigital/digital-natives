@@ -146,6 +146,7 @@ export const LANG_SECTION = {
           title: 'Our objectives',
           image: '/assets/executive-summary/4-what-we-found-card-1-preview.jpg',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
+          downloadLink: '',
           content: [
             'Gen One are at ease with their relationship with technology, confident in its ability to positively influence their broader life ambitions.',
             'Our research found that while their technology habits are meaningfully different to digital adopters, they are far more optimistic about the future of technology, including AI (37% vs. 30%) and the potential for technology to enable greater human connection (51% vs. 37%)',
@@ -164,6 +165,7 @@ export const LANG_SECTION = {
           title: 'Digital diet and behaviours',
           image: '/assets/executive-summary/4-what-we-found-card-2-modal.jpg',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-2-modal-mobile.jpg',
+          downloadLink: '',
           content: [
             `Gen One knows that to be out of touch with technology is to be out of touch with the world. They want to balance their daily intake of technology with mindful awareness of potential drawbacks, finding it enjoyable and beneficial for various aspects of their life including education and work, social fulfilment and entertainment.`,
             `In practice, they have much higher daily screen time than Digital Adopters - and are more concerned about the effect this has on their wellbeing (18% more likely for those using screens for at least 4 hours a day).`,
@@ -182,6 +184,7 @@ export const LANG_SECTION = {
           title: 'The emotional toll of distraction',
           image: '/assets/executive-summary/4-what-we-found-card-3-preview.png',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-3-modal-mobile.png',
+          downloadLink: '',
           content: [
             `Despite being more entertaining and engaging, short form, ever-changing and easily consumable content has the highest appeal to Gen One - but these small seeds can blossom into distraction blackholes.`,
             `As a result, Gen One reports higher enjoyment, inspiration and empowerment from being online, but are also feeling more anxious, overwhelmed and, above all, distracted. Overall, both positive emotions (+7%) and negative emotions (+8%) are amplified among Gen One.`,
@@ -200,6 +203,7 @@ export const LANG_SECTION = {
           title: 'Trust, data and security',
           image: '/assets/executive-summary/4-what-we-found-card-4-preview.png',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-4-modal-mobile.jpg',
+          downloadLink: '',
           content: [
             `Personal data is less and less personal - the genie is out of the bottle. Gen One feels confident they can stay in control but demands ethical usage.`,
             `Gen One are less concerned about data breaches, spam and the privacy of their personal data. However, they are less trusting of the government as custodian of their personal data than Digital Adopters, particularly for service history (54% vs. 63%) and location data (54% vs. 64%). The trend is reversed for private companies - they have higher comfort sharing data like their health (47% vs. 34%) and demographics (71% vs. 60%).`,

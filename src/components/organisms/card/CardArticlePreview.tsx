@@ -12,6 +12,7 @@ import { ModalArticle } from '../modal'
 
 interface ICardArticlePreview {
   customImage?: React.ReactNode
+  downloadLink?: string
   image?: string
   imageClassName?: string
   modalImage?: string
@@ -24,6 +25,7 @@ interface ICardArticlePreview {
 
 export default function CardArticlePreview({
   customImage,
+  downloadLink,
   image,
   imageClassName,
   modalImage,
@@ -106,6 +108,7 @@ export default function CardArticlePreview({
       </div>
       <ModalArticle
         closeModal={closeModal}
+        downloadLink={downloadLink}
         title={title}
         content={content}
         subtitle={subtitle}

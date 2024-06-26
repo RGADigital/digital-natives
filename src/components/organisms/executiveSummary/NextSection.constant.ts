@@ -3,5 +3,5 @@ export const CONTENT = {
   backgroundMobile: '/assets/executive-summary/next-section-1_mobile.jpg',
   nextSubtitle: 'Read the next chapter',
   nextTitle: 'Who is Gen One?',
-  nextLink: '/who-is-gen-one',
+  nextLink: '/chapter-02',
 }

@@ -8,7 +8,7 @@ export interface ButtonProps {
   ariaLabel?: string
   children?: React.ReactNode
   className?: string
-  handleClick: (...props: any) => void
+  handleClick?: (...props: any) => void
   type?: 'primary' | 'white'
 }
 

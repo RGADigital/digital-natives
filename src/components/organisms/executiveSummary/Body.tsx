@@ -126,6 +126,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                         modalImage={
                           isMobile ? LANG.section4.cards[0].modal.imageMobile : LANG.section4.cards[0].modal.image
                         }
+                        downloadLink={LANG.section4.cards[0].modal.downloadLink}
                         content={LANG.section4.cards[0].modal.content}
                         imageClassName="w-full h-auto aspect-[10/7]"
                       />
@@ -141,6 +142,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                         image={
                           isMobile ? LANG.section4.cards[1].preview.imageMobile : LANG.section4.cards[1].preview.image
                         }
+                        downloadLink={LANG.section4.cards[1].modal.downloadLink}
                         content={LANG.section4.cards[1].modal.content}
                         imageClassName="w-full h-auto aspect-[10/7] md:aspect-[10/8]"
                         modalImageClassName="object-scale-down bg-black"
@@ -170,6 +172,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                         modalImage={
                           isMobile ? LANG.section4.cards[2].modal.imageMobile : LANG.section4.cards[2].modal.image
                         }
+                        downloadLink={LANG.section4.cards[2].modal.downloadLink}
                         content={LANG.section4.cards[2].modal.content}
                         imageClassName="w-full h-auto aspect-[10/7] md:aspect-[34/32]"
                       />
@@ -191,6 +194,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                         modalImage={
                           isMobile ? LANG.section4.cards[3].modal.imageMobile : LANG.section4.cards[3].modal.image
                         }
+                        downloadLink={LANG.section4.cards[3].modal.downloadLink}
                       />
                     </div>
                   )

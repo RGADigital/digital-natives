@@ -1,7 +1,7 @@
 const menuContent = [
   {
     microDetail: 'Chapter 01',
-    link: '/executive-summary',
+    link: '/',
     title: 'Executive Summary',
     isComingSoon: false,
   },

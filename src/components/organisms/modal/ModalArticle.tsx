@@ -9,6 +9,7 @@ import CardArticle from '@/organisms/card/CardArticle'
 
 interface IModalArticle {
   isModalOpen?: boolean
+  downloadLink?: string
   image?: string
   imageClassName?: string
   title?: string
@@ -17,6 +18,7 @@ interface IModalArticle {
   closeModal: () => void
 }
 export default function ModalArticle({
+  downloadLink,
   isModalOpen = false,
   imageClassName,
   closeModal,
@@ -60,6 +62,7 @@ export default function ModalArticle({
           <CardArticle
             image={image}
             title={title}
+            downloadLink={downloadLink}
             subtitle={subtitle}
             content={content}
             imageClassName={imageClassName}
