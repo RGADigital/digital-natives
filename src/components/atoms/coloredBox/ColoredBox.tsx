@@ -16,7 +16,7 @@ export default function ColoredBox({ className, color }: Readonly<IColoredBox>) 
           'bg-accents-pink': color === 'magenta',
           'bg-accents-blue': color === 'blue',
           'bg-[#E40004]': color === 'red',
-          'bg-cool-gray-1': color === 'grey',
+          'bg-neutrals-cool-gray-1': color === 'grey',
         },
         className,
       )}
