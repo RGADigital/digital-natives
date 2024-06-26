@@ -113,6 +113,10 @@ body {
   border-radius: var(--input-radius);
 }
 
+.mantine-Modal-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 section.mantine-Modal-content {
   @apply !w-screen lg:!w-[703px] lg:min-w-[703px];
   /* Hide scrollbar */
@@ -147,8 +151,8 @@ section.mantine-Modal-content {
 
 /* START: Accordion */
 @media (max-width: 1024px) {
-  .mantine-Accordion-control {
-    @apply -mx-5 px-5 w-[calc(100vw_+_10px)] overflow-clip;
+  .dn-article-body__content > .mantine-Accordion-root > .mantine-Accordion-item > button.mantine-Accordion-control {
+    @apply -mx-5 px-5 w-[calc(100vw_+_10px)] overflow-clip !border-b !border-b-neutrals-beige;
   }
   .mantine-Accordion-content::before {
     @apply bg-white absolute top-0 right-0 bottom-0 -left-5 overflow-clip -z-10;
