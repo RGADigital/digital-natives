@@ -2,7 +2,7 @@ import useViewport from '@/hooks/useViewport'
 
 import IntroDesktop from './IntroDesktop'
 import IntroMobile from './IntroMobile'
-import { MAX_HEIGHT_IN_PX, MAX_WIDTH_IN_PX } from './introSection.constant'
+import { MAX_HEIGHT_IN_PX, MAX_WIDTH_IN_PX } from './IntroSection.constant'
 
 interface Props {
   handleRegister: () => void

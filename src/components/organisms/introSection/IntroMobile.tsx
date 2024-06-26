@@ -10,25 +10,16 @@ import cn from '@/utils/cn'
 import { MotionDiv } from '@/atoms/index'
 import type { IMotionDiv, IMotionDivPosition, IMotionDivSize } from '@/atoms/motionDiv/motionDiv.type'
 
-import {
-  ASSETS,
-  LANG,
-  MAX_HEIGHT_IN_PX,
-  MAX_WIDTH_IN_PX,
-  MOTION_DIVS_DESKTOP,
-  SECTION_2_THRESHOLD,
-} from './introSection.constant'
+import { ASSETS, LANG, MOTION_DIVS_MOBILE, SECTION_2_THRESHOLD } from './IntroSection.constant'
 import SectionTwo from './SectionTwo'
 
 interface Props {
   handleRegister: () => void
 }
 
-export default function IntroDesktop({ handleRegister }: Readonly<Props>) {
-  const { viewportWidth, viewportHeight, vhToPx, vwToPx } = useViewport({
-    maxHeight: MAX_HEIGHT_IN_PX,
-    maxWidth: MAX_WIDTH_IN_PX,
-  })
+// TODO: reuse the similar code on mobile and desktop
+export default function IntroMobile({ handleRegister }: Readonly<Props>) {
+  const { viewportWidth, viewportHeight, vwToPx } = useViewport({})
   const scrollRef = useRef<HTMLElement>(null)
   const { ref: section2Ref, entry } = useIntersectionObserver({
     threshold: SECTION_2_THRESHOLD,
@@ -36,21 +27,21 @@ export default function IntroDesktop({ handleRegister }: Readonly<Props>) {
 
   const motionDivsInPx: { [key: string]: IMotionDiv & { size: IMotionDivSize; position: IMotionDivPosition } } =
     useMemo(() => {
-      return Object.entries(MOTION_DIVS_DESKTOP).reduce(
+      return Object.entries(MOTION_DIVS_MOBILE).reduce(
         (acc: {}, [key, { sizeInPercent, positionInPercent, ...rest }]: [string, IMotionDiv]) => {
           const sizeInPx: IMotionDivSize = {
             w0: vwToPx(sizeInPercent.w0),
-            h0: vhToPx(sizeInPercent.h0),
+            h0: vwToPx(sizeInPercent.h0),
           }
           if (sizeInPercent.w1) sizeInPx.w1 = vwToPx(sizeInPercent.w1)
-          if (sizeInPercent.h1) sizeInPx.h1 = vhToPx(sizeInPercent.h1)
+          if (sizeInPercent.h1) sizeInPx.h1 = vwToPx(sizeInPercent.h1)
 
           const positionInPx: IMotionDivPosition = {
             x0: vwToPx(positionInPercent.x0),
-            y0: vhToPx(positionInPercent.y0),
+            y0: vwToPx(positionInPercent.y0),
           }
           if (positionInPercent.x1) positionInPx.x1 = vwToPx(positionInPercent.x1)
-          if (positionInPercent.y1) positionInPx.y1 = vhToPx(positionInPercent.y1)
+          if (positionInPercent.y1) positionInPx.y1 = vwToPx(positionInPercent.y1)
 
           return { ...acc, [key]: { size: sizeInPx, position: positionInPx, ...rest } }
         },
@@ -64,23 +55,23 @@ export default function IntroDesktop({ handleRegister }: Readonly<Props>) {
 
   return (
     <div
-      className={cn('dn-intro--desktop', 'flex flex-col', 'w-screen h-full bg-black', 'overflow-hidden')}
+      className={cn('dn-intro--desktop', 'flex flex-col gap-y-[39.77px]', 'w-screen h-full bg-black mt-[75px]')}
       ref={scrollRef as React.RefObject<HTMLDivElement>}
     >
-      <section className={cn('dn-intro__hero', 'max-h-[755px] h-screen')}>
-        <div className="container relative mx-auto size-full">
-          {motionDivsInPx.blueDesktop && (
+      <section className={cn('dn-intro__hero', 'h-min')}>
+        <div className="relative mx-0 h-[100vw] w-full overflow-hidden px-0">
+          {motionDivsInPx.blueMobile && (
             <MotionDiv
-              {...motionDivsInPx.blueDesktop}
+              {...motionDivsInPx.blueMobile}
               className={cn('bg-accents-blue absolute')}
               motionValue={motionValue}
               inputRange={motionInputRange}
             />
           )}
-          {motionDivsInPx.redPinkDesktop && (
+          {motionDivsInPx.redPinkMobile && (
             <MotionDiv
-              {...motionDivsInPx.redPinkDesktop}
-              className={cn('absolute bg-accents-red  transition-all')}
+              {...motionDivsInPx.redPinkMobile}
+              className={cn('absolute bg-accents-red transition-all')}
               motionValue={motionValue}
               inputRange={motionInputRange}
               ease="easeIn"
@@ -89,18 +80,24 @@ export default function IntroDesktop({ handleRegister }: Readonly<Props>) {
             </MotionDiv>
           )}
 
-          <Image fill alt={LANG.heroAlt} src={ASSETS.heroLg} priority className="transition-opacity delay-300" />
-          {motionDivsInPx.redDesktop && (
+          <Image
+            fill
+            alt={LANG.heroAlt}
+            src={ASSETS.heroSm}
+            priority
+            className="object-contain transition-opacity delay-300"
+          />
+          {motionDivsInPx.redMobile && (
             <MotionDiv
-              {...motionDivsInPx.redDesktop}
+              {...motionDivsInPx.redMobile}
               className={cn('absolute bg-accents-red mix-blend-plus-lighter transition-colors')}
               motionValue={motionValue}
               inputRange={motionInputRange}
             />
           )}
-          {motionDivsInPx.cyanGreenDesktop && (
+          {motionDivsInPx.cyanGreenMobile && (
             <MotionDiv
-              {...motionDivsInPx.cyanGreenDesktop}
+              {...motionDivsInPx.cyanGreenMobile}
               className={cn('absolute mix-blend-exclusion transition-all')}
               motionValue={motionValue}
               inputRange={motionInputRange}
@@ -113,6 +110,7 @@ export default function IntroDesktop({ handleRegister }: Readonly<Props>) {
           )}
         </div>
       </section>
+      {/* TODO: remove props drilling by bring the section2 component up */}
       <SectionTwo handleRegister={handleRegister} sectionRef={section2Ref} />
     </div>
   )

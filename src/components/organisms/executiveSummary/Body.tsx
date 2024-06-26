@@ -8,12 +8,12 @@ import cn from '@/utils/cn'
 
 import type { IQuoteBox } from '@/molecules/index'
 import { CardArticlePreview } from '@/organisms/card'
+import { NextSection } from '@/organisms/nextSection'
 import TwoColumnStat from '@/organisms/twoColumnStatText/TwoColumnStatText'
 import ArticleBody from '@/templates/articleBody/ArticleBody'
 import { type ITwoColumnStatText, TWO_COLUMN_STAT } from '@/templates/twoColumnStatText'
 
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
-import NextSection from './NextSection'
 
 interface Props {
   isMobile?: boolean

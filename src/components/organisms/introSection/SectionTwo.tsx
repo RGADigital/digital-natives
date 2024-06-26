@@ -6,7 +6,7 @@ import { Button } from '@/atoms/button'
 import ScrollDownIcon from '@/atoms/icon/ScrollDown'
 import MicroDetail from '@/atoms/microDetail/MicroDetail'
 
-import { LANG } from './introSection.constant'
+import { LANG } from './IntroSection.constant'
 
 interface Props {
   handleRegister: () => void

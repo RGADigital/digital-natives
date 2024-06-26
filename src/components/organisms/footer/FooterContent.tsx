@@ -25,7 +25,7 @@ export default function FooterContent({ handleRegister }: Readonly<IFooterConten
             'flex flex-col gap-[50px] lg:gap-20',
           )}
         >
-          <Title order={2} className="dn-footer__content__title lg:text-h2 font-m-h1 lg:font-h2 text-m-h1">
+          <Title order={2} className="dn-footer__content__title font-m-h1 lg:font-h2 text-m-h1 lg:text-h2">
             {LANG.footerTitle}
           </Title>
           <Button type="primary" handleClick={handleRegister} className="w-fit">
