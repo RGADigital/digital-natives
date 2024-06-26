@@ -45,7 +45,7 @@ export default function CardArticlePreview({
           'bg-white',
 
           'flex flex-col',
-          'mb-[22px] ',
+          'lg:mb-[22px] ',
           'hover:scale-105 transition duration-200 ease-in',
         )}
         onClick={openModal}
@@ -59,7 +59,7 @@ export default function CardArticlePreview({
               'relative',
               'bg-grey-300',
               'w-full h-auto',
-              'border border-black',
+              'lg:border lg:border-black',
               imageClassName,
             )}
           >
@@ -71,11 +71,11 @@ export default function CardArticlePreview({
         {/* START: title */}
         <div
           className={cn(
-            'flex justify-between items-end gap-2.5',
-            'border border-black !border-t-0',
-            'pt-2.5',
-            'pb-5 lg:pb-[13px]',
-            'pl-2.5 pr-[17px]',
+            'flex flex-col lg:flex-row lg:justify-between lg:items-end gap-1 lg:gap-2.5',
+            'lg:border lg:border-black !border-t-0',
+            'pt-6 lg:pt-2.5',
+            '0 lg:pb-[13px]',
+            'lg:pl-2.5 pr-[17px]',
           )}
         >
           <div className={cn('flex flex-col')}>

@@ -15,15 +15,24 @@ export default function TextContent({
 }>) {
   return (
     <>
-      <div className={cn('dn-two-column-stat__text-content__title', 'mt-6 lg:mt-5 grid w-full grid-cols-12')}>
+      <div className={cn('dn-two-column-stat__text-content__title', 'mt-[110px] lg:mt-5 grid w-full grid-cols-12')}>
         <div className="col-span-12">
-          <Title order={3} className="lg:font-subheading mb-6 text-black lg:mb-5 lg:text-subheading">
+          <Title
+            order={3}
+            className="font-m-h3 lg:font-subheading mb-[46px] text-m-h3 text-black lg:mb-5 lg:text-subheading"
+          >
             {bodyTitle}
           </Title>
         </div>
       </div>
-      <div className={cn('dn-two-column-stat__text-content__content', 'grid w-full grid-cols-12 lg:pr-5 ')}>
-        <div className="col-span-12 lg:col-span-6 lg:mb-5">
+      <div
+        className={cn(
+          'dn-two-column-stat__text-content__content',
+          'grid w-full grid-cols-12 lg:pr-5 ',
+          'font-body text-body',
+        )}
+      >
+        <div className="col-span-12 lg:col-span-6 lg:mb-5 ">
           {paragraph1Content &&
             paragraph1Content?.length > 0 &&
             paragraph1Content.map((content, idx) => (

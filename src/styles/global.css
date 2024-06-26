@@ -170,14 +170,7 @@ section.mantine-Modal-content {
   .mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > p {
     @apply !text-neutrals-cool-gray-5;
   }
-
-  /* TODO[pops]: avoid scroll to accordion center */
-  /* .mantine-Accordion-item {
-    scroll-snap-align: start;
-    scroll-padding-top: 100px;
-  } */
 }
-/* END: Accordion */
 
 .dn-header__wrapper {
   overscroll-behavior: auto;

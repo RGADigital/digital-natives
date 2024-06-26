@@ -6,6 +6,7 @@ const SECTION_ONE_CONTENT = {
   id: 'challenge',
   title: 'The Challenge',
   titleNumber: '01',
+  bodyTitleMobile: 'Our digital landscape has been shaped by, and for, Digital Adopters',
   bodyTitle:
     'Our digital landscape has largely been shaped by, and for, Digital Adopters - those who were not born into the digital world but have had to adapt. However, the world is now majority Digital Natives or “Gen One”, the first generation of a true digital world.',
   statContent: [
@@ -20,6 +21,11 @@ const SECTION_ONE_CONTENT = {
     author: `Tayla, 17`,
     edgeColor: 'yellow',
   },
+  paragraph1ContentMobile: [
+    `Those who were not born into the digital world but have had to adapt. However, the world is now majority Digital Natives or ‘Gen One’ of a true digital world.`,
+    `Digital Adopters are cautious when adopting new technology and old, inefficient experiences have often been digitised rather than reimagining them for new audiences and technology. Gen One are the most vocal critics of these technologies: they play a crucial role in identifying issues and pushing for improvements. `,
+    `Persisting with a design approach from the Digital Adopter era risks alienating Gen One and limiting the adoption of new technology that can provide greater access and opportunities for all.`,
+  ],
   paragraph1Content: [
     `Digital Adopters are cautious when adopting new technology and old, inefficient experiences have often been digitised as-is, rather than reimagining them for new audiences and technology.`,
     `Gen One are the most vocal critics of these technologies: they play a crucial role in identifying issues and pushing for improvements.`,
@@ -103,6 +109,7 @@ const SECTION_FIVE_CONTENT = {
   ],
 
   quoteContent: {
+    edgeColor: 'pink',
     quote: `“Like we're in 2024... Every other state has a cool website.”`,
     author: 'Imogen, 28',
   },

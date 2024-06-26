@@ -126,7 +126,7 @@ export default function Header({ mode = 'dark', handleRegister, showHeaderGradie
       <motion.div
         initial={false}
         animate={isMenuOpen ? 'open' : 'closed'}
-        className={cn('background bg-white', {
+        className={cn('background bg-white ', {
           hidden: !isMenuOpen,
         })}
         variants={sidebar}

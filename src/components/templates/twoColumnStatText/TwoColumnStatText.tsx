@@ -11,6 +11,8 @@ interface Props {
   noMarginBottom?: boolean
   rightChildren?: React.ReactNode
   statContent: React.ReactNode
+  statContentWrapperClassName?: string
+  statContentTextRightClassName?: string
   textContent: React.ReactNode
   titleContent: React.ReactNode
   type?: ITwoColumnStatText
@@ -24,6 +26,8 @@ export default function TwoColumnStatTemplate({
   noMarginBottom,
   rightChildren,
   statContent,
+  statContentWrapperClassName,
+  statContentTextRightClassName,
   textContent,
   titleContent,
   type = TWO_COLUMN_STAT.textLeft,
@@ -32,8 +36,8 @@ export default function TwoColumnStatTemplate({
   return (
     <div
       className={cn({
-        'pt-8': !noMarginTop,
-        'lg:pb-5': !noMarginBottom,
+        'pt-[30px]': !noMarginTop,
+        'lg:pb-5': !noMarginBottom && titleContent,
         'dn-two-column-stat': true,
         'dn-two-column-stat--text-right': type === TWO_COLUMN_STAT.textRight,
         'dn-two-column-stat--text-left': type === TWO_COLUMN_STAT.textLeft,
@@ -41,7 +45,15 @@ export default function TwoColumnStatTemplate({
       })}
     >
       <div className="grid w-full grid-cols-12">{titleContent}</div>
-      <div className="dn-two-column-stat__content grid w-full grid-cols-12 ">
+      <div
+        className={cn(
+          'dn-two-column-stat__content grid w-full grid-cols-12 ',
+          {
+            'flex flex-col gap-[46px] mb-[30px]': isMobile,
+          },
+          statContentWrapperClassName,
+        )}
+      >
         <div
           className={cn('dn-two-column-stat__text-content', 'col-span-12 lg:col-span-8', {
             'order-last lg:border-l lg:pl-5 lg:border-l-neutrals-cool-gray-0': type === TWO_COLUMN_STAT.textRight,
@@ -52,9 +64,15 @@ export default function TwoColumnStatTemplate({
           {leftChildren}
         </div>
         <div
-          className={cn('dn-two-column-stat__stat-content', 'col-span-12 mb-12 mt-6 lg:my-0  lg:col-span-4', {
-            'order-first': type === TWO_COLUMN_STAT.textRight,
-          })}
+          className={cn(
+            'dn-two-column-stat__stat-content',
+            'col-span-12 lg:my-0 lg:col-span-4',
+            {
+              'order-first': type === TWO_COLUMN_STAT.textRight,
+              'flex flex-col gap-[46px]': isMobile,
+            },
+            statContentTextRightClassName,
+          )}
         >
           {statContent}
           {quoteContent}

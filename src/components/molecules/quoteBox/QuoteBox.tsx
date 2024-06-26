@@ -28,7 +28,7 @@ export default function QuoteBox({
         'dn-quote-box',
         'relative',
         'flex flex-col justify-between gap-[26.5px]',
-        'p-5 m-5',
+        'p-5 m-1 lg:m-5',
         'border border-black',
         wrapperClassName,
       )}

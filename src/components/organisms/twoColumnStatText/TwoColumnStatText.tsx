@@ -22,13 +22,17 @@ export default function TwoColumnStat({
   quoteContent,
   noMarginTop = false,
   noMarginBottom = false,
+  statContentWrapperClassName,
+  statContentTextRightClassName,
 }: Readonly<TwoColumnStatTextProps>) {
   return (
     <TwoColumnStatTemplate
       noMarginTop={noMarginTop}
       noMarginBottom={noMarginBottom}
       isMobile={isMobile}
-      type={type}
+      type={isMobile ? TWO_COLUMN_STAT.textLeft : type}
+      statContentWrapperClassName={statContentWrapperClassName}
+      statContentTextRightClassName={statContentTextRightClassName}
       leftChildren={leftChildren}
       rightChildren={rightChildren}
       titleContent={title && <TitleContent title={title} titleNumber={titleNumber} />}

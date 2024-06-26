@@ -17,6 +17,8 @@ export interface TwoColumnStatTextProps {
     alt: string
     className?: string
   }[]
+  statContentWrapperClassName?: string
+  statContentTextRightClassName?: string
   title?: string
   titleNumber?: string
   type: ITwoColumnStatText

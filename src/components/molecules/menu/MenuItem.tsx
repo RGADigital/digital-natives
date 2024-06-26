@@ -22,12 +22,19 @@ const variants = {
   },
 }
 
-export default function MenuItem({ boxText, boxClassName, isComingSoon, menuLink, menuText }: Readonly<IMenuItem>) {
+export default function MenuItem({
+  boxText,
+  boxClassName,
+  isComingSoon,
+  menuLink,
+  menuText,
+  isMobile,
+}: Readonly<IMenuItem>) {
   return (
     <motion.li
       className={cn(
         'dn-menu-item',
-        'w-full  py-6',
+        'w-full py-3 lg:py-6',
         {
           'border-t': true,
           'border-t-black': !isComingSoon,
@@ -47,6 +54,7 @@ export default function MenuItem({ boxText, boxClassName, isComingSoon, menuLink
             boxClassName={boxClassName}
             isComingSoon={isComingSoon}
             menuText={menuText}
+            isMobile={isMobile}
           />
         </div>
       ) : (
@@ -56,6 +64,7 @@ export default function MenuItem({ boxText, boxClassName, isComingSoon, menuLink
             boxClassName={boxClassName}
             isComingSoon={isComingSoon}
             menuText={menuText}
+            isMobile={isMobile}
           />
         </a>
       )}

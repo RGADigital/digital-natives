@@ -18,7 +18,7 @@ const SHOW_GRADIENT_HEADER_Y = 220
 // TODO[pops]: extract header & footer into template
 export default function ExecutiveSummary() {
   const scrollRef = useRef(null) as React.RefObject<HTMLDivElement>
-  const { isMobile, isSmallLandscape, viewportHeight } = useViewport({})
+  const { isMobile, isSmallLandscape } = useViewport({})
   const [showRegisterModal, { open: openRegisterModal, close }] = useDisclosure(false)
   // change header to light background when section 3 is intersecting
 
@@ -47,8 +47,6 @@ export default function ExecutiveSummary() {
     }
   }, [])
 
-  console.log('isInView', isInView, `${viewportHeight * 3}px 0px 0px 0px`)
-
   return (
     <div
       className={cn(
@@ -67,7 +65,7 @@ export default function ExecutiveSummary() {
       />
       <Meta />
       <ExecutiveSummaryIntro handleRegister={openRegisterModal} />
-      <div ref={ref} className=" flex flex-col bg-neutrals-cream lg:bg-white">
+      <div ref={ref} className={cn('flex flex-col', 'bg-white')}>
         <Body isMobile={isMobile} />
       </div>
       <FooterContent handleRegister={openRegisterModal} />

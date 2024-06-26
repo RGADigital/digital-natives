@@ -59,7 +59,7 @@ export default function IntroMobile({ handleRegister }: Readonly<Props>) {
       ref={scrollRef as React.RefObject<HTMLDivElement>}
     >
       <section className={cn('dn-intro__hero', 'h-min')}>
-        <div className="container relative mx-auto h-[100vw] w-full overflow-hidden">
+        <div className="relative mx-0 h-[100vw] w-full overflow-hidden px-0">
           {motionDivsInPx.blueMobile && (
             <MotionDiv
               {...motionDivsInPx.blueMobile}

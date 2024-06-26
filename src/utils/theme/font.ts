@@ -20,9 +20,9 @@ export const FONT_BODY_2 = {
 }
 
 export const FONT_BODY_MOBILE = {
-  fontSize: '12px',
+  fontSize: '14px',
   fontWeight: 400,
-  lineHeight: '14.4px',
+  lineHeight: '16.8px',
 }
 
 export const FONT_NAV = {

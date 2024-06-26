@@ -4,6 +4,8 @@ import React, { useRef } from 'react'
 import type { UseInViewOptions } from 'framer-motion'
 import { useInView } from 'framer-motion'
 
+import cn from '@/utils/cn'
+
 import type { IQuoteBox } from '@/molecules/index'
 import { CardArticlePreview } from '@/organisms/card'
 import TwoColumnStat from '@/organisms/twoColumnStatText/TwoColumnStatText'
@@ -57,8 +59,8 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
               isMobile={isMobile}
               title={LANG.section1.title}
               titleNumber={LANG.section1.titleNumber}
-              bodyTitle={LANG.section1.bodyTitle}
-              paragraph1Content={LANG.section1.paragraph1Content}
+              bodyTitle={isMobile ? LANG.section1.bodyTitleMobile : LANG.section1.bodyTitle}
+              paragraph1Content={isMobile ? LANG.section1.paragraph1ContentMobile : LANG.section1.paragraph1Content}
               paragraph2Content={LANG.section1.paragraph2Content}
               statContent={LANG.section1.statContent}
               quoteContent={LANG.section1.quoteContent as IQuoteBox}
@@ -97,6 +99,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
               paragraph1Content={LANG.section3.paragraph1Content}
               paragraph2Content={LANG.section3.paragraph2Content}
               statContent={LANG.section3.statContent}
+              statContentTextRightClassName={cn({ '!gap-5': isMobile })}
             />
           ),
           ref: section3Ref,
@@ -146,6 +149,10 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
                     </div>
                   )
                 }
+                statContentWrapperClassName={cn({
+                  'border-t border-neutrals-beige': isMobile,
+                  'mt-[30px] pt-[42px] gap-[42px]': isMobile,
+                })}
                 noMarginBottom
               />
               <TwoColumnStat
@@ -208,6 +215,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
               paragraph2Content={LANG.section5.paragraph2Content}
               statContent={LANG.section5.statContent}
               quoteContent={LANG.section5.quoteContent as IQuoteBox}
+              noMarginBottom
             />
           ),
           ref: section5Ref,
