@@ -29,7 +29,6 @@ export default function SectionFive({ isMobile }: Readonly<Props>) {
             implications for topics as diverse as `}
             <a
               href="https://www.researchgate.net/publication/257101965_IGovernment_A_new_perspective_on_the_future_of_government_digitisation"
-              className="underline-offset-7 underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -38,7 +37,6 @@ export default function SectionFive({ isMobile }: Readonly<Props>) {
             ,{' '}
             <a
               href="https://www.researchgate.net/publication/344433621_Consumer_Behavior_in_the_Digital_Age"
-              className="underline-offset-7 underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -47,7 +45,6 @@ export default function SectionFive({ isMobile }: Readonly<Props>) {
             ,{' '}
             <a
               href="https://www.researchgate.net/publication/346843332_Generational_Differences_in_Omnichannel_Experience_Rising_New_Segment_Gen_Z"
-              className="underline-offset-7 underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -56,7 +53,6 @@ export default function SectionFive({ isMobile }: Readonly<Props>) {
             ,{' '}
             <a
               href="https://www.emerald.com/insight/content/doi/10.1108/EMJB-09-2021-0132/full/html?skipTracking=true"
-              className="underline-offset-7 underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -65,7 +61,6 @@ export default function SectionFive({ isMobile }: Readonly<Props>) {
             ,{' '}
             <a
               href="https://www.researchgate.net/publication/329452733_'Better_understanding_about_what's_going_on'_young_Australians'_use_of_digital_technologies_for_health_and_fitness"
-              className="underline-offset-7 underline"
               target="_blank"
               rel="noreferrer"
             >
@@ -74,7 +69,6 @@ export default function SectionFive({ isMobile }: Readonly<Props>) {
             {` and `}
             <a
               href="https://www.researchgate.net/publication/348509163_Millennial_and_generation_Z_digital_marketing_communication_and_advertising_effectiveness_A_qualitative_exploration"
-              className="underline-offset-7 underline"
               target="_blank"
               rel="noreferrer"
             >

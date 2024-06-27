@@ -6,6 +6,7 @@ export interface TwoColumnStatTextProps {
   noMarginTop?: boolean
   noMarginBottom?: boolean
   smallChildren?: React.ReactNode
+  contentWrapperClassName?: string
   largeContentWrapperClassName?: string
   smallContentWrapperClassName?: string
   title?: string

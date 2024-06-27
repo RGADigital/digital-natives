@@ -7,8 +7,8 @@ const SECTION_ONE_CONTENT = {
   title: 'Digital Natives and Digital Immigrants',
   titleMobile: 'Definitions',
   titleNumber: '01',
-  titleImage: '/assets/chapter-one/1-definition.jpg',
-  titleImageMobile: '/assets/chapter-one/1-definition-mobile.jpg',
+  titleImage: '/assets/chapter-two/1-definition.jpg',
+  titleImageMobile: '/assets/chapter-two/1-definition-mobile.jpg',
   titleImageAlt:
     'Image with text that says The idea of “digital natives” has been around for over 20 years, and there is extensive evidence that their early immersion into the digital world has changed the way this group sees and interacts with the world.',
   bodyTitle:
@@ -55,64 +55,166 @@ const SECTION_ONE_CONTENT = {
   source2:
     'Source: Çoklar, Ahmet Naci, and Ali Tatli. “Examining the Digital Nativity Levels of Digital Generations: From Generation X to Generation Z.” Shanlax International Journal of Education,  vol. 9, no. 4, 2021,  pp. 433–44.',
 }
-// const SECTION_TWO_CONTENT = {
-//   color: 'cyan',
-//   navigation: 'Opportunity',
-//   id: 'opportunity',
-//   title: 'The Opportunity',
-//   titleNumber: '02',
-//   bodyTitle: 'In contrast, Gen One have grown up with technology as pervasive and integral to their lives.',
-//   statContent: [
-//     {
-//       src: '/assets/executive-summary/2-opportunity-1.png',
-//       srcMobile: '/assets/executive-summary/2-opportunity-1-mobile.png',
-//       alt: 'Image with text that says Gen one is 51% of Gen One are optimistic about the future of tech to enable  human connection, compared to 37% of Digital Adopters.',
-//     },
-//   ],
-//   quoteContent: {
-//     quote: `“Thinking about the actual role technology plays... It's a thing that's everywhere you don't actually realise how important it is.”`,
-//     author: 'Chelsea, 21',
-//     edgeColor: 'cyan',
-//   },
-//   paragraph1Content: [
-//     `They seamlessly adopt new digital tools into their daily routines and have an expectation for interactions to be fluid, intuitive, and almost imperceptible within their lifestyle. Their usage habits and behaviours reflect a world that is now digital first.`,
-//     `Despite their ease with technology, Gen One shares the same fundamental life concerns as previous generations, such as financial security, career progression, education, and adapting to life changes.`,
-//   ],
-//   paragraph2Content: [
-//     `Given their openness and enthusiasm for adopting new technology, both public and private sector organisations should actively engage younger Australians as partners, and accelerate technological advancements and innovations for their key life moments.`,
-//     `In our increasingly digital world, a Gen One first approach enables us to uplift and accelerate our progress toward a more inclusive future for all.`,
-//   ],
-// }
 
-// const SECTION_THREE_CONTENT = {
-//   color: 'magenta',
-//   navigation: 'Research',
-//   id: 'research',
-//   title: 'Our Research',
-//   titleNumber: '03',
-//   bodyTitle:
-//     'R/GA sought to uncover the ambitions, behaviours, motivations and barriers of using digital services among Gen One, and contrast that with Digital Adopters.',
-//   statContent: [
-//     {
-//       src: '/assets/executive-summary/3-our-research-1.png',
-//       srcMobile: '/assets/executive-summary/3-our-research-1-mobile.png',
-//       alt: `Image with text that says we heard from 1579 Australian to understand what makes Gen One different.`,
-//     },
-//     {
-//       src: '/assets/executive-summary/3-our-research-2.png',
-//       srcMobile: '/assets/executive-summary/3-our-research-2-mobile.jpg',
-//       alt: 'Image with text that says Gen One are twice as likely to identify as neurodiverse or LGBTIQ+ than Digital Adopters',
-//     },
-//   ],
-//   paragraph1Content: [
-//     `In particular, we wanted to know how we could use the distinct behaviours of Gen One to unlock new techniques to make digital services more accessible to vulnerable Australians - like First Nations, CALD, neurodiverse and LGBTIQ+ Australians.`,
-//     `Our multimodal research with 1,579 Australians aged 15 and above included diary studies, in-depth interviews and a quantitative study. Our research included a diversity of demographics and geographies to ensure we heard from a`,
-//   ],
-//   paragraph2Content: [
-//     ` broad cross-section of Australians, and narrowed in on their experience around key life stages like starting or finishing education, moving home or changing jobs.`,
-//     `While those born after 1997 are generally considered Digital Natives, our research found that the characteristics of Gen One are even more prevalent among under 18s and present among those in their 20s and 30s - a continuum, not a monolithic group.`,
-//   ],
-// }
+const SECTION_TWO_CONTENT = {
+  color: 'blue',
+  navigation: 'Our research',
+  id: 'our-research',
+  title: 'Our Research Hypotheses and Approach',
+  titleNumber: '02',
+  cards: [
+    {
+      preview: {
+        subtitle: 'Finding 01',
+        title: 'Our objectives',
+        image: '/assets/chapter-two/2-preview-1.jpg',
+        imageMobile: '/assets/chapter-two/2-preview-1-mobile.jpg',
+      },
+      modal: {
+        subtitle: 'Finding 01',
+        title: 'Our objectives',
+        image: '/assets/chapter-two/2-modal-1.jpg',
+        imageMobile: '/assets/chapter-two/2-modal-1-mobile.jpg',
+        downloadLink: '',
+        content: [
+          `Understand the digital lifestyle, perceptions and behaviours of young Australians, and how that changes with age`,
+          `Explore the tensions and challenges posed by digital nativity, such as cognitive overload and trust in institutions`,
+          `Identify the most valuable strategies to enhance digital communications, service delivery and trust among younger Australians`,
+        ],
+        contentType: 'ol',
+      },
+    },
+    {
+      preview: {
+        subtitle: 'Finding 02',
+        title: 'Our hypothesis',
+        image: '/assets/chapter-two/2-preview-2.jpg',
+        imageMobile: '/assets/chapter-two/2-preview-2-mobile.jpg',
+      },
+      modal: {
+        subtitle: 'Finding 02',
+        title: 'Our hypothesis',
+        image: '/assets/chapter-two/2-modal-2.jpg',
+        imageMobile: '/assets/chapter-two/2-modal-2-mobile.jpg',
+        downloadLink: '',
+        content: [
+          `Due to their lifelong exposure to technology, digital natives often contend with cognitive overload and shorter attention spans. Therefore, their expectations and engagement patterns with digital services differ significantly from previous generations.`,
+          `Choice architecture and gamification techniques can reduce cognitive overload and enhance engagement among digital natives when interacting with government services.`,
+          `Digital natives' engagement and adoption of digital services are influenced by their privacy concerns, trust in the brand, and the ethical use of choice architecture, gamification, and personalisation, which are moderated by performance and effort expectancy, social influence, and facilitating conditions.`,
+        ],
+        contentType: 'ol',
+      },
+    },
+    {
+      preview: {
+        subtitle: 'Finding 03',
+        title: 'Our approach',
+        image: '/assets/chapter-two/2-preview-3.jpg',
+        imageMobile: '/assets/chapter-two/2-preview-3-mobile.jpg',
+      },
+      modal: {
+        subtitle: 'Finding 03',
+        title: 'Our approach',
+        image: '/assets/chapter-two/2-preview-3.jpg',
+        imageMobile: '/assets/chapter-two/2-modal-3-mobile.jpg',
+        downloadLink: '',
+        content: [
+          `Learn from the experts: A review of the extant literature on what defines and drives digital natives `,
+          `Listen to digital natives and digital immigrants: In-depth interviews and diary studies with 18 Australians aged from 15 - 59 to explore digital behaviour, choice architecture, cognitive overload, personalisation and trust`,
+          `Validate findings and measure desirability: A survey of 1,561 Australians to quantify the differences across the digital divide and measure the desirability of new tactics to engage them.`,
+        ],
+        contentType: 'ol',
+      },
+    },
+    {
+      preview: {
+        subtitle: 'Finding 04',
+        title: 'Research Sample',
+        image: '/assets/chapter-two/2-preview-4.jpg',
+        imageMobile: '/assets/chapter-two/2-preview-4-mobile.jpg',
+      },
+      modal: {
+        subtitle: 'Finding 04',
+        title: 'Research Sample',
+        image: '/assets/chapter-two/2-preview-4.jpg',
+        imageMobile: '/assets/chapter-two/2-modal-4-mobile.jpg',
+        downloadLink: '',
+        content: [
+          `Personal data is less and less personal - the genie is out of the bottle. Gen One feels confident they can stay in control but demands ethical usage.`,
+          `Gen One are less concerned about data breaches, spam and the privacy of their personal data. However, they are less trusting of the government as custodian of their personal data than Digital Adopters, particularly for service history (54% vs. 63%) and location data (54% vs. 64%). The trend is reversed for private companies - they have higher comfort sharing data like their health (47% vs. 34%) and demographics (71% vs. 60%).`,
+        ],
+        image1: '/assets/chapter-two/2-modal-4-1.jpg',
+        alt1: 'Image that compare gender of Gen One ( 58% are female, 40% are male, and 1% are non-binary/gender non-conforming) and Digital adopter (54% are female and 46% are male)',
+        image2: '/assets/chapter-two/2-modal-4-2.png',
+        alt2: 'Image with text hat says Gen One are more diverse: they are more likely to identify as indigenous, LGBTIQ+ or neurodiverse as Digital Adopters',
+        image3: '/assets/chapter-two/2-modal-4-3.jpg',
+        alt3: 'Image that compare area (Capital city, regional city, rural or remote) of Gen One and Digital Adopter using bar chart shows similar trend, with highest percentage on capital city, then regional city, and the lowest on rural or remote.',
+        image4: '/assets/chapter-two/2-modal-4-4.jpg',
+        alt4: 'Image that compare state (NSW, Vic, QLD, WA, SA, TAS, ACT, NT) of Gen One and Digital Adopter using bar chart shows similar trend, with highest percentage on NSW and the lowest on NT',
+      },
+    },
+  ],
+}
+
+const SECTION_THREE_CONTENT = {
+  color: 'magenta',
+  navigation: 'The Digital Native Continuum',
+  id: 'the-digital-native-continuum',
+  title: 'The Digital Native Continuum',
+  titleNumber: '03',
+  paragraph1Content: [
+    `Our research has confirmed that as boundaries increasingly blur across our physical and digital worlds, generational differences have emerged – relationship to technology, digital habits, trust and the appeal of engagement techniques like gamification and personalisation correlate strongly with age.`,
+    `While being born before or after 1997 was a useful tool for segmentation, it’s not the only factor in digital nativity. Looking at global social and economic policy, Van Dijk (2020) breaks down the digital divide into five perspectives: technological, economic, educational, social and persuasive. Governments and businesses can play a role in closing the divide through investment and policy.`,
+  ],
+  paragraph2Content: [
+    `R/GA’s research confirms that other factors beyond age play a role in digital nativity: including geography, family background, education and other socioeconomic characteristics. Younger Australians from more vulnerable backgrounds have not had the same access and opportunity for early-age immersion in the digital world, so they think and behave similarly to digital immigrants, and vice-versa for older Australians. This makes the opportunity to bring a Digital Native-first approach to all Australians an exciting opportunity to close the digital divide for governments and businesses.`,
+  ],
+  image: '/assets/chapter-two/3-infographic.jpg',
+  imageMobile: '/assets/chapter-two/3-infographic-mobile.jpg',
+  imageAlt: 'Image about the digital divide',
+  description:
+    'Digital nativity is not just a result of age: other factors play a role in digital nativity, including geography, family background, education and other socioeconomic characteristics. It’s better understood as a set of behaviours and perceptions that is more prevalent among younger Australians and less so among older Australians.',
+  source: 'Source: Van Dijk, Jan A.G.M. The Digital Divide. John Wiley & Sons, 2020.',
+}
+
+const SECTION_FOUR_CONTENT = {
+  color: 'blue',
+  navigation: 'Life Events and Digital Natives',
+  id: 'life-events-and-digital-natives',
+  title: 'Life Events and Digital Natives',
+  titleNumber: '04',
+  paragraph1Content: [
+    `While we sought to understand what makes digital natives tick in their day-to-day interactions with digital experiences, looking at critical life stages helps us unpack their behaviour when they’re most in need of support - and test which improvements to the experience would be most impactful.`,
+    `Recent research and analysis have identified that reframing service delivery and support around life stages improves accessibility and efficiency.`,
+  ],
+  paragraph2Content: [
+    ` For our research, we adapted the life stages framework to deep-dive into how digital natives’ behaviour changes in proximity to important life events.`,
+  ],
+  imageHeader: 'Research respondents across life stages',
+  image: '/assets/chapter-two/4-life-event.jpg',
+  imageMobile: '/assets/chapter-two/4-life-event-mobile.jpg',
+  imageAlt: 'Image about the adopter age group',
+  description:
+    'Digital nativity is not just a result of age: other factors play a role in digital nativity, including geography, family background, education and other socioeconomic characteristics. It’s better understood as a set of behaviours and perceptions that is more prevalent among younger Australians and less so among older Australians.',
+  source: 'Source: Van Dijk, Jan A.G.M. The Digital Divide. John Wiley & Sons, 2020.',
+  lifeStages: [
+    'Started high school',
+    'Changed high schools',
+    'Left school',
+    'Started further education',
+    'Completed apprenticeship',
+    'Became a parent',
+    'Bought a home to live in',
+    'Bought investment property',
+    'Moved home',
+    'Got married',
+    'Got divorced or separated',
+    'Entered the workforce',
+    'Started a business',
+    'Became unemployed',
+    'Retired',
+  ],
+}
 
 const SECTION_FIVE_CONTENT = {
   color: 'red',
@@ -130,110 +232,25 @@ const SECTION_FIVE_CONTENT = {
   ],
 }
 
-export const LANG_SECTION = {
-  section1: SECTION_ONE_CONTENT,
-  // section2: SECTION_TWO_CONTENT,
-  // section3: SECTION_THREE_CONTENT,
-  // section4: {
-  //   color: 'blue',
-  //   navigation: 'Our findings',
-  //   id: 'our-findings',
-  //   title: 'What We Found',
-  //   titleNumber: '04',
-  //   cards: [
-  //     {
-  //       preview: {
-  //         subtitle: 'Finding01',
-  //         title: 'Their relationship to technology',
-  //         image: '/assets/executive-summary/4-what-we-found-card-1-preview.jpg',
-  //         imageMobile: '/assets/executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
-  //       },
-  //       modal: {
-  //         subtitle: 'Finding01',
-  //         title: 'Our objectives',
-  //         image: '/assets/executive-summary/4-what-we-found-card-1-preview.jpg',
-  //         imageMobile: '/assets/executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
-  //         downloadLink: '',
-  //         content: [
-  //           'Gen One are at ease with their relationship with technology, confident in its ability to positively influence their broader life ambitions.',
-  //           'Our research found that while their technology habits are meaningfully different to digital adopters, they are far more optimistic about the future of technology, including AI (37% vs. 30%) and the potential for technology to enable greater human connection (51% vs. 37%)',
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       preview: {
-  //         subtitle: 'Finding02',
-  //         title: 'Digital diet and behaviours',
-  //         image: '/assets/executive-summary/4-what-we-found-card-2-preview.png',
-  //         imageMobile: '/assets/executive-summary/4-what-we-found-card-2-preview-mobile.jpg',
-  //       },
-  //       modal: {
-  //         subtitle: 'Finding02',
-  //         title: 'Digital diet and behaviours',
-  //         image: '/assets/executive-summary/4-what-we-found-card-2-modal.jpg',
-  //         imageMobile: '/assets/executive-summary/4-what-we-found-card-2-modal-mobile.jpg',
-  //         downloadLink: '',
-  //         content: [
-  //           `Gen One knows that to be out of touch with technology is to be out of touch with the world. They want to balance their daily intake of technology with mindful awareness of potential drawbacks, finding it enjoyable and beneficial for various aspects of their life including education and work, social fulfilment and entertainment.`,
-  //           `In practice, they have much higher daily screen time than Digital Adopters - and are more concerned about the effect this has on their wellbeing (18% more likely for those using screens for at least 4 hours a day).`,
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       preview: {
-  //         subtitle: 'Finding03',
-  //         title: 'The emotional toll of distraction',
-  //         image: '/assets/executive-summary/4-what-we-found-card-3-preview.png',
-  //         imageMobile: '/assets/executive-summary/4-what-we-found-card-3-preview-mobile.jpg',
-  //       },
-  //       modal: {
-  //         subtitle: 'Finding03',
-  //         title: 'The emotional toll of distraction',
-  //         image: '/assets/executive-summary/4-what-we-found-card-3-preview.png',
-  //         imageMobile: '/assets/executive-summary/4-what-we-found-card-3-modal-mobile.png',
-  //         downloadLink: '',
-  //         content: [
-  //           `Despite being more entertaining and engaging, short form, ever-changing and easily consumable content has the highest appeal to Gen One - but these small seeds can blossom into distraction blackholes.`,
-  //           `As a result, Gen One reports higher enjoyment, inspiration and empowerment from being online, but are also feeling more anxious, overwhelmed and, above all, distracted. Overall, both positive emotions (+7%) and negative emotions (+8%) are amplified among Gen One.`,
-  //         ],
-  //       },
-  //     },
-  //     {
-  //       preview: {
-  //         subtitle: 'Finding04',
-  //         title: 'Trust, data and security',
-  //         image: '/assets/executive-summary/4-what-we-found-card-4-preview.png',
-  //         imageMobile: '/assets/executive-summary/4-what-we-found-card-4-preview-mobile.jpg',
-  //       },
-  //       modal: {
-  //         subtitle: 'Finding04',
-  //         title: 'Trust, data and security',
-  //         image: '/assets/executive-summary/4-what-we-found-card-4-preview.png',
-  //         imageMobile: '/assets/executive-summary/4-what-we-found-card-4-modal-mobile.jpg',
-  //         downloadLink: '',
-  //         content: [
-  //           `Personal data is less and less personal - the genie is out of the bottle. Gen One feels confident they can stay in control but demands ethical usage.`,
-  //           `Gen One are less concerned about data breaches, spam and the privacy of their personal data. However, they are less trusting of the government as custodian of their personal data than Digital Adopters, particularly for service history (54% vs. 63%) and location data (54% vs. 64%). The trend is reversed for private companies - they have higher comfort sharing data like their health (47% vs. 34%) and demographics (71% vs. 60%).`,
-  //         ],
-  //       },
-  //     },
-  //   ],
-  // },
-  section5: SECTION_FIVE_CONTENT,
-}
-
 export const LANG = {
-  ...LANG_SECTION,
+  section1: SECTION_ONE_CONTENT,
+  section2: SECTION_TWO_CONTENT,
+  section3: SECTION_THREE_CONTENT,
+  section4: SECTION_FOUR_CONTENT,
+  section5: SECTION_FIVE_CONTENT,
   title: 'Who is Gen One?',
   chapterTitle: 'Chapter One',
 }
 
-export const NAVIGATION_HEADER = Object.entries(LANG_SECTION)
-  .map(([key, { navigation, id, color }]) => {
+export const NAVIGATION_HEADER = ['section1', 'section2', 'section3', 'section4', 'section5']
+  .map(key => {
+    const section = LANG?.[key as keyof typeof LANG]
+    if (!section || typeof section === 'string') return null
+    const { navigation, id, color } = section
     if (!navigation) return null
     return {
       sectionName: key,
-      key: key?.replace('section', ''),
+      key: key.replace('section', ''),
       label: navigation,
       color: color as IColoredBox['color'],
       href: `#${id}`,

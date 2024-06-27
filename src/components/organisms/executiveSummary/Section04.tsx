@@ -49,7 +49,7 @@ export default function SectionFour({ isMobile }: Readonly<Props>) {
             </div>
           )
         }
-        largeContentWrapperClassName={cn({
+        contentWrapperClassName={cn({
           'border-t border-neutrals-beige': isMobile,
           'mt-[30px] pt-[42px] gap-[42px]': isMobile,
         })}

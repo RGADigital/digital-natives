@@ -16,7 +16,7 @@ export default function SectionThree({ isMobile }: Readonly<Props>) {
       isMobile={isMobile}
       title={LANG.section3.title}
       titleNumber={LANG.section3.titleNumber}
-      largeContentWrapperClassName={cn({ '!gap-5': isMobile })}
+      contentWrapperClassName={cn({ '!gap-5': isMobile })}
       largeChildren={
         <>
           {LANG.section3.bodyTitle && (

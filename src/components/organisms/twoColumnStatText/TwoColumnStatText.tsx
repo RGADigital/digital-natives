@@ -1,4 +1,4 @@
-import { TWO_COLUMN_POSITION, TwoColumnTemplate } from '@/templates/twoColumnTemplate'
+import { TwoColumnTemplate } from '@/templates/twoColumnTemplate'
 
 import TitleContent from './TitleContent'
 import type { TwoColumnStatTextProps } from './TwoColumnStatText.type'
@@ -10,10 +10,11 @@ export default function TwoColumnStat({
   title,
   titleNumber,
   largeChildren,
+  largeContentWrapperClassName,
   smallChildren,
   noMarginTop = false,
   noMarginBottom = false,
-  largeContentWrapperClassName,
+  contentWrapperClassName,
   smallContentWrapperClassName,
 }: Readonly<TwoColumnStatTextProps>) {
   return (
@@ -21,7 +22,8 @@ export default function TwoColumnStat({
       noMarginTop={noMarginTop}
       noMarginBottom={noMarginBottom}
       isMobile={isMobile}
-      type={isMobile ? TWO_COLUMN_POSITION.textLeft : type}
+      type={type}
+      contentWrapperClassName={contentWrapperClassName}
       largeContentWrapperClassName={largeContentWrapperClassName}
       smallContentWrapperClassName={smallContentWrapperClassName}
       largeChildren={largeChildren}

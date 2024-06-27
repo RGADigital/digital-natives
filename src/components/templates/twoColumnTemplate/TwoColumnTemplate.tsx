@@ -10,6 +10,7 @@ interface Props {
   noMarginTop?: boolean
   noMarginBottom?: boolean
   smallChildren?: React.ReactNode
+  contentWrapperClassName?: string
   largeContentWrapperClassName?: string
   smallContentWrapperClassName?: string
   titleContent: React.ReactNode
@@ -22,6 +23,7 @@ export default function TwoColumnTemplate({
   noMarginTop,
   noMarginBottom,
   smallChildren,
+  contentWrapperClassName,
   largeContentWrapperClassName,
   smallContentWrapperClassName,
   titleContent,
@@ -45,14 +47,19 @@ export default function TwoColumnTemplate({
           {
             'flex flex-col gap-[46px] mb-[30px]': isMobile,
           },
-          largeContentWrapperClassName,
+          contentWrapperClassName,
         )}
       >
         <div
-          className={cn('dn-two-column-template__text-content', 'col-span-12 lg:col-span-8', {
-            'order-last lg:border-l lg:pl-5 lg:border-l-neutrals-cool-gray-0': type === TWO_COLUMN_POSITION.textRight,
-            'lg:ml-6 lg:border-r lg:border-r-neutrals-cool-gray-0': type === TWO_COLUMN_POSITION.textLeft,
-          })}
+          className={cn(
+            'dn-two-column-template__text-content',
+            'col-span-12 lg:col-span-8',
+            {
+              'order-last lg:border-l lg:pl-5 lg:border-l-neutrals-cool-gray-0': type === TWO_COLUMN_POSITION.textRight,
+              'lg:ml-6 lg:border-r lg:border-r-neutrals-cool-gray-0': type === TWO_COLUMN_POSITION.textLeft,
+            },
+            largeContentWrapperClassName,
+          )}
         >
           {largeChildren}
         </div>

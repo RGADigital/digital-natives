@@ -12,6 +12,9 @@ import ArticleBodyMobile from '@/templates/articleBody/ArticleBodyMobile'
 
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
 import SectionOne from './Section01'
+import SectionTwo from './Section02'
+import SectionThree from './Section03'
+import SectionFour from './Section04'
 import SectionFive from './Section05'
 
 interface Props {
@@ -50,13 +53,30 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
         title={LANG.title}
         menu={NAVIGATION_HEADER}
         activeStatus={activeStatus}
-        isMobile={isMobile}
         content={{
           section1: {
             Component: <SectionOne isMobile />,
             ref: section1Ref,
             id: LANG.section1.id,
             isActive: activeStatus.isInView1,
+          },
+          section2: {
+            Component: <SectionTwo isMobile />,
+            ref: section2Ref,
+            id: LANG.section2.id,
+            isActive: activeStatus.isInView2,
+          },
+          section3: {
+            Component: <SectionThree isMobile />,
+            ref: section3Ref,
+            id: LANG.section3.id,
+            isActive: activeStatus.isInView3,
+          },
+          section4: {
+            Component: <SectionFour isMobile />,
+            ref: section4Ref,
+            id: LANG.section4.id,
+            isActive: activeStatus.isInView4,
           },
           section5: {
             Component: <SectionFive isMobile />,
@@ -66,6 +86,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           },
         }}
         nextSection={<NextSection isMobile chapter={3} />}
+        isMobile
       />
     )
   }
@@ -83,6 +104,24 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           id: LANG.section1.id,
           isActive: activeStatus.isInView1,
         },
+        section2: {
+          Component: <SectionTwo />,
+          ref: section2Ref,
+          id: LANG.section2.id,
+          isActive: activeStatus.isInView2,
+        },
+        section3: {
+          Component: <SectionThree />,
+          ref: section3Ref,
+          id: LANG.section3.id,
+          isActive: activeStatus.isInView3,
+        },
+        section4: {
+          Component: <SectionFour />,
+          ref: section4Ref,
+          id: LANG.section4.id,
+          isActive: activeStatus.isInView4,
+        },
         section5: {
           Component: <SectionFive />,
           ref: section5Ref,
@@ -90,7 +129,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           isActive: activeStatus.isInView5,
         },
       }}
-      nextSection={<NextSection chapter={3} wrapperClassName={isMobile ? '' : 'border-t border-black'} />}
+      nextSection={<NextSection chapter={3} wrapperClassName={'border-t border-black'} />}
     />
   )
 }
