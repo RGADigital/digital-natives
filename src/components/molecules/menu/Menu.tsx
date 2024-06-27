@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 
+import useViewport from '@/hooks/useViewport'
+
 import { LANG } from './menu.constant'
 import MenuItem from './MenuItem'
 
@@ -13,8 +15,9 @@ const variants = {
 }
 
 export default function MenuList() {
+  const { isMobile } = useViewport({})
   return (
-    <section className="dn-menu-open mt-[76px] w-full pt-10">
+    <section className="dn-menu-open mt-[76px] w-full py-10">
       <motion.ul variants={variants} className="container mx-auto">
         {LANG.menuContent.map(menu => (
           <MenuItem
@@ -23,6 +26,7 @@ export default function MenuList() {
             menuText={menu.title}
             isComingSoon={menu.isComingSoon}
             key={menu.microDetail}
+            isMobile={isMobile}
           />
         ))}
       </motion.ul>

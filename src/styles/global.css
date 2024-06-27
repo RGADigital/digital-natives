@@ -113,8 +113,23 @@ body {
   border-radius: var(--input-radius);
 }
 
+.mantine-Modal-overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 section.mantine-Modal-content {
-  @apply !w-full lg:!w-[528px] px-3 py-3 lg:p-10;
+  @apply !w-screen lg:!w-[703px] lg:min-w-[703px];
+  /* Hide scrollbar */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.dn-modal-register .mantine-Modal-content {
+  @apply !px-3 !py-3 lg:!p-10;
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.mantine-Modal-content::-webkit-scrollbar {
+  display: none;
 }
 
 .mantine-Modal-body {
@@ -134,16 +149,27 @@ section.mantine-Modal-content {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.mantine-Accordion-control[data-active='true'] .dn-micro-detail > div {
-  @apply !bg-accents-blue;
-}
+/* START: Accordion */
+@media (max-width: 1024px) {
+  .dn-article-body__content > .mantine-Accordion-root > .mantine-Accordion-item > button.mantine-Accordion-control {
+    @apply -mx-5 px-5 w-[calc(100vw_+_10px)] overflow-clip !border-b !border-b-neutrals-beige;
+  }
+  .mantine-Accordion-content::before {
+    @apply bg-white absolute top-0 right-0 bottom-0 -left-5 overflow-clip -z-10;
+    width: calc(100vw + 10px);
+    content: '';
+  }
 
-.mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > div {
-  @apply !bg-neutrals-cool-gray-5;
-}
+  .mantine-Accordion-content {
+    @apply p-0 relative bg-transparent;
+  }
+  .mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > div {
+    @apply !bg-neutrals-cool-gray-5;
+  }
 
-.mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > p {
-  @apply !text-neutrals-cool-gray-5;
+  .mantine-Accordion-control:not([data-active='true']) .dn-micro-detail > p {
+    @apply !text-neutrals-cool-gray-5;
+  }
 }
 
 .dn-header__wrapper {
@@ -152,3 +178,36 @@ section.mantine-Modal-content {
 .dn-header__wrapper.dn-header__wrapper--open {
   overscroll-behavior: contain !important;
 }
+
+/* START: Article Card */
+.dn-modal-article--mobile .mantine-Modal-inner {
+  @apply !p-0;
+}
+
+.dn-modal-article--mobile .mantine-Modal-content {
+  @apply max-h-none;
+}
+
+.dn-modal-article .mantine-Modal-content,
+.dn-modal-register .mantine-Modal-content {
+  @apply !rounded-none;
+}
+
+/* START: sidebar */
+.dn-section__article
+  > .dn-section__article__sidebar-item--active:not(:first-of-type)
+  > .dn-micro-detail
+  > .dn-colored-box,
+.dn-section__article .dn-section__article__sidebar-item--inactive > .dn-micro-detail > .dn-colored-box {
+  @apply bg-[#eeeeee];
+}
+
+.dn-section__article
+  > .dn-section__article__sidebar-item--active:not(:first-of-type)
+  > .dn-micro-detail
+  > .dn-colored-box
+  + p,
+.dn-section__article .dn-section__article__sidebar-item--inactive > .dn-micro-detail > .dn-colored-box + p {
+  @apply !text-neutrals-cool-gray-5;
+}
+/* END: sidebar */

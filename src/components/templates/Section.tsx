@@ -91,7 +91,7 @@ export default function SectionTemplate({
       </div>
       {showScrollIcon && (
         <div
-          className={cn('dp-section__footer', 'animate-bounce duration-500 ease-in', {
+          className={cn('dn-section__footer', 'animate-bounce duration-500 ease-in', {
             'absolute !bottom-8 lg:w-screen': mdBottomRight,
           })}
         >
