@@ -5,8 +5,10 @@ const SECTION_ONE_CONTENT = {
   navigation: 'Definitions',
   id: 'definitions',
   title: 'Digital Natives and Digital Immigrants',
+  titleMobile: 'Definitions',
   titleNumber: '01',
   titleImage: '/assets/chapter-one/1-definition.jpg',
+  titleImageMobile: '/assets/chapter-one/1-definition-mobile.jpg',
   titleImageAlt:
     'Image with text that says The idea of “digital natives” has been around for over 20 years, and there is extensive evidence that their early immersion into the digital world has changed the way this group sees and interacts with the world.',
   bodyTitle:
@@ -25,18 +27,33 @@ const SECTION_ONE_CONTENT = {
       edgeColor: 'green',
     },
   ],
-  paragraph1ContentMobile: [
-    `Those who were not born into the digital world but have had to adapt. However, the world is now majority Digital Natives or ‘Gen One’ of a true digital world.`,
-    `Digital Adopters are cautious when adopting new technology and old, inefficient experiences have often been digitised rather than reimagining them for new audiences and technology. Gen One are the most vocal critics of these technologies: they play a crucial role in identifying issues and pushing for improvements. `,
-    `Persisting with a design approach from the Digital Adopter era risks alienating Gen One and limiting the adoption of new technology that can provide greater access and opportunities for all.`,
+  point1Content: [
+    {
+      point: 'Growing up with technology:',
+      content: `Digital natives grew up with the internet, mobile phones, and computers. This dimension looks at exposure to digital technologies from a young age and integration into daily life.`,
+    },
+    {
+      point: 'Comfort with multitasking:',
+      content:
+        'Digital natives perform multiple tasks simultaneously using new operating systems. They are accustomed to using screens and can engage in activities like reading emails and listening to music simultaneously.',
+    },
   ],
-  paragraph1Content: [
-    `Digital Adopters are cautious when adopting new technology and old, inefficient experiences have often been digitised as-is, rather than reimagining them for new audiences and technology.`,
-    `Gen One are the most vocal critics of these technologies: they play a crucial role in identifying issues and pushing for improvements.`,
+  point2Content: [
+    {
+      point: 'Reliant on graphics for communication:',
+      content:
+        'This dimension emphasises the use of visuals and graphics by digital natives in their communication. They rely on visual elements, such as emojis and abbreviations, to express themselves more comfortably compared to previous generations.',
+    },
+    {
+      point: 'Thrive on instant gratifications and rewards:',
+      content:
+        'This dimension reflects the eagerness of digital natives to acquire knowledge and their preference for immediate rewards. They have a limited attention span and seek instant gratification in their interactions with digital technologies.',
+    },
   ],
-  paragraph2Content: [
-    `Persisting with a design approach from the Digital Adopter era risks alienating Gen One and limiting the adoption of new technology that can provide greater access and opportunities for all.`,
-  ],
+  source1:
+    'Source: Teo, Timothy. “‘Digital Nativity’: A Definitional Framework.” World Journal on Educational Technology, vol. 5, no. 3, 2013a, pp. 389-394.',
+  source2:
+    'Source: Çoklar, Ahmet Naci, and Ali Tatli. “Examining the Digital Nativity Levels of Digital Generations: From Generation X to Generation Z.” Shanlax International Journal of Education,  vol. 9, no. 4, 2021,  pp. 433–44.',
 }
 // const SECTION_TWO_CONTENT = {
 //   color: 'cyan',

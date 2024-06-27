@@ -34,7 +34,7 @@ export default function MicroDetail({
         )}
       />
       {text && (
-        <Text className={cn('!text-m-eyebrow lg:!text-eyebrow', 'uppercase', textClassName)} component="p">
+        <Text className={cn('text-m-eyebrow lg:text-eyebrow', 'uppercase', textClassName)} component="p">
           {text}
         </Text>
       )}

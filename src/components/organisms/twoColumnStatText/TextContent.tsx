@@ -4,16 +4,26 @@ import cn from '@/utils/cn'
 
 export default function TextContent({
   bodyTitle,
+  titleWrapperClassName,
   paragraph1Content,
   paragraph2Content,
 }: Readonly<{
   bodyTitle?: React.ReactNode
+  noMarginTop?: boolean
   paragraph1Content?: React.ReactNode[]
   paragraph2Content?: React.ReactNode[]
+  titleWrapperClassName?: string
 }>) {
   return (
     <>
-      <div className={cn('dn-two-column-template__text-content__title', 'mt-[110px] lg:mt-5 grid w-full grid-cols-12')}>
+      <div
+        className={cn(
+          'dn-two-column-template__text-content__title',
+          ' grid w-full grid-cols-12',
+          'mt-[110px] lg:mt-5',
+          titleWrapperClassName,
+        )}
+      >
         <div className="col-span-12">
           <Title
             order={3}
@@ -28,6 +38,7 @@ export default function TextContent({
           'dn-two-column-template__text-content__content',
           'grid w-full grid-cols-12 lg:pr-5 ',
           'font-body text-body',
+          { hidden: !paragraph1Content && !paragraph2Content },
         )}
       >
         <div className="col-span-12 lg:col-span-6 lg:mb-5 ">

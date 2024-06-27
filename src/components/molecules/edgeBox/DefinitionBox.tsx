@@ -22,7 +22,7 @@ export default function DefinitionBox({
 }: Readonly<IDefinitionBox>) {
   return (
     <EdgeBox edgeColor={edgeColor} edgeBoxClassName={edgeBoxClassName} wrapperClassName={wrapperClassName}>
-      <Text component="p" className="font-m-quote lg:font-quote text-m-quote font-[700] text-black lg:text-quote">
+      <Text component="p" className="font-m-quote lg:font-quote text-m-quote !font-[700] text-black lg:text-quote">
         {`${terms}`}
       </Text>
       <Text component="footer" className="font-m-body lg:font-body text-m-body lg:text-body">
