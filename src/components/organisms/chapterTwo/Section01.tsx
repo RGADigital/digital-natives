@@ -65,7 +65,7 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
         type={TWO_COLUMN_POSITION.textLeft as ITwoColumnStatPosition}
         isMobile={isMobile}
         largeChildren={
-          <>
+          <div className="flex flex-col justify-between">
             {LANG.section1.bodyTitle && (
               <TextContent bodyTitle={LANG.section1.bodyTitle} titleWrapperClassName="mt-[46px] lg:mt-5" />
             )}
@@ -78,12 +78,12 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
               component="p"
               className={cn(
                 '!font-normal text-m-nav lg:text-body2 font-m-nav lg:font-body2',
-                'lg:max-w-[50%] pt-[46px] lg:pt-1',
+                'lg:max-w-[50%] pt-[46px] lg:pb-5',
               )}
             >
               {LANG.section1.source1}
             </Text>
-          </>
+          </div>
         }
         smallChildren={
           <>
@@ -101,6 +101,7 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
             </Text>
           </>
         }
+        smallContentWrapperClassName="lg:flex lg:flex-col lg:justify-between"
         noMarginTop
         noMarginBottom
       />

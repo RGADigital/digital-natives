@@ -114,35 +114,21 @@ const SECTION_ONE_CONTENT = {
 //   ],
 // }
 
-// const SECTION_FIVE_CONTENT = {
-//   color: 'red',
-//   navigation: 'Reimagining',
-//   id: 'reimagining',
-//   title: 'Reimagining the Digital World',
-//   titleNumber: '05',
-//   bodyTitle:
-//     'Our research highlighted the sharp division in the digital behaviours of Gen One and Digital Adopters in Australia, and their assessments of the current landscape of digital services.',
-//   statContent: [
-//     {
-//       src: '/assets/executive-summary/5-reimagining-1.png',
-//       alt: `Image with text that says 48% of Gen One prefer visually appealing imagery, bright colours and design online, compared to 33% of Digital Adopters`,
-//     },
-//   ],
-
-//   quoteContent: {
-//     edgeColor: 'pink',
-//     quote: `“Like we're in 2024... Every other state has a cool website.”`,
-//     author: 'Imogen, 28',
-//   },
-//   paragraph1Content: [
-//     `Alongside the exploratory research, by investigating specific life stages we were able to find and prioritise the digital tactics and features that are most likely to drive adoption and ongoing engagement.`,
-//     `Our research highlights a critical juncture for our society. We are presented with a choice: continue with outdated design philosophies that risk alienating digital natives and stifling transformative technologies, or capitalise on the adaptability and digital fluency of Gen One to forge new innovative solutions for all.`,
-//   ],
-//   paragraph2Content: [
-//     `We have already seen evidence of how Gen One-driven design has influenced everything from social media apps to beauty brands to productivity tools - these experiences are faster, mobile-first, more utilitarian and more personalised.`,
-//     `We believe the choice is clear, by reimagining how we design for life experiences of Gen One, we can revolutionise both public and private sectors, ensuring that no segment of society is left behind.`,
-//   ],
-// }
+const SECTION_FIVE_CONTENT = {
+  color: 'red',
+  navigation: 'Digital Natives to Gen One',
+  id: 'digital-natives-to-gen-one',
+  title: 'From Digital Natives to Gen One',
+  titleNumber: '05',
+  paragraph1Content: [
+    `Our research has highlighted that this rethink is more urgent than ever, and that the highly distinct
+  behaviours of those born into a world infused with technology are not getting due consideration.`,
+  ],
+  paragraph2Content: [
+    `Without a change in mindset, we risk permanently undermining a growing majority of Australians' access to impactful services and experiences.`,
+    `It’s more accurate to think of digital natives not as the next generation but as the first generation of a new age of digital: Gen One. The Gen One report is a re-introduction to this new generation and a call to action for brands and government organisations to radically rethink the way they engage Australians through digital.`,
+  ],
+}
 
 export const LANG_SECTION = {
   section1: SECTION_ONE_CONTENT,
@@ -233,7 +219,7 @@ export const LANG_SECTION = {
   //     },
   //   ],
   // },
-  // section5: SECTION_FIVE_CONTENT,
+  section5: SECTION_FIVE_CONTENT,
 }
 
 export const LANG = {
