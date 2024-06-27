@@ -136,39 +136,40 @@ export const LANG_SECTION = {
     cards: [
       {
         preview: {
-          subtitle: 'Finding01',
+          subtitle: 'Finding 01',
           title: 'Their relationship to technology',
           image: '/assets/executive-summary/4-what-we-found-card-1-preview.jpg',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
         },
         modal: {
-          subtitle: 'Finding01',
-          title: 'Our objectives',
+          subtitle: 'Finding 01',
+          title: 'Their relationship to technology',
           image: '/assets/executive-summary/4-what-we-found-card-1-preview.jpg',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-1-preview-mobile.jpg',
           downloadLink: '',
           content: [
-            'Gen One are at ease with their relationship with technology, confident in its ability to positively influence their broader life ambitions.',
-            'Our research found that while their technology habits are meaningfully different to digital adopters, they are far more optimistic about the future of technology, including AI (37% vs. 30%) and the potential for technology to enable greater human connection (51% vs. 37%)',
+            `Gen One are at ease with their relationship with technology, confident in its ability to positively influence their broader life ambitions.`,
+            `Our research found that while their technology habits are meaningfully different to digital adopters, they are far more optimistic about the future of technology, including AI (37% vs. 30%) and the potential for technology to enable greater human connection (51% vs. 37%)`,
           ],
         },
       },
       {
         preview: {
-          subtitle: 'Finding02',
-          title: 'Digital diet and behaviours',
+          subtitle: 'Finding 02',
+          title: 'Their digital diet and behaviours',
           image: '/assets/executive-summary/4-what-we-found-card-2-preview.png',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-2-preview-mobile.jpg',
         },
         modal: {
-          subtitle: 'Finding02',
-          title: 'Digital diet and behaviours',
+          subtitle: 'Finding 02',
+          title: 'Their digital diet and behaviours',
           image: '/assets/executive-summary/4-what-we-found-card-2-modal.jpg',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-2-modal-mobile.jpg',
           downloadLink: '',
           content: [
             `Gen One knows that to be out of touch with technology is to be out of touch with the world. They want to balance their daily intake of technology with mindful awareness of potential drawbacks, finding it enjoyable and beneficial for various aspects of their life including education and work, social fulfilment and entertainment.`,
-            `In practice, they have much higher daily screen time than Digital Adopters - and are more concerned about the effect this has on their wellbeing (18% more likely for those using screens for at least 4 hours a day).`,
+
+            `In practice, they have much higher daily screen time than Digital Adopters - and are more concerned about the effect this has on their wellbeing. More than half of Gen One are concerned to some extent about their screen time, compared to 1 in 3 Digital Adopters.`,
           ],
         },
       },

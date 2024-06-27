@@ -2,7 +2,7 @@ const menuContent = [
   {
     microDetail: 'Chapter 01',
     link: '/',
-    title: 'Executive Summary',
+    title: 'The Report at a Glance',
     isComingSoon: false,
   },
   {
@@ -14,19 +14,19 @@ const menuContent = [
   {
     microDetail: 'Chapter 03',
     link: '/chapter-03',
-    title: 'Relationship to Technology',
+    title: 'Gen One and Technology',
     isComingSoon: true,
   },
   {
     microDetail: 'Chapter 04',
     link: '/chapter-04',
-    title: 'Digital Diet & Behaviours',
+    title: 'Digital Diet',
     isComingSoon: true,
   },
   {
     microDetail: 'Chapter 05',
     link: '/chapter-05',
-    title: 'Attention Economy',
+    title: 'The Emotional Toll of Distraction',
     isComingSoon: true,
   },
   {
@@ -38,13 +38,13 @@ const menuContent = [
   {
     microDetail: 'Chapter 07',
     link: '/chapter-07',
-    title: 'Government Services & Comms',
+    title: 'Life Stages',
     isComingSoon: true,
   },
   {
     microDetail: 'Chapter 08',
     link: '/chapter-08',
-    title: 'Reimaging the Digital World',
+    title: 'Reimagining the Digital World',
     isComingSoon: true,
   },
 ]
