@@ -1,12 +1,10 @@
-import Image from 'next/image'
-import { Text } from '@mantine/core'
-
 import cn from '@/utils/cn'
 
 import { ColoredBox, type IColoredBox } from '@/atoms/index'
 
-export interface IQuoteBox {
+export interface IEdgeBox {
   avatar?: string
+  children?: React.ReactNode
   edgeBoxClassName?: string
   edgeColor?: IColoredBox['color']
   quote?: string
@@ -14,14 +12,12 @@ export interface IQuoteBox {
   wrapperClassName?: string
 }
 
-export default function QuoteBox({
-  avatar,
+export default function EdgeBox({
+  children,
   edgeBoxClassName,
   edgeColor = 'blue',
-  quote,
-  author,
   wrapperClassName,
-}: Readonly<IQuoteBox>) {
+}: Readonly<IEdgeBox>) {
   return (
     <blockquote
       className={cn(
@@ -33,9 +29,6 @@ export default function QuoteBox({
         wrapperClassName,
       )}
     >
-      {avatar && (
-        <Image width={63} height={63} loading="lazy" className="pulse" src={avatar} alt={`avatar of ${author}`} />
-      )}
       {/* START: edge */}
       <ColoredBox
         color={edgeColor}
@@ -72,12 +65,7 @@ export default function QuoteBox({
         )}
       />
       {/* END: edge */}
-      <Text component="p" className="font-m-quote lg:font-quote text-m-quote italic text-black lg:text-quote">
-        {`${quote}`}
-      </Text>
-      <Text component="footer" className="font-m-body lg:font-body text-m-body lg:text-body">
-        {author}
-      </Text>
+      {children}
     </blockquote>
   )
 }
