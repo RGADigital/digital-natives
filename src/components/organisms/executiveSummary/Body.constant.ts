@@ -2,7 +2,7 @@ import type { IColoredBox } from '@/atoms/index'
 
 const SECTION_ONE_CONTENT = {
   color: 'yellow',
-  navigation: 'Challenge',
+  navigation: 'The Challenge',
   id: 'challenge',
   title: 'The Challenge',
   titleNumber: '01',
@@ -36,7 +36,7 @@ const SECTION_ONE_CONTENT = {
 }
 const SECTION_TWO_CONTENT = {
   color: 'cyan',
-  navigation: 'Opportunity',
+  navigation: 'The Opportunity',
   id: 'opportunity',
   title: 'The Opportunity',
   titleNumber: '02',
@@ -65,7 +65,7 @@ const SECTION_TWO_CONTENT = {
 
 const SECTION_THREE_CONTENT = {
   color: 'magenta',
-  navigation: 'Research',
+  navigation: 'Our Research',
   id: 'research',
   title: 'Our Research',
   titleNumber: '03',
@@ -95,7 +95,7 @@ const SECTION_THREE_CONTENT = {
 
 const SECTION_FIVE_CONTENT = {
   color: 'red',
-  navigation: 'Reimagining',
+  navigation: 'Reimagining the Digital World',
   id: 'reimagining',
   title: 'Reimagining the Digital World',
   titleNumber: '05',
@@ -129,8 +129,8 @@ export const LANG_SECTION = {
   section3: SECTION_THREE_CONTENT,
   section4: {
     color: 'blue',
-    navigation: 'Our findings',
-    id: 'our-findings',
+    navigation: 'What We Found',
+    id: 'what-we-found',
     title: 'What We Found',
     titleNumber: '04',
     cards: [
