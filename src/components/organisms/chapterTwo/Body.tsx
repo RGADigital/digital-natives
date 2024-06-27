@@ -11,7 +11,8 @@ import ArticleBodyDesktop from '@/templates/articleBody/ArticleBodyDesktop'
 import ArticleBodyMobile from '@/templates/articleBody/ArticleBodyMobile'
 
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
-import SectionOne from './SectionOne'
+import SectionOne from './Section01'
+import SectionFive from './Section05'
 
 interface Props {
   isMobile?: boolean
@@ -52,13 +53,19 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
         isMobile={isMobile}
         content={{
           section1: {
-            Component: <SectionOne isMobile={isMobile} />,
+            Component: <SectionOne isMobile />,
             ref: section1Ref,
             id: LANG.section1.id,
             isActive: activeStatus.isInView1,
           },
+          section5: {
+            Component: <SectionFive isMobile />,
+            ref: section5Ref,
+            id: LANG.section5.id,
+            isActive: activeStatus.isInView5,
+          },
         }}
-        nextSection={<NextSection isMobile={isMobile} />}
+        nextSection={<NextSection isMobile chapter={3} />}
       />
     )
   }
@@ -69,16 +76,21 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
       title={LANG.title}
       menu={NAVIGATION_HEADER}
       activeStatus={activeStatus}
-      isMobile={isMobile}
       content={{
         section1: {
-          Component: <SectionOne isMobile={isMobile} />,
+          Component: <SectionOne />,
           ref: section1Ref,
           id: LANG.section1.id,
           isActive: activeStatus.isInView1,
         },
+        section5: {
+          Component: <SectionFive />,
+          ref: section5Ref,
+          id: LANG.section5.id,
+          isActive: activeStatus.isInView5,
+        },
       }}
-      nextSection={<NextSection isMobile={isMobile} />}
+      nextSection={<NextSection chapter={3} wrapperClassName={isMobile ? '' : 'border-t border-black'} />}
     />
   )
 }
