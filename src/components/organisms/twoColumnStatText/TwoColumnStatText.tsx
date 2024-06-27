@@ -1,62 +1,32 @@
-import cn from '@/utils/cn'
+import { TWO_COLUMN_POSITION, TwoColumnTemplate } from '@/templates/twoColumnTemplate'
 
-import { QuoteBox } from '@/molecules/index'
-import { TWO_COLUMN_STAT, TwoColumnStatTemplate } from '@/templates/twoColumnStatText'
-
-import StatContent from './StatContent'
-import TextContent from './TextContent'
 import TitleContent from './TitleContent'
 import type { TwoColumnStatTextProps } from './TwoColumnStatText.type'
 
+// TODO[pops]: join this & template
 export default function TwoColumnStat({
   type,
   isMobile,
   title,
   titleNumber,
-  bodyTitle,
-  paragraph1Content,
-  paragraph2Content,
-  leftChildren,
-  rightChildren,
-  statContent,
-  quoteContent,
+  largeChildren,
+  smallChildren,
   noMarginTop = false,
   noMarginBottom = false,
-  statContentWrapperClassName,
-  statContentTextRightClassName,
+  largeContentWrapperClassName,
+  smallContentWrapperClassName,
 }: Readonly<TwoColumnStatTextProps>) {
   return (
-    <TwoColumnStatTemplate
+    <TwoColumnTemplate
       noMarginTop={noMarginTop}
       noMarginBottom={noMarginBottom}
       isMobile={isMobile}
-      type={isMobile ? TWO_COLUMN_STAT.textLeft : type}
-      statContentWrapperClassName={statContentWrapperClassName}
-      statContentTextRightClassName={statContentTextRightClassName}
-      leftChildren={leftChildren}
-      rightChildren={rightChildren}
+      type={isMobile ? TWO_COLUMN_POSITION.textLeft : type}
+      largeContentWrapperClassName={largeContentWrapperClassName}
+      smallContentWrapperClassName={smallContentWrapperClassName}
+      largeChildren={largeChildren}
+      smallChildren={smallChildren}
       titleContent={title && <TitleContent title={title} titleNumber={titleNumber} />}
-      statContent={statContent && <StatContent statContent={statContent} type={type} isMobile={isMobile} />}
-      quoteContent={
-        quoteContent && (
-          <QuoteBox
-            {...quoteContent}
-            wrapperClassName={cn({
-              'mx-0': isMobile,
-              'lg:mr-0': type === TWO_COLUMN_STAT.textLeft,
-            })}
-          />
-        )
-      }
-      textContent={
-        bodyTitle && (
-          <TextContent
-            bodyTitle={bodyTitle}
-            paragraph1Content={paragraph1Content}
-            paragraph2Content={paragraph2Content}
-          />
-        )
-      }
     />
   )
 }

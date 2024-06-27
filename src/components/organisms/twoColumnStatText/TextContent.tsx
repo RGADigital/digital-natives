@@ -2,20 +2,18 @@ import { Title } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import type { TwoColumnStatTextProps } from './TwoColumnStatText.type'
-
 export default function TextContent({
   bodyTitle,
   paragraph1Content,
   paragraph2Content,
 }: Readonly<{
-  bodyTitle: TwoColumnStatTextProps['bodyTitle']
-  paragraph1Content: TwoColumnStatTextProps['paragraph1Content']
-  paragraph2Content: TwoColumnStatTextProps['paragraph2Content']
+  bodyTitle?: React.ReactNode
+  paragraph1Content?: React.ReactNode[]
+  paragraph2Content?: React.ReactNode[]
 }>) {
   return (
     <>
-      <div className={cn('dn-two-column-stat__text-content__title', 'mt-[110px] lg:mt-5 grid w-full grid-cols-12')}>
+      <div className={cn('dn-two-column-template__text-content__title', 'mt-[110px] lg:mt-5 grid w-full grid-cols-12')}>
         <div className="col-span-12">
           <Title
             order={3}
@@ -27,7 +25,7 @@ export default function TextContent({
       </div>
       <div
         className={cn(
-          'dn-two-column-stat__text-content__content',
+          'dn-two-column-template__text-content__content',
           'grid w-full grid-cols-12 lg:pr-5 ',
           'font-body text-body',
         )}

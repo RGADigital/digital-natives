@@ -11,18 +11,20 @@ const SECTION_ONE_CONTENT = {
     'Image with text that says The idea of “digital natives” has been around for over 20 years, and there is extensive evidence that their early immersion into the digital world has changed the way this group sees and interacts with the world.',
   bodyTitle:
     'Past research has established the clear divide between digital natives and digital immigrants. Teo (2013) established four dimensions of digital nativity:',
-  statContent: [
+  definitionContent: [
     {
-      src: '/assets/executive-summary/1-challenge.png',
-      srcMobile: '/assets/executive-summary/1-challenge-mobile.jpg',
-      alt: 'Image with text that says Gen one is 18% Of Gen One are more likely to be concerned about their screen time than Digital Adopters',
+      terms: 'Digital Immigrants',
+      description:
+        'Individuals who were born before the widespread adoption of digital technology and have had to adapt to its use later in life',
+      edgeColor: 'cyan',
+    },
+    {
+      terms: 'Digital Natives',
+      description:
+        'Individuals who have grown up with digital technology from an early age, characterised by high familiarity and comfort with digital environments',
+      edgeColor: 'green',
     },
   ],
-  quoteContent: {
-    quote: `I think it's just like body expectations and they're out here living this luscious life, like traveling every weekend and the average person is just like at home watching them. So it just kind of makes you think like, why not me? Like why can't I be doing that?`,
-    author: `Tayla, 17`,
-    edgeColor: 'yellow',
-  },
   paragraph1ContentMobile: [
     `Those who were not born into the digital world but have had to adapt. However, the world is now majority Digital Natives or ‘Gen One’ of a true digital world.`,
     `Digital Adopters are cautious when adopting new technology and old, inefficient experiences have often been digitised rather than reimagining them for new audiences and technology. Gen One are the most vocal critics of these technologies: they play a crucial role in identifying issues and pushing for improvements. `,

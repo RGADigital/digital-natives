@@ -1,15 +1,15 @@
 import cn from '@/utils/cn'
 
-import { TWO_COLUMN_STAT } from '@/templates/twoColumnStatText'
+import { TWO_COLUMN_POSITION } from '@/templates/twoColumnTemplate'
 
-import type { TwoColumnStatTextProps } from './TwoColumnStatText.type'
+import type { IStatContent, TwoColumnStatTextProps } from './TwoColumnStatText.type'
 
 export default function StatContent({
   isMobile,
   statContent,
   type,
 }: Readonly<{
-  statContent: TwoColumnStatTextProps['statContent']
+  statContent?: IStatContent[]
   type: TwoColumnStatTextProps['type']
   isMobile?: boolean
 }>) {
@@ -19,8 +19,8 @@ export default function StatContent({
         <div
           key={alt}
           className={cn('w-full', 'lg:border-b-[1px] lg:border-b-neutrals-cool-gray-0 lg:last:border-b-0', {
-            'lg:pl-5': type === TWO_COLUMN_STAT.textLeft,
-            'lg:px-5': type === TWO_COLUMN_STAT.textRight,
+            'lg:pl-5': type === TWO_COLUMN_POSITION.textLeft,
+            'lg:px-5': type === TWO_COLUMN_POSITION.textRight,
             'lg:py-5': true,
           })}
         >

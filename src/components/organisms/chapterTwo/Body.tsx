@@ -3,19 +3,15 @@
 import React, { useRef } from 'react'
 import type { UseInViewOptions } from 'framer-motion'
 import { useInView } from 'framer-motion'
-import Image from 'next/image'
 
 // import cn from '@/utils/cn'
-import type { IQuoteBox } from '@/molecules/index'
 // import { CardArticlePreview } from '@/organisms/card'
 import { NextSection } from '@/organisms/nextSection'
-import TwoColumnStat from '@/organisms/twoColumnStatText/TwoColumnStatText'
-import ArticleBody from '@/templates/articleBody/ArticleBody'
-import { type ITwoColumnStatText, TWO_COLUMN_STAT } from '@/templates/twoColumnStatText'
-
-import TitleContent from '../twoColumnStatText/TitleContent'
+import ArticleBodyDesktop from '@/templates/articleBody/ArticleBodyDesktop'
+import ArticleBodyMobile from '@/templates/articleBody/ArticleBodyMobile'
 
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
+import SectionOne from './SectionOne'
 
 interface Props {
   isMobile?: boolean
@@ -46,8 +42,29 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
     isInView5: isInView5 && !isInView4,
   }
 
+  if (isMobile) {
+    return (
+      <ArticleBodyMobile
+        chapterTitle={LANG.chapterTitle}
+        title={LANG.title}
+        menu={NAVIGATION_HEADER}
+        activeStatus={activeStatus}
+        isMobile={isMobile}
+        content={{
+          section1: {
+            Component: <SectionOne isMobile={isMobile} />,
+            ref: section1Ref,
+            id: LANG.section1.id,
+            isActive: activeStatus.isInView1,
+          },
+        }}
+        nextSection={<NextSection isMobile={isMobile} />}
+      />
+    )
+  }
+
   return (
-    <ArticleBody
+    <ArticleBodyDesktop
       chapterTitle={LANG.chapterTitle}
       title={LANG.title}
       menu={NAVIGATION_HEADER}
@@ -55,27 +72,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
       isMobile={isMobile}
       content={{
         section1: {
-          Component: (
-            <>
-              <div className="grid grid-cols-12">
-                <TitleContent title={LANG.section1.title} titleNumber={LANG.section1.titleNumber} />
-                <div className="relative col-span-12 aspect-[41/10] h-auto w-full">
-                  <Image alt={LANG.section1.titleImageAlt} src={LANG.section1.titleImage} fill priority />
-                </div>
-              </div>
-              <TwoColumnStat
-                type={TWO_COLUMN_STAT.textLeft as ITwoColumnStatText}
-                isMobile={isMobile}
-                // title={LANG.section1.title}
-                // titleNumber={LANG.section1.titleNumber}
-                bodyTitle={LANG.section1.bodyTitle}
-                paragraph1Content={isMobile ? LANG.section1.paragraph1ContentMobile : LANG.section1.paragraph1Content}
-                paragraph2Content={LANG.section1.paragraph2Content}
-                statContent={LANG.section1.statContent}
-                quoteContent={LANG.section1.quoteContent as IQuoteBox}
-              />
-            </>
-          ),
+          Component: <SectionOne isMobile={isMobile} />,
           ref: section1Ref,
           id: LANG.section1.id,
           isActive: activeStatus.isInView1,
