@@ -55,9 +55,7 @@ export default function ModalArticle({
           )}
         >
           {/* START: close modal */}
-          <div
-            className={cn('flex flex-row-reverse', 'pt-5 pb-6 lg:pb-11', 'sticky top-0 lg:top-5 right-5 z-20 bg-white')}
-          >
+          <div className={cn('flex flex-row-reverse', 'pt-5 pb-6 lg:pb-11', 'sticky top-0 right-5 z-20 bg-white')}>
             <button className="size-fit bg-transparent text-black transition duration-200 ease-in" onClick={closeModal}>
               <CloseIcon
                 width={isMobile ? 21.54 : 24}

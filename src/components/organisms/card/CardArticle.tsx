@@ -79,7 +79,7 @@ export default function CardArticle({
         </div>
       </div>
       {/* START: title */}
-      <div className={cn('flex flex-col', { 'lg:col-span-5': !children, 'lg:col-span-7': children })}>
+      <div className={cn('flex flex-col', { 'lg:col-span-5': !children, 'lg:col-span-7': children }, 'lg:mt-2')}>
         <Text
           component="p"
           className={cn(
@@ -119,7 +119,7 @@ export default function CardArticle({
           {contentType === 'p' && contentBody}
 
           {/* START: additional children */}
-          <div className="col-span-12 grid overflow-x-hidden">{children}</div>
+          <div className="col-span-12 grid">{children}</div>
           {/* END: additional children */}
         </div>
       </div>

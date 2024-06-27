@@ -21,7 +21,7 @@ export default function Section02Finding04({ isMobile }: Readonly<Props>) {
   const image4Scroll = isMobile && viewportWidth < 625
 
   return (
-    <div className={cn('flex flex-col', 'overflow-hidden')}>
+    <div className={cn('flex flex-col')}>
       {/* START: col 1 */}
       <div
         className={cn(
@@ -41,11 +41,11 @@ export default function Section02Finding04({ isMobile }: Readonly<Props>) {
           />
         </div>
         <div
-          className={cn(' pb-8', {
+          className={cn('w-full lg:w-2/3', 'pb-8', {
             '!overflow-x-scroll scrollbar-always-visible': image2Scroll,
           })}
         >
-          <div className={cn('w-full lg:w-2/3 relative aspect-[58/41] lg:aspect-[46/33]')}>
+          <div className={cn('w-full relative aspect-[58/41] lg:aspect-[46/33]')}>
             <Image
               className="object-scale-down object-left-bottom lg:object-cover"
               alt={`${LANG.section2.cards?.[3]?.modal?.alt2}`}
