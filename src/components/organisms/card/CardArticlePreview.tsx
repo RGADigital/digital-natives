@@ -1,3 +1,4 @@
+import React from 'react'
 import Image from 'next/image'
 import { Text, Title } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
@@ -10,11 +11,15 @@ import { Plus as PlusIcon } from '@/atoms/index'
 
 import { ModalArticle } from '../modal'
 
+export type IContentType = 'ul' | 'ol' | 'p'
 interface ICardArticlePreview {
   customImage?: React.ReactNode
+  contentType?: IContentType
   downloadLink?: string
   image?: string
   imageClassName?: string
+  imageFitClassName?: string
+  modalChildren?: React.ReactNode
   modalImage?: string
   modalImageClassName?: string
   titleClassName?: string
@@ -25,9 +30,12 @@ interface ICardArticlePreview {
 
 export default function CardArticlePreview({
   customImage,
+  contentType = 'p',
   downloadLink,
   image,
   imageClassName,
+  imageFitClassName,
+  modalChildren,
   modalImage,
   modalImageClassName,
   subtitle,
@@ -49,6 +57,7 @@ export default function CardArticlePreview({
           'flex flex-col',
           'lg:mb-[22px] ',
           'hover:scale-105 transition duration-200 ease-in',
+          'border border-black ',
         )}
         onClick={openModal}
         role="button"
@@ -56,16 +65,15 @@ export default function CardArticlePreview({
         {/* START: image */}
         {image && (
           <div
-            className={cn(
-              'dn-card-article-preview__image',
-              'relative',
-              'bg-grey-300',
-              'w-full h-auto',
-              'lg:border lg:border-black',
-              imageClassName,
-            )}
+            className={cn('dn-card-article-preview__image', 'relative', 'bg-grey-300', 'w-full h-auto', imageClassName)}
           >
-            <Image src={image} loading="lazy" alt={`Image for ${title}`} fill className="object-cover object-top" />
+            <Image
+              src={image}
+              loading="lazy"
+              alt={`Image for ${title}`}
+              fill
+              className={cn('object-cover object-top', imageFitClassName)}
+            />
           </div>
         )}
         {customImage}
@@ -74,13 +82,13 @@ export default function CardArticlePreview({
         <div
           className={cn(
             'flex flex-col lg:flex-row lg:justify-between lg:items-end gap-1 lg:gap-2.5',
-            'lg:border lg:border-black !border-t-0',
-            'pt-6 lg:pt-2.5',
-            '0 lg:pb-[13px]',
-            'lg:pl-2.5 pr-[17px]',
+            'pt-8 lg:pt-2.5',
+            'pb-2 lg:pb-[13px]',
+            'pl-2 lg:pl-2.5 pr-[17px]',
+            'lg:border-t lg:border-t-black',
           )}
         >
-          <div className={cn('flex flex-col')}>
+          <div className={cn('flex flex-col ')}>
             <Text
               component="p"
               className={cn(
@@ -107,8 +115,10 @@ export default function CardArticlePreview({
         </div>
       </div>
       <ModalArticle
+        modalChildren={modalChildren}
         closeModal={closeModal}
         downloadLink={downloadLink}
+        contentType={contentType}
         title={title}
         content={content}
         subtitle={subtitle}
