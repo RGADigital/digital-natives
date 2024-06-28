@@ -181,7 +181,11 @@ section.mantine-Modal-content {
 
 /* START: Article Card */
 .dn-modal-article--mobile .mantine-Modal-inner {
-  @apply !p-0;
+  @apply !p-0 bg-white;
+}
+
+.dn-modal-article--mobile .mantine-Paper-root {
+  @apply shadow-none;
 }
 
 .dn-modal-article--mobile .mantine-Modal-content {
@@ -211,3 +215,33 @@ section.mantine-Modal-content {
   @apply !text-neutrals-cool-gray-5;
 }
 /* END: sidebar */
+
+/* START: scrollbar */
+.scrollbar-always-visible {
+  scrollbar-gutter: stable;
+  scrollbar-color: #000000;
+}
+
+.scrollbar-always-visible::-webkit-scrollbar {
+  width: 3px; /* For Chrome, Safari, and Opera */
+  border-width: 3px;
+  height: 3px;
+  border: 1px solid #d5d5d5;
+}
+
+.scrollbar-always-visible::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 0px;
+  border: 3px solid transparent;
+}
+
+.scrollbar-always-visible::-webkit-scrollbar-track-piece {
+  background: #e8e3d8 !important;
+  border-color: white;
+  border-width: 0;
+  border-style: solid;
+}
+
+.dn-section__article__body p a {
+  @apply underline-offset-[7] underline;
+}

@@ -65,7 +65,7 @@ export default function ArticleBodyDesktop({
         </div>
         {/* END: content sidebar */}
         {/* START: content body */}
-        <div className="col-span-12 border-l-[1px] border-l-black lg:col-span-9">
+        <div className="dn-section__article__body col-span-12 border-l-[1px] border-l-black lg:col-span-9">
           {content &&
             Object.values(content).map(({ ref, Component: Section, id }) => {
               return (

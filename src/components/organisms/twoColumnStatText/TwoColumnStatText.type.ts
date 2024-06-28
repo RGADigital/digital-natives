@@ -1,25 +1,22 @@
-import type { IQuoteBox } from '@/molecules/index'
-import type { ITwoColumnStatText } from '@/templates/twoColumnStatText'
+import type { ITwoColumnStatPosition } from '@/templates/twoColumnTemplate'
 
 export interface TwoColumnStatTextProps {
-  bodyTitle?: string
   isMobile?: boolean
-  leftChildren?: React.ReactNode
+  largeChildren?: React.ReactNode
   noMarginTop?: boolean
   noMarginBottom?: boolean
-  paragraph1Content?: string[]
-  paragraph2Content?: string[]
-  quoteContent?: IQuoteBox
-  rightChildren?: React.ReactNode
-  statContent?: {
-    src: string
-    srcMobile?: string
-    alt: string
-    className?: string
-  }[]
-  statContentWrapperClassName?: string
-  statContentTextRightClassName?: string
+  smallChildren?: React.ReactNode
+  contentWrapperClassName?: string
+  largeContentWrapperClassName?: string
+  smallContentWrapperClassName?: string
   title?: string
   titleNumber?: string
-  type: ITwoColumnStatText
+  type: ITwoColumnStatPosition
+}
+
+export interface IStatContent {
+  alt?: string
+  className?: string
+  src?: string
+  srcMobile?: string
 }

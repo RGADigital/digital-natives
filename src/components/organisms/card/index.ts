@@ -1,1 +1,1 @@
-export { default as CardArticlePreview } from './CardArticlePreview'
+export { default as CardArticlePreview, type IContentType } from './CardArticlePreview'

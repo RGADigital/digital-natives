@@ -78,8 +78,12 @@ export default function ArticleBodyMobile({
 
                   {sectionName && (
                     <div
-                      id={sectionName}
-                      className={cn('scroll-m-[140px] transition-all duration-400 ease-in', { hidden: !isActive })}
+                      id={content?.[sectionName]?.id}
+                      className={cn(
+                        'dn-section__article__body ',
+                        'scroll-m-[140px] transition-all duration-400 ease-in',
+                        { hidden: !isActive },
+                      )}
                     >
                       {content?.[sectionName]?.Component}
                     </div>

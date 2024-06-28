@@ -37,7 +37,7 @@ const SECTION_ONE_CONTENT = {
 const SECTION_TWO_CONTENT = {
   color: 'cyan',
   navigation: 'The Opportunity',
-  id: 'opportunity',
+  id: 'the-opportunity',
   title: 'The Opportunity',
   titleNumber: '02',
   bodyTitle: 'In contrast, Gen One have grown up with technology as pervasive and integral to their lives.',
@@ -66,7 +66,7 @@ const SECTION_TWO_CONTENT = {
 const SECTION_THREE_CONTENT = {
   color: 'magenta',
   navigation: 'Our Research',
-  id: 'research',
+  id: 'our-research',
   title: 'Our Research',
   titleNumber: '03',
   bodyTitle:
@@ -96,7 +96,7 @@ const SECTION_THREE_CONTENT = {
 const SECTION_FIVE_CONTENT = {
   color: 'red',
   navigation: 'Reimagining the Digital World',
-  id: 'reimagining',
+  id: 'reimagining-the-digital-world',
   title: 'Reimagining the Digital World',
   titleNumber: '05',
   bodyTitle:
@@ -175,13 +175,13 @@ export const LANG_SECTION = {
       },
       {
         preview: {
-          subtitle: 'Finding03',
+          subtitle: 'Finding 03',
           title: 'The emotional toll of distraction',
           image: '/assets/executive-summary/4-what-we-found-card-3-preview.png',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-3-preview-mobile.jpg',
         },
         modal: {
-          subtitle: 'Finding03',
+          subtitle: 'Finding 03',
           title: 'The emotional toll of distraction',
           image: '/assets/executive-summary/4-what-we-found-card-3-preview.png',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-3-modal-mobile.png',
@@ -194,13 +194,13 @@ export const LANG_SECTION = {
       },
       {
         preview: {
-          subtitle: 'Finding04',
+          subtitle: 'Finding 04',
           title: 'Trust, data and security',
           image: '/assets/executive-summary/4-what-we-found-card-4-preview.png',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-4-preview-mobile.jpg',
         },
         modal: {
-          subtitle: 'Finding04',
+          subtitle: 'Finding 04',
           title: 'Trust, data and security',
           image: '/assets/executive-summary/4-what-we-found-card-4-preview.png',
           imageMobile: '/assets/executive-summary/4-what-we-found-card-4-modal-mobile.jpg',

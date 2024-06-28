@@ -8,8 +8,8 @@ import useViewport from '@/hooks/useViewport'
 
 import cn from '@/utils/cn'
 
+import { Body, IntroSection } from '@/components/organisms/chapterTwo/index'
 import { Meta } from '@/globals/index'
-import { Body, IntroSection } from '@/organisms/chapterOne/index'
 import FooterContent from '@/organisms/footer/FooterContent'
 import { Header, ModalRegister } from '@/organisms/index'
 
@@ -78,3 +78,5 @@ export default function ChapterOne() {
     </div>
   )
 }
+
+// TODO[pops]: move modal register to separate template

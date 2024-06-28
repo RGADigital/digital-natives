@@ -8,16 +8,27 @@ import { HorizontalArrow, HorizontalArrowMobile } from '@/atoms/icon'
 import { CONTENT } from './NextSection.constant'
 
 interface Props {
+  wrapperClassName?: string
   isMobile?: boolean
+  chapter?: number
 }
-export default function NextSection({ isMobile = false }: Readonly<Props>) {
+export default function NextSection({ isMobile = false, chapter, wrapperClassName }: Readonly<Props>) {
+  const nextChapter = chapter && CONTENT?.[`${chapter}`]
+  if (!chapter || !nextChapter) {
+    return null
+  }
   return (
     <div
-      className={cn('dn-article__next-section', 'group transition-all duration-200 ease-in-out ', {
-        'border-t-[0.5px] border-t-black': isMobile,
-        '-mx-5 px-5 pt-[9.2px]': isMobile,
-        relative: !isMobile,
-      })}
+      className={cn(
+        'dn-article__next-section',
+        'group transition-all duration-200 ease-in-out ',
+        {
+          'border-t-[0.5px] border-t-black': isMobile,
+          '-mx-5 px-5 pt-[30px]': isMobile,
+          relative: !isMobile,
+        },
+        wrapperClassName,
+      )}
     >
       <div
         className="relative aspect-[51/22] h-auto !overflow-clip bg-black lg:my-5 lg:ml-5 lg:aspect-[1028/448]"
@@ -27,7 +38,7 @@ export default function NextSection({ isMobile = false }: Readonly<Props>) {
           fill
           priority
           alt="go to next section"
-          src={isMobile ? CONTENT.backgroundMobile : CONTENT.background}
+          src={isMobile ? nextChapter.backgroundMobile : nextChapter.background}
           className="object-cover object-center group-hover:scale-[1.2] group-hover:opacity-80 lg:object-scale-down"
         />
       </div>
@@ -44,13 +55,13 @@ export default function NextSection({ isMobile = false }: Readonly<Props>) {
         )}
       >
         <Text component="p" className="font-eyebrow text-eyebrow">
-          {CONTENT.nextSubtitle}
+          {nextChapter.nextSubtitle}
         </Text>
         <Title
           order={2}
           className={cn('flex flex-col lg:flex-row gap-1 lg:gap-7', 'text-m-h2 font-m-h2 lg:text-h2 lg:font-h2')}
         >
-          {CONTENT.nextTitle}
+          {nextChapter.nextTitle}
           {isMobile ? <HorizontalArrowMobile /> : <HorizontalArrow />}
         </Title>
       </div>
