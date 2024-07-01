@@ -1,4 +1,5 @@
 export { CardArticlePreview } from './card/index'
+export { FooterContent } from './footer'
 export { default as Footer } from './footer/Footer'
 export { default as Form } from './form/RegisterForm'
 export { default as Header } from './header/Header'
