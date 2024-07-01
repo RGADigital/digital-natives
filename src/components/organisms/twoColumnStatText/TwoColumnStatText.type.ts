@@ -8,6 +8,7 @@ export interface TwoColumnStatTextProps {
   smallChildren?: React.ReactNode
   contentWrapperClassName?: string
   largeContentWrapperClassName?: string
+  rootWrapperClassName?: string
   smallContentWrapperClassName?: string
   title?: string
   titleImageChildren?: React.ReactNode

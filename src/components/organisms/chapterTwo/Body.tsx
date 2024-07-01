@@ -9,11 +9,10 @@ import ArticleBodyMobile from '@/templates/articleBody/ArticleBodyMobile'
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
 import SectionOne from './Section01'
 import SectionTwo from './Section02'
-// import SectionTwo from './Section02'
-// import SectionThree from './Section03'
+import SectionThree from './Section03'
 // import SectionFour from './Section04'
-// import SectionFive from './Section05'
-// import SectionSix from './Section06'
+import SectionFive from './Section05'
+import SectionSix from './Section06'
 // import SectionSeven from './Section07'
 
 interface Props {
@@ -26,6 +25,8 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
   const section3Ref = useRef<HTMLDivElement>(null)
   const section4Ref = useRef<HTMLDivElement>(null)
   const section5Ref = useRef<HTMLDivElement>(null)
+  const section6Ref = useRef<HTMLDivElement>(null)
+  const section7Ref = useRef<HTMLDivElement>(null)
 
   const inViewSetting: UseInViewOptions = {
     amount: 'some',
@@ -36,8 +37,8 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
   const isInView3 = useInView(section3Ref, inViewSetting)
   const isInView4 = useInView(section4Ref, inViewSetting)
   const isInView5 = useInView(section5Ref, inViewSetting)
-  const isInView6 = useInView(section4Ref, inViewSetting)
-  const isInView7 = useInView(section5Ref, inViewSetting)
+  const isInView6 = useInView(section6Ref, inViewSetting)
+  const isInView7 = useInView(section7Ref, inViewSetting)
 
   const activeStatus: { [key: string]: any } = {
     isInView1,
@@ -69,30 +70,30 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
             id: LANG.section2.id,
             isActive: activeStatus.isInView2,
           },
-          // section3: {
-          //   Component: <SectionThree isMobile />,
-          //   ref: section3Ref,
-          //   id: LANG.section3.id,
-          //   isActive: activeStatus.isInView3,
-          // },
+          section3: {
+            Component: <SectionThree isMobile />,
+            ref: section3Ref,
+            id: LANG.section3.id,
+            isActive: activeStatus.isInView3,
+          },
           // section4: {
           //   Component: <SectionFour isMobile />,
           //   ref: section4Ref,
           //   id: LANG.section4.id,
           //   isActive: activeStatus.isInView4,
           // },
-          // section5: {
-          //   Component: <SectionFive isMobile />,
-          //   ref: section5Ref,
-          //   id: LANG.section5.id,
-          //   isActive: activeStatus.isInView5,
-          // },
-          // section6: {
-          //   Component: <SectionSix isMobile />,
-          //   ref: section6Ref,
-          //   id: LANG.section6.id,
-          //   isActive: activeStatus.isInView6,
-          // },
+          section5: {
+            Component: <SectionFive isMobile />,
+            ref: section5Ref,
+            id: LANG.section5.id,
+            isActive: activeStatus.isInView5,
+          },
+          section6: {
+            Component: <SectionSix isMobile />,
+            ref: section6Ref,
+            id: LANG.section6.id,
+            isActive: activeStatus.isInView6,
+          },
           // section7: {
           //   Component: <SectionSeven isMobile />,
           //   ref: section7Ref,
@@ -125,30 +126,30 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           id: LANG.section2.id,
           isActive: activeStatus.isInView2,
         },
-        // section3: {
-        //   Component: <SectionThree />,
-        //   ref: section3Ref,
-        //   id: LANG.section3.id,
-        //   isActive: activeStatus.isInView3,
-        // },
+        section3: {
+          Component: <SectionThree />,
+          ref: section3Ref,
+          id: LANG.section3.id,
+          isActive: activeStatus.isInView3,
+        },
         // section4: {
         //   Component: <SectionFour />,
         //   ref: section4Ref,
         //   id: LANG.section4.id,
         //   isActive: activeStatus.isInView4,
         // },
-        // section5: {
-        //   Component: <SectionFive />,
-        //   ref: section5Ref,
-        //   id: LANG.section5.id,
-        //   isActive: activeStatus.isInView5,
-        // },
-        // section6: {
-        //   Component: <SectionSix />,
-        //   ref: section6Ref,
-        //   id: LANG.section6.id,
-        //   isActive: activeStatus.isInView6,
-        // },
+        section5: {
+          Component: <SectionFive />,
+          ref: section5Ref,
+          id: LANG.section5.id,
+          isActive: activeStatus.isInView5,
+        },
+        section6: {
+          Component: <SectionSix />,
+          ref: section6Ref,
+          id: LANG.section6.id,
+          isActive: activeStatus.isInView6,
+        },
         // section7: {
         //   Component: <SectionSeven />,
         //   ref: section7Ref,

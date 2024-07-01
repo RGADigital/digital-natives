@@ -12,6 +12,7 @@ export default function TwoColumnStat({
   titleImageChildren,
   largeChildren,
   largeContentWrapperClassName,
+  rootWrapperClassName,
   smallChildren,
   noMarginTop = false,
   noMarginBottom = false,
@@ -26,6 +27,7 @@ export default function TwoColumnStat({
       type={type}
       contentWrapperClassName={contentWrapperClassName}
       largeContentWrapperClassName={largeContentWrapperClassName}
+      rootWrapperClassName={rootWrapperClassName}
       smallContentWrapperClassName={smallContentWrapperClassName}
       largeChildren={largeChildren}
       smallChildren={smallChildren}

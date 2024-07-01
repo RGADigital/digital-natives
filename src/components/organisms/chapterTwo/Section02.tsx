@@ -19,6 +19,7 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
       isMobile={isMobile}
       title={LANG.section2.title}
       titleNumber={LANG.section2.titleNumber}
+      contentWrapperClassName={cn({ 'mb-[65px]': isMobile })}
       largeChildren={
         <>
           {LANG.section2.bodyTitle && (
@@ -27,17 +28,18 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
               paragraph1Content={LANG.section2.paragraph1Content}
               paragraph2Content={LANG.section2.paragraph2Content}
               bodyTitleClassName="lg:mb-[30px]"
+              titleWrapperClassName={cn({ 'mt-[46px]': isMobile })}
             />
           )}
         </>
       }
+      rootWrapperClassName={cn({ '!pt-2.5': isMobile })}
       smallChildren={
         <>
           {LANG.section2?.quoteContent?.[0] && (
             <QuoteBox
               {...(LANG.section2.quoteContent[0] as IQuoteBox)}
               wrapperClassName={cn('lg:h-[calc(100%_-_40px)]', {
-                // 'mx-0': isMobile,
                 'gap-[30px]': !isMobile,
               })}
             />
@@ -46,7 +48,7 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
       }
       titleImageChildren={
         LANG.section2.image?.[0] && (
-          <div className="lg:border-b lg:border-neutrals-cool-gray-1 lg:p-5">
+          <div className={cn('lg:border-b lg:border-neutrals-cool-gray-1', 'pt-[110px] lg:p-5')}>
             <div className="relative aspect-[1.43] h-auto bg-black lg:aspect-[2.3]">
               <Image
                 src={isMobile ? LANG.section2.image[0].srcMobile : LANG.section2.image[0].src}
@@ -59,7 +61,7 @@ export default function SectionTwo({ isMobile }: Readonly<Props>) {
           </div>
         )
       }
-      largeContentWrapperClassName="pb-5 lg:pb-[113px]"
+      largeContentWrapperClassName="pb-0 lg:pb-[110px] !order-first lg:!order-last"
       noMarginBottom
     />
   )

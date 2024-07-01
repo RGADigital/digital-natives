@@ -75,7 +75,7 @@ const SECTION_THREE_CONTENT = {
       quote: `“I guess we've become more attached to our phones and less to each other.”`,
     },
     {
-      avatar: '/assets/chapter-two/avatar/melissa.png',
+      avatar: '/assets/chapter-two/avatar/melissa-2.png',
       author: 'Melissa, Digital Adopter',
       edgeColor: 'yellow',
       quote: `“And it's just like you don't wanna lose human interaction either. I think that's the main thing that I am like, it's not trying to lose this. I mean, now we have robots, like cleaners that clean the plates of restaurants. Like here we go: no more waitresses, no more waiters”`,

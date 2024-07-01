@@ -13,6 +13,7 @@ export interface IQuoteBox {
   edgeColor?: IColoredBox['color']
   quote?: string
   author?: string
+  textClassName?: string
   wrapperClassName?: string
 }
 
@@ -22,6 +23,7 @@ export default function QuoteBox({
   edgeColor = 'blue',
   quote,
   author,
+  textClassName,
   wrapperClassName,
 }: Readonly<IQuoteBox>) {
   return (
@@ -31,10 +33,15 @@ export default function QuoteBox({
       )}
       <Text
         component="p"
-        className={cn('italic text-black ', 'flex-grow', {
-          'font-m-quote lg:font-quote text-m-quote lg:text-quote': avatar,
-          'font-m-quote text-m-quote lg:text-[22px] lg:leading-[26.4px]': !avatar,
-        })}
+        className={cn(
+          'italic text-black ',
+          'flex-grow',
+          {
+            'font-m-quote lg:font-quote text-m-quote lg:text-quote': avatar,
+            'font-m-quote text-m-quote lg:text-[22px] lg:leading-[26.4px]': !avatar,
+          },
+          textClassName,
+        )}
       >
         {`${quote}`}
       </Text>
