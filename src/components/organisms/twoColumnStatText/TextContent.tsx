@@ -4,11 +4,13 @@ import cn from '@/utils/cn'
 
 export default function TextContent({
   bodyTitle,
+  bodyTitleClassName,
   titleWrapperClassName,
   paragraph1Content,
   paragraph2Content,
 }: Readonly<{
   bodyTitle?: React.ReactNode
+  bodyTitleClassName?: string
   noMarginTop?: boolean
   paragraph1Content?: React.ReactNode[]
   paragraph2Content?: React.ReactNode[]
@@ -27,7 +29,10 @@ export default function TextContent({
         <div className="col-span-12">
           <Title
             order={3}
-            className="font-m-h3 lg:font-subheading mb-[46px] text-m-h3 text-black lg:mb-5 lg:text-subheading"
+            className={cn(
+              'font-m-h3 lg:font-subheading mb-[46px] text-m-h3 text-black lg:mb-5 lg:text-subheading',
+              bodyTitleClassName,
+            )}
           >
             {bodyTitle}
           </Title>
