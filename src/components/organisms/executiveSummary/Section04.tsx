@@ -42,7 +42,7 @@ export default function SectionFour({ isMobile }: Readonly<Props>) {
                 image={isMobile ? LANG.section4.cards[1].preview.imageMobile : LANG.section4.cards[1].preview.image}
                 downloadLink={LANG.section4.cards[1].modal.downloadLink}
                 content={LANG.section4.cards[1].modal.content}
-                imageClassName="w-full h-auto aspect-[10/7] md:aspect-[10/8]"
+                imageClassName="w-full h-auto aspect-[10/7] lg:aspect-[10/8]"
                 modalImageClassName="object-scale-down bg-black"
                 modalImage={LANG.section4.cards[1].modal.image}
               />
@@ -68,7 +68,7 @@ export default function SectionFour({ isMobile }: Readonly<Props>) {
                 modalImage={isMobile ? LANG.section4.cards[2].modal.imageMobile : LANG.section4.cards[2].modal.image}
                 downloadLink={LANG.section4.cards[2].modal.downloadLink}
                 content={LANG.section4.cards[2].modal.content}
-                imageClassName="w-full h-auto aspect-[10/7] md:aspect-[34/32]"
+                imageClassName="w-full h-auto aspect-[10/7] lg:aspect-[34/32]"
               />
             </div>
           )
@@ -81,7 +81,7 @@ export default function SectionFour({ isMobile }: Readonly<Props>) {
                 subtitle={LANG.section4.cards[3].preview.subtitle}
                 image={isMobile ? LANG.section4.cards[3].preview.imageMobile : LANG.section4.cards[3].preview.image}
                 content={LANG.section4.cards[3].modal.content}
-                imageClassName="w-full h-auto aspect-[10/7] md:aspect-[6.4/2.2]"
+                imageClassName="w-full h-auto aspect-[10/7] lg:aspect-[6.4/2.2]"
                 modalImageClassName="object-scale-down bg-black"
                 modalImage={isMobile ? LANG.section4.cards[3].modal.imageMobile : LANG.section4.cards[3].modal.image}
                 downloadLink={LANG.section4.cards[3].modal.downloadLink}

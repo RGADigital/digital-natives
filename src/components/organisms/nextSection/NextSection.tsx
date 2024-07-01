@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router'
 import { Text, Title } from '@mantine/core'
 
 import cn from '@/utils/cn'
@@ -13,9 +14,14 @@ interface Props {
   chapter?: number
 }
 export default function NextSection({ isMobile = false, chapter, wrapperClassName }: Readonly<Props>) {
+  const router = useRouter()
   const nextChapter = chapter && CONTENT?.[`${chapter}`]
   if (!chapter || !nextChapter) {
     return null
+  }
+
+  const redirectToNextChapter = () => {
+    router.push(nextChapter.nextLink)
   }
   return (
     <div
@@ -33,6 +39,7 @@ export default function NextSection({ isMobile = false, chapter, wrapperClassNam
       <div
         className="relative aspect-[51/22] h-auto !overflow-clip bg-black lg:my-5 lg:ml-5 lg:aspect-[1028/448]"
         role="button"
+        onClick={redirectToNextChapter}
       >
         <Image
           fill

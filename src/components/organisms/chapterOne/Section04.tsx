@@ -1,9 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 import { Text } from '@mantine/core'
+import { useViewportSize } from '@mantine/hooks'
 
 import cn from '@/utils/cn'
 
+import { HorizontalArrowScroll } from '@/components/atoms'
 import { TitleContent, TwoColumnStat } from '@/organisms/twoColumnStatText'
 import type { ITwoColumnStatPosition } from '@/templates/twoColumnTemplate'
 import { TWO_COLUMN_POSITION } from '@/templates/twoColumnTemplate'
@@ -15,6 +17,9 @@ interface Props {
 }
 
 export default function SectionFour({ isMobile }: Readonly<Props>) {
+  const { width: viewportWidth } = useViewportSize()
+
+  const showScrollbar = isMobile && viewportWidth < 580
   return (
     <>
       <div
@@ -96,7 +101,7 @@ export default function SectionFour({ isMobile }: Readonly<Props>) {
             </Text>
             <div
               className={cn('w-full flex flex-col', {
-                '!overflow-x-scroll pb-5 scrollbar-always-visible': isMobile,
+                '!overflow-x-scroll pb-5 scrollbar-always-visible': showScrollbar,
               })}
             >
               <div
@@ -106,6 +111,9 @@ export default function SectionFour({ isMobile }: Readonly<Props>) {
               >
                 <Image src={LANG.section4.image} alt={LANG.section4.imageAlt} priority fill />
               </div>
+            </div>
+            <div className={cn('hidden', { 'flex justify-end mt-[19px]': showScrollbar })}>
+              <HorizontalArrowScroll />
             </div>
           </>
         }

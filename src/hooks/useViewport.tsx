@@ -11,7 +11,7 @@ interface Props {
 export default function useViewport({ maxWidth, maxHeight }: Readonly<Props>) {
   const { height: viewportHeight, width: viewportWidth } = useViewportSize()
 
-  const isMobile = useMediaQuery(`(max-width: ${em(BREAKPOINTS.md)})`)
+  const isMobile = useMediaQuery(`(max-width: ${em(BREAKPOINTS.lg)})`)
   // Convert VH to Pixel with optional width constraint
   const height = maxHeight && viewportHeight > maxHeight ? maxHeight : viewportHeight
   const vhToPx = (vh: number) => {

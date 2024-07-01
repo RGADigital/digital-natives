@@ -85,7 +85,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
             isActive: activeStatus.isInView5,
           },
         }}
-        nextSection={<NextSection isMobile chapter={3} />}
+        nextSection={<NextSection isMobile chapter={2} />}
         isMobile
       />
     )
@@ -129,7 +129,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           isActive: activeStatus.isInView5,
         },
       }}
-      nextSection={<NextSection chapter={3} wrapperClassName={'border-t border-black'} />}
+      nextSection={<NextSection chapter={2} wrapperClassName={'border-t border-black'} />}
     />
   )
 }
