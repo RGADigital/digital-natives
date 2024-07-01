@@ -8,7 +8,7 @@ import useViewport from '@/hooks/useViewport'
 
 import cn from '@/utils/cn'
 
-import { Body, IntroSection } from '@/components/organisms/chapterTwo/index'
+import { Body, IntroSection } from '@/components/organisms/chapterOne/index'
 import { Meta } from '@/globals/index'
 import FooterContent from '@/organisms/footer/FooterContent'
 import { Header, ModalRegister } from '@/organisms/index'
