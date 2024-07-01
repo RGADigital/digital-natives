@@ -9,6 +9,7 @@ export default function TwoColumnStat({
   isMobile,
   title,
   titleNumber,
+  titleImageChildren,
   largeChildren,
   largeContentWrapperClassName,
   smallChildren,
@@ -29,6 +30,7 @@ export default function TwoColumnStat({
       largeChildren={largeChildren}
       smallChildren={smallChildren}
       titleContent={title && <TitleContent title={title} titleNumber={titleNumber} />}
+      titleImageChildren={titleImageChildren}
     />
   )
 }

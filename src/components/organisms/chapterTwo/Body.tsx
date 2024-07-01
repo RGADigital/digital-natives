@@ -8,6 +8,7 @@ import ArticleBodyMobile from '@/templates/articleBody/ArticleBodyMobile'
 
 import { LANG, NAVIGATION_HEADER } from './Body.constant'
 import SectionOne from './Section01'
+import SectionTwo from './Section02'
 // import SectionTwo from './Section02'
 // import SectionThree from './Section03'
 // import SectionFour from './Section04'
@@ -62,12 +63,12 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
             id: LANG.section1.id,
             isActive: activeStatus.isInView1,
           },
-          // section2: {
-          //   Component: <SectionTwo isMobile />,
-          //   ref: section2Ref,
-          //   id: LANG.section2.id,
-          //   isActive: activeStatus.isInView2,
-          // },
+          section2: {
+            Component: <SectionTwo isMobile />,
+            ref: section2Ref,
+            id: LANG.section2.id,
+            isActive: activeStatus.isInView2,
+          },
           // section3: {
           //   Component: <SectionThree isMobile />,
           //   ref: section3Ref,
@@ -118,12 +119,12 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           id: LANG.section1.id,
           isActive: activeStatus.isInView1,
         },
-        // section2: {
-        //   Component: <SectionTwo />,
-        //   ref: section2Ref,
-        //   id: LANG.section2.id,
-        //   isActive: activeStatus.isInView2,
-        // },
+        section2: {
+          Component: <SectionTwo />,
+          ref: section2Ref,
+          id: LANG.section2.id,
+          isActive: activeStatus.isInView2,
+        },
         // section3: {
         //   Component: <SectionThree />,
         //   ref: section3Ref,

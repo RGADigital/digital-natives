@@ -10,6 +10,7 @@ export interface TwoColumnStatTextProps {
   largeContentWrapperClassName?: string
   smallContentWrapperClassName?: string
   title?: string
+  titleImageChildren?: React.ReactNode
   titleNumber?: string
   type: ITwoColumnStatPosition
 }

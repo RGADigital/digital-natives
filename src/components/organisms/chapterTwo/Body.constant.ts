@@ -39,7 +39,7 @@ const SECTION_TWO_CONTENT: IBody = {
   ],
   quoteContent: [
     {
-      avatar: '/assets/chapter-two/melissa.png',
+      avatar: '/assets/chapter-two/avatar/melissa.png',
       author: 'Melissa, Digital Adopter',
       edgeColor: 'pink',
       quote: `“It feels like it's addictive sometimes and you know, sometimes you're like, oh wrap it up or whatever, and then you can't like then something else jumps to mind and then you're like, oh OK, look this up. I gotta do this. So yeah, it's sometimes a bit of a love hate relationship with it….it's finding that sweet spot, I guess.”`,
@@ -69,19 +69,19 @@ const SECTION_THREE_CONTENT = {
   paragraph2Content: [],
   quoteContent: [
     {
-      avatar: '/assets/chapter-two/ayaan.png',
+      avatar: '/assets/chapter-two/avatar/ayaan.png',
       author: 'Ayaan, Gen One',
       edgeColor: 'yellow',
       quote: `“I guess we've become more attached to our phones and less to each other.”`,
     },
     {
-      avatar: '/assets/chapter-two/melissa.png',
+      avatar: '/assets/chapter-two/avatar/melissa.png',
       author: 'Melissa, Digital Adopter',
       edgeColor: 'yellow',
       quote: `“And it's just like you don't wanna lose human interaction either. I think that's the main thing that I am like, it's not trying to lose this. I mean, now we have robots, like cleaners that clean the plates of restaurants. Like here we go: no more waitresses, no more waiters”`,
     },
     {
-      avatar: '/assets/chapter-two/vivian.png',
+      avatar: '/assets/chapter-two/avatar/vivian.png',
       author: 'Vivian, Digital Adopter',
       edgeColor: 'yellow',
       quote: `“A lot of stuff is shared online as well. Not more to show off, but more to just keep it connected with other people close around us and they're like, hey, you know, everyone's still connected. This is what we've got going on in our life right now.”`,
@@ -104,7 +104,7 @@ const SECTION_FOUR_CONTENT = {
   ],
   quoteContent: [
     {
-      avatar: '/assets/chapter-two/tayla.png',
+      avatar: '/assets/chapter-two/avatar/tayla.png',
       author: 'Tayla, Gen One',
       edgeColor: 'cyan',
       quote: `“Because someone like Apple doing [the Vision Pro] means that it's gonna just go crazy and expand. Like it's like we're seeing a new introduction, like when they released the first iPhone, like that would have just been crazy and it just kind of feels like that. It’s like a new wave of technology is coming.”`,
@@ -133,19 +133,19 @@ const SECTION_FIVE_CONTENT = {
   ],
   quoteContent: [
     {
-      avatar: '/assets/chapter-two/darcy.png',
+      avatar: '/assets/chapter-two/avatar/darcy.png',
       author: 'Darcy, Digital Adopter',
       edgeColor: 'yellow',
       quote: `“I guess we've become more attached to our phones and less to each other.”`,
     },
     {
-      avatar: '/assets/chapter-two/gus.png',
+      avatar: '/assets/chapter-two/avatar/gus.png',
       author: 'Gus, Gen One',
       edgeColor: 'yellow',
       quote: `“And it's just like you don't wanna lose human interaction either. I think that's the main thing that I am like, it's not trying to lose this. I mean, now we have robots, like cleaners that clean the plates of restaurants. Like here we go: no more waitresses, no more waiters”`,
     },
     {
-      avatar: '/assets/chapter-two/claudia.png',
+      avatar: '/assets/chapter-two/avatar/claudia.png',
       author: 'Claudia, Gen One',
       edgeColor: 'yellow',
       quote: `“A lot of stuff is shared online as well. Not more to show off, but more to just keep it connected with other people close around us and they're like, hey, you know, everyone's still connected. This is what we've got going on in our life right now.”`,

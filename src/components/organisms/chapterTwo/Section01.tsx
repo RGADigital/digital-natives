@@ -34,12 +34,7 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
       smallChildren={
         <>
           {LANG.section1?.image?.[0] && (
-            <div
-              className={cn(
-                'bg-accents-cyan relative',
-                `w-full h-auto aspect-[0.77] lg:aspect-[100/77] lg:mt-5 lg:ml-5`,
-              )}
-            >
+            <div className={cn('bg-accents-cyan relative', `w-full h-auto aspect-[0.77] lg:aspect-[100/77]`)}>
               <Image
                 src={isMobile ? LANG.section1.image[0].srcMobile : LANG.section1.image[0].src}
                 alt={LANG.section1.image[0].alt}
@@ -51,7 +46,7 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
           )}
         </>
       }
-      smallContentWrapperClassName="lg:col-span-7 mb-[46px] lg:mb-5"
+      smallContentWrapperClassName="lg:col-span-7 mb-[46px] lg:m-5"
       noMarginBottom
     />
   )

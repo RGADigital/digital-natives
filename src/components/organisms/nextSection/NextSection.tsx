@@ -37,7 +37,7 @@ export default function NextSection({ isMobile = false, chapter, wrapperClassNam
       )}
     >
       <div
-        className="relative aspect-[51/22] h-auto !overflow-clip bg-black lg:my-5 lg:ml-5 lg:aspect-[1028/448]"
+        className="relative aspect-[51/22] h-auto !overflow-clip bg-black lg:m-5 lg:aspect-[1028/448]"
         role="button"
         onClick={redirectToNextChapter}
       >
@@ -57,7 +57,7 @@ export default function NextSection({ isMobile = false, chapter, wrapperClassNam
           'group-hover:scale-105',
           'pt-[4.9px] lg:pt-0',
           {
-            'absolute bottom-5 right-5': !isMobile,
+            'absolute bottom-5 right-10': !isMobile,
           },
         )}
       >

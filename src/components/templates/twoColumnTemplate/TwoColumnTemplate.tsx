@@ -14,6 +14,7 @@ interface Props {
   largeContentWrapperClassName?: string
   smallContentWrapperClassName?: string
   titleContent: React.ReactNode
+  titleImageChildren?: React.ReactNode
   type?: ITwoColumnStatPosition
 }
 
@@ -27,6 +28,7 @@ export default function TwoColumnTemplate({
   largeContentWrapperClassName,
   smallContentWrapperClassName,
   titleContent,
+  titleImageChildren,
   type = TWO_COLUMN_POSITION.textLeft,
 }: Readonly<Props>) {
   return (
@@ -41,6 +43,7 @@ export default function TwoColumnTemplate({
       })}
     >
       <div className="grid w-full grid-cols-12">{titleContent}</div>
+      {titleImageChildren && <div className="w-full">{titleImageChildren}</div>}
       <div
         className={cn(
           'dn-two-column-template__content grid w-full grid-cols-12 ',
