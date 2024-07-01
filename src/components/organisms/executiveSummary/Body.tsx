@@ -80,7 +80,7 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           isActive: activeStatus.isInview5,
         },
       }}
-      nextSection={<NextSection isMobile={isMobile} chapter={2} />}
+      nextSection={<NextSection isMobile={isMobile} chapter={1} />}
     />
   )
 }
