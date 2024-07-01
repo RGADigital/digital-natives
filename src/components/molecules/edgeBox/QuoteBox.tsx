@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import { Text } from '@mantine/core'
 
+import cn from '@/utils/cn'
+
 import { type IColoredBox } from '@/atoms/index'
 
 import EdgeBox from './EdgeBox'
@@ -27,7 +29,13 @@ export default function QuoteBox({
       {avatar && (
         <Image width={63} height={63} loading="lazy" className="pulse" src={avatar} alt={`avatar of ${author}`} />
       )}
-      <Text component="p" className="font-m-quote lg:font-quote text-m-quote italic text-black lg:text-quote">
+      <Text
+        component="p"
+        className={cn('italic text-black ', 'flex-grow', {
+          'font-m-quote lg:font-quote text-m-quote lg:text-quote': avatar,
+          'font-m-quote text-m-quote lg:text-[22px] lg:leading-[26.4px]': !avatar,
+        })}
+      >
         {`${quote}`}
       </Text>
       <Text component="footer" className="font-m-body lg:font-body text-m-body lg:text-body">
