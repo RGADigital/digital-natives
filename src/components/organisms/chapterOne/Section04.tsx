@@ -5,8 +5,8 @@ import { useViewportSize } from '@mantine/hooks'
 
 import cn from '@/utils/cn'
 
-import { HorizontalArrowScroll } from '@/components/atoms'
-import { TitleContent, TwoColumnStat } from '@/organisms/twoColumnStatText'
+import { HorizontalArrowScroll } from '@/atoms/index'
+import { TitleContent, TwoColumnStat } from '@/organisms/articleContent'
 import type { ITwoColumnStatPosition } from '@/templates/twoColumnTemplate'
 import { TWO_COLUMN_POSITION } from '@/templates/twoColumnTemplate'
 

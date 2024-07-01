@@ -1,8 +1,8 @@
 import cn from '@/utils/cn'
 
 import { type ITwoColumnStatPosition, TWO_COLUMN_POSITION } from '@/components/templates/twoColumnTemplate'
+import { TwoColumnStat } from '@/organisms/articleContent'
 import { CardArticlePreview } from '@/organisms/card'
-import { TwoColumnStat } from '@/organisms/twoColumnStatText'
 
 import { LANG } from './Body.constant'
 

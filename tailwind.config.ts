@@ -37,6 +37,11 @@ module.exports = {
         'gr-pink-yellow-2': 'linear-gradient(180deg, #FF00FF 0%, #FF00FF 60.26%, #FFFF00 101.25%)',
         'gr-pink-white': 'linear-gradient(360deg, #F0F 0%, rgba(255, 0, 255, 0.00) 100%)',
         'gr-green-white': 'linear-gradient(90deg, #0F0 0%, #00FFFF 100%)',
+
+        // for paragraph ol background
+        'gr-p-ol-green': ' linear-gradient(90deg, #00FF00 0%, #00FFFF 37.78%, rgba(0, 255, 255, 0) 75.16%)',
+        'gr-p-ol-pink': 'linear-gradient(270deg, rgba(255, 0, 255, 0) 19.97%, #FF00FF 100%)',
+        'gr-p-ol-yellow': 'linear-gradient(90deg, #FFFF00 0%, rgba(255, 255, 0, 0) 82%)',
       },
       colors: {
         ...SITE_COLOR,
@@ -207,5 +212,5 @@ module.exports = {
     },
   },
   plugins: [],
-  safelist: [],
+  safelist: ['bg-gr-p-ol-green', 'bg-gr-p-ol-pink', 'bg-gr-p-ol-yellow'],
 }

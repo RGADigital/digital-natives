@@ -1,4 +1,5 @@
 import type { IColoredBox } from '@/atoms/coloredBox'
+import type { IContent } from '@/organisms/articleContent/ParagraphOlContent'
 
 export interface ArticleBodyProps {
   isMobile?: boolean
@@ -32,10 +33,7 @@ export interface IBody {
   bodyTitle?: string
   paragraph1Content?: string[]
   paragraph2Content?: string[]
-  paragraphOlContent?: {
-    title: string
-    description: string
-  }[]
+  paragraphOlContent?: IContent[]
   quoteContent?: {
     avatar: string
     author: string

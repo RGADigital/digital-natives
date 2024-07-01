@@ -181,19 +181,25 @@ const SECTION_SEVEN_CONTENT: IBody = {
   titleNumber: '07',
   paragraphOlContent: [
     {
+      no: '1.',
       title: 'Be brave',
       description:
         'Gen One is attracted to new and innovative technology, willing to take a chance on something groundbreaking but unproven. As with any new technology, getting early adopters excited will ultimately attract the masses.',
+      gradientClassName: 'bg-gr-p-ol-green',
     },
     {
+      no: '2.',
       title: 'Be balanced',
       description:
         'Any technology advance should be tempered by ensuring privacy, security and malicious actors are addressed, particularly to keep Digital Adopters confident in its long-term net benefit.',
+      gradientClassName: 'bg-gr-p-ol-pink',
     },
     {
+      no: '3.',
       title: 'Be human',
       description:
         'Gen One believe that technology will ultimately bring people together - if we dehumanise our experiences, making them more like processes or forms, they will feel less connected to the benefits and less likely to use them.',
+      gradientClassName: 'bg-gr-p-ol-yellow',
     },
   ],
 }

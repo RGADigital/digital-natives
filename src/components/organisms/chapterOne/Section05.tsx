@@ -2,7 +2,7 @@ import { Text } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import { TitleContent } from '@/organisms/twoColumnStatText'
+import { TitleContent } from '@/organisms/articleContent'
 
 import { LANG } from './Body.constant'
 

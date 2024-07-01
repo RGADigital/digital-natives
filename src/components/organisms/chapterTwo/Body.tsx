@@ -13,7 +13,7 @@ import SectionThree from './Section03'
 import SectionFour from './Section04'
 import SectionFive from './Section05'
 import SectionSix from './Section06'
-// import SectionSeven from './Section07'
+import SectionSeven from './Section07'
 
 interface Props {
   isMobile?: boolean
@@ -94,12 +94,12 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
             id: LANG.section6.id,
             isActive: activeStatus.isInView6,
           },
-          // section7: {
-          //   Component: <SectionSeven isMobile />,
-          //   ref: section7Ref,
-          //   id: LANG.section7.id,
-          //   isActive: activeStatus.isInView7,
-          // },
+          section7: {
+            Component: <SectionSeven isMobile />,
+            ref: section7Ref,
+            id: LANG.section7.id,
+            isActive: activeStatus.isInView7,
+          },
         }}
         nextSection={<NextSection isMobile chapter={3} />}
         isMobile
@@ -150,12 +150,12 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           id: LANG.section6.id,
           isActive: activeStatus.isInView6,
         },
-        // section7: {
-        //   Component: <SectionSeven />,
-        //   ref: section7Ref,
-        //   id: LANG.section7.id,
-        //   isActive: activeStatus.isInView7,
-        // },
+        section7: {
+          Component: <SectionSeven />,
+          ref: section7Ref,
+          id: LANG.section7.id,
+          isActive: activeStatus.isInView7,
+        },
       }}
       nextSection={<NextSection chapter={3} wrapperClassName={'border-t border-black'} />}
     />

@@ -1,6 +1,6 @@
 import cn from '@/utils/cn'
 
-import { TextContent, TwoColumnStat } from '@/organisms/twoColumnStatText'
+import { TextContent, TwoColumnStat } from '@/organisms/articleContent'
 import { type ITwoColumnStatPosition, TWO_COLUMN_POSITION } from '@/templates/twoColumnTemplate'
 
 import { LANG } from './Body.constant'
