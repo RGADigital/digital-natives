@@ -1,7 +1,7 @@
 import type { IColoredBox } from '@/atoms/index'
 
 const SECTION_ONE_CONTENT = {
-  color: 'blue',
+  color: 'yellow',
   navigation: 'Definitions',
   id: 'definitions',
   title: 'Digital Natives and Digital Immigrants',
@@ -57,7 +57,7 @@ const SECTION_ONE_CONTENT = {
 }
 
 const SECTION_TWO_CONTENT = {
-  color: 'blue',
+  color: 'cyan',
   navigation: 'Our research',
   id: 'our-research',
   title: 'Our Research Hypotheses and Approach',
