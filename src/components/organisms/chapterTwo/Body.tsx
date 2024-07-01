@@ -10,7 +10,7 @@ import { LANG, NAVIGATION_HEADER } from './Body.constant'
 import SectionOne from './Section01'
 import SectionTwo from './Section02'
 import SectionThree from './Section03'
-// import SectionFour from './Section04'
+import SectionFour from './Section04'
 import SectionFive from './Section05'
 import SectionSix from './Section06'
 // import SectionSeven from './Section07'
@@ -76,12 +76,12 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
             id: LANG.section3.id,
             isActive: activeStatus.isInView3,
           },
-          // section4: {
-          //   Component: <SectionFour isMobile />,
-          //   ref: section4Ref,
-          //   id: LANG.section4.id,
-          //   isActive: activeStatus.isInView4,
-          // },
+          section4: {
+            Component: <SectionFour isMobile />,
+            ref: section4Ref,
+            id: LANG.section4.id,
+            isActive: activeStatus.isInView4,
+          },
           section5: {
             Component: <SectionFive isMobile />,
             ref: section5Ref,
@@ -132,12 +132,12 @@ export default function Body({ isMobile = false }: Readonly<Props>) {
           id: LANG.section3.id,
           isActive: activeStatus.isInView3,
         },
-        // section4: {
-        //   Component: <SectionFour />,
-        //   ref: section4Ref,
-        //   id: LANG.section4.id,
-        //   isActive: activeStatus.isInView4,
-        // },
+        section4: {
+          Component: <SectionFour />,
+          ref: section4Ref,
+          id: LANG.section4.id,
+          isActive: activeStatus.isInView4,
+        },
         section5: {
           Component: <SectionFive />,
           ref: section5Ref,
