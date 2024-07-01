@@ -52,8 +52,8 @@ export default function ArticleBodyDesktop({
                   <MicroDetail
                     text={label}
                     color={color}
-                    boxClassName={cn('lg:size-[10px]')}
-                    containerClassName={cn('lg:gap-[3.02px]')}
+                    boxClassName={cn('lg:size-[10px] lg:mt-[3px]')}
+                    containerClassName={cn('lg:gap-[3.02px] lg:items-start')}
                     textClassName={cn('capitalize', {
                       'text-black': isActive,
                     })}

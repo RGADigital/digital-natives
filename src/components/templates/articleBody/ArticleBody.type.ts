@@ -22,3 +22,29 @@ export interface ArticleBodyProps {
     }
   }
 }
+
+export interface IBody {
+  color: string
+  navigation: string
+  id: string
+  title: string
+  titleNumber: string
+  bodyTitle?: string
+  paragraph1Content?: string[]
+  paragraph2Content?: string[]
+  paragraphOlContent?: {
+    title: string
+    description: string
+  }[]
+  quoteContent?: {
+    avatar: string
+    author: string
+    edgeColor: string
+    quote: string
+  }[]
+  image?: {
+    alt: string
+    src: string
+    srcMobile: string
+  }[]
+}
