@@ -1,11 +1,6 @@
-interface Props {
-  className?: string
-  width?: number | `${number}`
-  height?: number | `${number}`
-  onClick?: (...props: any) => void
-}
+import type { IconProps } from './icon.type'
 
-export default function Checked({ width = '18', height = '18', className, onClick }: Readonly<Props>) {
+export default function Checked({ width = '18', height = '18', className, onClick }: Readonly<IconProps>) {
   return (
     <svg
       width={width}

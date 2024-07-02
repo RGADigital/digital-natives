@@ -5,13 +5,20 @@ import cn from '@/utils/cn'
 import { buttonFramerConfig } from './animation'
 
 export interface ButtonProps {
+  ariaLabel?: string
   children?: React.ReactNode
   className?: string
-  handleClick: (...props: any) => void
+  handleClick?: (...props: any) => void
   type?: 'primary' | 'white'
 }
 
-export default function Button({ className, handleClick, children, type = 'primary' }: Readonly<ButtonProps>) {
+export default function Button({
+  ariaLabel,
+  className,
+  handleClick,
+  children,
+  type = 'primary',
+}: Readonly<ButtonProps>) {
   return (
     <motion.button
       {...buttonFramerConfig}
@@ -32,6 +39,7 @@ export default function Button({ className, handleClick, children, type = 'prima
         className,
       )}
       onClick={handleClick}
+      aria-label={ariaLabel}
     >
       {children}
     </motion.button>

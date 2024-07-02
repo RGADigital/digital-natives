@@ -1,10 +1,6 @@
-interface Props {
-  width?: number | `${number}`
-  height?: number | `${number}`
-  fill?: string
-}
+import type { IconProps } from './icon.type'
 
-export default function ScrollDown({ width = 9.865, height = 9.988, fill = '#ffffff' }: Readonly<Props>) {
+export default function ScrollDown({ width = 9.865, height = 9.988, fill = '#ffffff' }: Readonly<IconProps>) {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width={width} height={height} viewBox="0 0 11 11" fill="none">
       <path
