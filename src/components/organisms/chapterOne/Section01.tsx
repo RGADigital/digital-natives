@@ -3,9 +3,14 @@ import { Text } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import { MicroDetail } from '@/atoms/index'
 import type { IDefinitionBox } from '@/molecules/index'
-import { DefinitionContent, TextContent, TitleContent, TwoColumnStat } from '@/organisms/twoColumnStatText'
+import {
+  DefinitionContent,
+  ParagraphUlContent,
+  TextContent,
+  TitleContent,
+  TwoColumnStat,
+} from '@/organisms/articleContent'
 import { type ITwoColumnStatPosition, TWO_COLUMN_POSITION } from '@/templates/twoColumnTemplate'
 
 import { LANG } from './Body.constant'
@@ -15,27 +20,6 @@ interface Props {
 }
 
 export default function SectionOne({ isMobile }: Readonly<Props>) {
-  const PointContent = ({ point, content }: { point: string; content: string }) => (
-    <li
-      key={point}
-      className={cn('col-span-12 lg:col-span-6 ', 'flex flex-col', {
-        'lg:!min-h-[187px]': true,
-        'mt-5 lg:mr-5 lg:mt-5': true,
-      })}
-    >
-      <MicroDetail
-        boxClassName="!size-2 mt-1"
-        color="red"
-        text={point}
-        textClassName="capitalize font-m-body lg:font-nav text-m-body lg:text-nav !font-normal"
-        containerClassName="items-start"
-      />
-      <Text component="p" className="font-m-body lg:font-nav mt-5 text-m-body !font-normal lg:text-nav">
-        {content}
-      </Text>
-    </li>
-  )
-
   const points = [...(LANG.section1?.point1Content || []), ...(LANG.section1?.point2Content || [])]
   return (
     <>
@@ -71,7 +55,9 @@ export default function SectionOne({ isMobile }: Readonly<Props>) {
             )}
             {(LANG.section1.point1Content || LANG.section1.point2Content) && (
               <ul className={cn('grid grid-cols-12', 'text-black')}>
-                {points?.map(({ point, content }) => <PointContent point={point} content={content} key={point} />)}
+                {points?.map(({ point, content }) => (
+                  <ParagraphUlContent point={point} content={content} key={point} />
+                ))}
               </ul>
             )}
             <Text

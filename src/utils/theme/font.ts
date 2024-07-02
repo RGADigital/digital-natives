@@ -102,15 +102,15 @@ export const FONT_EYEBROW_MOBILE = {
 }
 
 export const FONT_QUOTE = {
-  fontSize: '22px',
+  fontSize: '16px',
   fontWeight: '400',
-  lineHeight: '26.4px',
+  lineHeight: '19.2px',
 }
 
 export const FONT_QUOTE_MOBILE = {
-  fontSize: '20px',
+  fontSize: '18px',
   fontWeight: '400',
-  lineHeight: '24px',
+  lineHeight: '21.6px',
 }
 
 // TODO: check if those fonts still used

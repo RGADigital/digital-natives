@@ -1,7 +1,7 @@
 import cn from '@/utils/cn'
 
+import { TwoColumnStat } from '@/organisms/articleContent'
 import { CardArticlePreview, type IContentType } from '@/organisms/card'
-import { TwoColumnStat } from '@/organisms/twoColumnStatText'
 import { type ITwoColumnStatPosition, TWO_COLUMN_POSITION } from '@/templates/twoColumnTemplate'
 
 import { LANG } from './Body.constant'

@@ -9,7 +9,7 @@ export const CONTENT_CHAPTER_1 = {
 export const CONTENT_CHAPTER_2 = {
   background: '/assets/executive-summary/next-section-2.jpg',
   backgroundMobile: '/assets/executive-summary/next-section-2_mobile.jpg',
-  nextSubtitle: 'Relationship to Technology',
+  nextSubtitle: 'Read the next chapter',
   nextTitle: 'Relationship to Technology',
   nextLink: '/chapter-02',
 }
@@ -17,7 +17,7 @@ export const CONTENT_CHAPTER_2 = {
 export const CONTENT_CHAPTER_3 = {
   background: '/assets/executive-summary/next-section-3.jpg',
   backgroundMobile: '/assets/executive-summary/next-section-3_mobile.jpg',
-  nextSubtitle: 'Digital Diet',
+  nextSubtitle: 'Read the next chapter',
   nextTitle: 'Digital diet',
   nextLink: '/chapter-03',
 }

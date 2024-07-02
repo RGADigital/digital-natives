@@ -12,8 +12,10 @@ interface Props {
   smallChildren?: React.ReactNode
   contentWrapperClassName?: string
   largeContentWrapperClassName?: string
+  rootWrapperClassName?: string
   smallContentWrapperClassName?: string
   titleContent: React.ReactNode
+  titleImageChildren?: React.ReactNode
   type?: ITwoColumnStatPosition
 }
 
@@ -25,22 +27,28 @@ export default function TwoColumnTemplate({
   smallChildren,
   contentWrapperClassName,
   largeContentWrapperClassName,
+  rootWrapperClassName,
   smallContentWrapperClassName,
   titleContent,
+  titleImageChildren,
   type = TWO_COLUMN_POSITION.textLeft,
 }: Readonly<Props>) {
   return (
     <div
-      className={cn({
-        'pt-[30px]': !noMarginTop,
-        'lg:pb-5': !noMarginBottom && titleContent,
-        'dn-two-column-template': true,
-        'dn-two-column-template--text-right': type === TWO_COLUMN_POSITION.textRight,
-        'dn-two-column-template--text-left': type === TWO_COLUMN_POSITION.textLeft,
-        'border-b-[1px] border-b-black': !isMobile,
-      })}
+      className={cn(
+        {
+          'pt-[30px]': !noMarginTop,
+          'lg:pb-5': !noMarginBottom && titleContent,
+          'dn-two-column-template': true,
+          'dn-two-column-template--text-right': type === TWO_COLUMN_POSITION.textRight,
+          'dn-two-column-template--text-left': type === TWO_COLUMN_POSITION.textLeft,
+          'border-b-[1px] border-b-black': !isMobile,
+        },
+        rootWrapperClassName,
+      )}
     >
       <div className="grid w-full grid-cols-12">{titleContent}</div>
+      {titleImageChildren && <div className="w-full">{titleImageChildren}</div>}
       <div
         className={cn(
           'dn-two-column-template__content grid w-full grid-cols-12 ',
@@ -70,6 +78,7 @@ export default function TwoColumnTemplate({
             {
               'order-first': type === TWO_COLUMN_POSITION.textRight,
               'flex flex-col gap-[46px]': isMobile,
+              hidden: !smallChildren,
             },
             smallContentWrapperClassName,
           )}

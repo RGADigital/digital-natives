@@ -1,14 +1,14 @@
 import useViewport from '@/hooks/useViewport'
 
-import { Body as BodyExecutiveSummary } from '@/organisms/executiveSummary/index'
+import { Body as BodyChapterTwo } from '@/organisms/chapterTwo/index'
 import { ArticlePageTemplate } from '@/templates/index'
 
-export default function ExecutiveSummary() {
+export default function ChapterTwo() {
   const { isMobile } = useViewport({})
 
   return (
     <ArticlePageTemplate>
-      <BodyExecutiveSummary isMobile={isMobile} />
+      <BodyChapterTwo isMobile={isMobile} />
     </ArticlePageTemplate>
   )
 }

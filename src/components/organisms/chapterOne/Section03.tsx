@@ -3,7 +3,7 @@ import { Text } from '@mantine/core'
 
 import cn from '@/utils/cn'
 
-import { TitleContent, TwoColumnStat } from '@/organisms/twoColumnStatText'
+import { TitleContent, TwoColumnStat } from '@/organisms/articleContent'
 import type { ITwoColumnStatPosition } from '@/templates/twoColumnTemplate'
 import { TWO_COLUMN_POSITION } from '@/templates/twoColumnTemplate'
 
